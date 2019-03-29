@@ -1,0 +1,30 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+	    <li>
+	      <a href="https://gitter.im/zarr-developers/community" rel="nofollow">
+		<img src="https://camo.githubusercontent.com/0d690a9bd5751a99a64fe90305859aa07e2aa724/68747470733a2f2f6261646765732e6769747465722e696d2f7a6172722d646576656c6f706572732f636f6d6d756e6974792e737667" data-canonical-src="https://badges.gitter.im/zarr-developers/community.svg" style="max-width:100%;">
+	      </a>
+	    </li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        {%- include social.html -%}
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{- site.description | escape -}}</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
