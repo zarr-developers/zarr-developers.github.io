@@ -196,6 +196,14 @@ supported parallel reads, parallel writes, was easy to plug in new
 compressors, and easy to plug in different storage systems like cloud
 object stores?
 
+===
+
+```<montage/>```
+
+===
+
+<p class="stretch"><img src="scipy-2019-files/montage.png" style="float: left">3 years, 1,107 commits, 39 releases, 259 issues, 165 PRs, and at least 2 babies later ...</p>
+
 ====
 
 ## Compressors
