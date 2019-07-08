@@ -170,4 +170,40 @@ HDF5](https://cyrille.rossant.net/moving-away-hdf5/) by Cyrille Rossant.
 
 ===
 
-### BColz
+### bcolz
+
+<p class="stretch"><img style="max-height: 60%; max-width: 60%" src="scipy-2019-files/bcolz.png"><img style="max-height: 50%; max-width: 50%" src="scipy-2019-files/francesc.png"></p>
+
+* Developed by [Francesc Alted](https://github.com/FrancescAlted).
+* Chunked storage, primarily intended for storing 1D arrays (table columns), but can also store tensors.
+* Implementation is simple (in a good way).
+* Data format on disk is simple - one file for metadata, one file for each chunk.
+* Showcase for the [Blosc compressor](http://blosc.org/).
+
+===
+
+### bcolz - limitations
+
+* Chunking in 1 dimension only.
+* No support for cloud object stores.
+
+====
+
+## How hard could it be ...
+
+... to implement a chunked storage library for tensor data that
+supported parallel reads, parallel writes, was easy to plug in new
+compressors, and easy to plug in different storage systems like cloud
+object stores?
+
+====
+
+## Compressors
+
+===
+
+### Compressor benchmark (genomic data)
+
+<p class="stretch"><img src="scipy-2019-files/compressors.png"></p>
+
+<small><a href="http://alimanfoo.github.io/2016/09/21/genotype-compression-benchmark.html">http://alimanfoo.github.io/2016/09/21/genotype-compression-benchmark.html</a></small>
