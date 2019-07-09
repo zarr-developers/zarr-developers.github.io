@@ -9,7 +9,7 @@ These slides: @@TODO URL
 
 ====
 
-@@TODO mosquito image
+<p class="stretch"><img src="scipy-2019-files/malaria.png"></p>
 
 ====
 
@@ -40,8 +40,8 @@ memory.
 
 <p class="stretch"><img src="scipy-2019-files/compute2.png"></p>
 
-Some part of the computation can be parallelised by processing data in
-chunks.
+At least some part of the computation can be parallelised by
+processing data in chunks.
 
 ===
 
@@ -475,7 +475,7 @@ example.zarr
 ### ZipStore
 
 ```bash
-$ cd example.zarr && zip -r0v ../example.zip ./*
+$ cd example.zarr && zip -r0 ../example.zip ./*
 ```
 
 ```python
@@ -565,7 +565,7 @@ class ZipStore(MutableMapping):
 * Both multi-thread and multi-process parallelism are supported
 * GIL is released during critical sections (compression and decompression)
 
-<small>* depending on the store</small>
+<small>* Depending on the store.</small>
 
 ===
 
@@ -612,7 +612,7 @@ See docs for `da.from_array`, `da.from_zarr`, `da.to_zarr`. @@TODO links
 * If each writer is writing to a different region of an array, and
   writes are **not aligned** with chunk boundaries, then locking **is
   required** to avoid contention and/or data loss.
-  
+
 ===
 
 ### Write locks?
@@ -641,51 +641,128 @@ See docs for `da.from_array`, `da.from_zarr`, `da.to_zarr`. @@TODO links
 
 ### Available compressors (via numcodecs)
 
-@@TODO
+Blosc, Zstandard, LZ4, Zlib, BZ2, LZMA, ...
+
+```python
+import zarr
+from numcodecs import Blosc
+
+store = zarr.DirectoryStore('example.zarr')
+root = zarr.group(store)
+compressor = Blosc(cname='zstd', clevel=1, shuffle=Blosc.BITSHUFFLE)
+big2 = root.zeros('big2', 
+                  shape=(100_000_000, 100_000_000), 
+                  chunks=(10_000, 10_000), 
+                  dtype='i4', 
+                  compressor=compressor) 
+```
+
+@@TODO check this works
 
 ===
 
 ### Compressor (codec) interface
 
-@@TODO
+<p class="stretch">
+<img src="scipy-2019-files/codec-api.png" style="float: right">
+The numcodecs Codec interface defines the API for filters and compressors for use with Zarr. Built around the Python buffer protocol.
+</p>
+
+@@TODO link to buffer protocol
 
 ===
 
-### E.g., zlib implementation
+```python
+class Zlib(Codec):
 
-@@TODO
+    def __init__(self, level=1):
+        self.level = level
+
+    def encode(self, buf):
+
+        # normalise inputs
+        buf = ensure_contiguous_ndarray(buf)
+
+        # do compression
+        return _zlib.compress(buf, self.level)
+
+    def decode(self, buf, out=None):
+
+        # normalise inputs
+        buf = ensure_contiguous_ndarray(buf)
+        if out is not None:
+            out = ensure_contiguous_ndarray(out)
+
+        # do decompression
+        dec = _zlib.decompress(buf)
+
+        return ndarray_copy(dec, out)
+
+```
 
 ====
 
 ## Zarr specification
 
-@@TODO image
+<p class="stretch"><img src="scipy-2019-files/spec-v2.png"></p>
 
 ====
 
-## Integrations, applications and other implementations
+## Other Zarr implementations
 
-* @@TODO dask, xarray, intake (e.g., Pangeo data catalog)
-* @@TODO z5 - C++ implementation
-* @@TODO Zarr.jl - native Julia implementation
-* @@TODO Scala implementation
-* @@TODO other implementations?
-* @@TODO Unidata working on implementation in NetCDF C library
-* @@TODO OME, microscopy
-* @@TODO single cell examples
-* @@TODO Met office use cases
+* z5 - C++ implementation using xtensor
+* Zarr.jl - native Julia implementation
+* @@TODO - Scala implementation
+* WIP: Zarr support in NetCDF C library
+
+@@TODO links
+
+====
+
+## Integrations and applications
+
+===
+
+### Xarray, Intake, Pangeo
+
+@@TODO
+
+===
+
+### "High momentum" weather data
+
+@@TODO met office work
+
+===
+
+### Open microscopy (OME)
+
+@@TODO
+
+===
+
+### Single cell biology
+
+@@TODO
 
 ====
 
 ## Future
 
-* Zarr/N5
-* v3 protocol spec
-
-Community!
+* Zarr/N5 convergence.
+* Zarr protocol spec v3.
+* Community!
 
 ====
 
 ## Acknowledgments
 
-@@TODO
+* Thanks to the Zarr core development team.
+
+* Thanks to everyone who has contributed code or raised or commented
+  on an issue or PR.
+
+* Thanks to UK MRC and Wellcome Trust for supporting @alimanfoo.
+
+* Zarr is a community-maintained open source project - please think of
+  it as yours!
