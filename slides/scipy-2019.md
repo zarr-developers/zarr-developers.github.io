@@ -198,11 +198,310 @@ object stores?
 
 ===
 
-```<montage/>```
+### ```<montage/>```
+
+<p class="stretch"><img src="scipy-2019-files/montage.png" style="float: left">3 years, 1,107 commits, 39 releases, 259 issues, 165 PRs, and at least 2 babies later ...</p>
+
+====
+
+### Zarr Python
+
+```bash
+pip install zarr
+```
+
+```bash
+conda install -c conda-forge zarr
+```
+
+```python
+>>> import zarr
+>>> zarr.__version__
+'2.3.2'
+```
 
 ===
 
-<p class="stretch"><img src="scipy-2019-files/montage.png" style="float: left">3 years, 1,107 commits, 39 releases, 259 issues, 165 PRs, and at least 2 babies later ...</p>
+### Creating a hierarchy
+
+```python
+>>> store = zarr.DirectoryStore('example.zarr')
+>>> root = zarr.group(store)
+>>> root
+<zarr.hierarchy.Group '/'>
+```
+
+Using DirectoryStore the data will be stored on the local file
+system. 
+
+===
+
+### Creating an array
+
+```python
+>>> x = root.zeros('x', 
+...                shape=(10000, 10000), 
+...                chunks=(1000, 1000), 
+...                dtype='<i4')
+>>> x
+<zarr.core.Array '/x' (10000, 10000) int32>
+```
+
+* Creates a 2-dimensional array of 32-bit integers with 10,000 rows
+and 10,000 columns.
+
+* Divided into chunks where each chunk has 1,000 rows and 1,000 columns.
+
+* There will be 100 chunks in total, arranged in a 10x10 grid.
+
+===
+
+### Creating an array (h5py-style API)
+
+```python
+>>> x = root.create_dataset('x', 
+...                         shape=(10000, 10000), 
+...                         chunks=(1000, 1000), 
+...                         dtype='<i4')
+>>> x
+<zarr.core.Array '/x' (10000, 10000) int32>
+```
+
+===
+
+### Creating an array (big)
+
+```python
+>>> big = root.zeros('big',
+...                  shape=(100_000_000, 100_000_000),
+...                  chunks=(10_000, 10_000),
+...                  dtype='i4')
+>>> big
+<zarr.core.Array '/big' (100000000, 100000000) int32>
+```
+
+===
+
+### Creating an array (big)
+
+```python
+>>> big.info
+Name               : /big
+Type               : zarr.core.Array
+Data type          : int32
+Shape              : (100000000, 100000000)
+Chunk shape        : (10000, 10000)
+Order              : C
+Read-only          : False
+Compressor         : Blosc(cname='lz4', clevel=5, shuffle=SHUFFLE, blocksize=0)
+Store type         : zarr.storage.DirectoryStore
+No. bytes          : 40000000000000000 (35.5P)
+No. bytes stored   : 355
+Storage ratio      : 112676056338028.2
+Chunks initialized : 0/100000000
+```
+
+* That's a 35 petabyte array.
+* N.B., chunks are initialized on write.
+
+===
+
+### Writing data into an array
+
+```python
+>>> big[0, 0:20000] = np.arange(20000)
+>>> big[0:20000, 0] = np.arange(20000)
+```
+
+* Same API as writing into numpy array or h5py dataset.
+
+===
+
+### Reading data from an array
+
+```python
+>>> big[0:1000, 0:1000]
+array([[  0,   1,   2, ..., 997, 998, 999],
+       [  1,   0,   0, ...,   0,   0,   0],
+       [  2,   0,   0, ...,   0,   0,   0],
+       ...,
+       [997,   0,   0, ...,   0,   0,   0],
+       [998,   0,   0, ...,   0,   0,   0],
+       [999,   0,   0, ...,   0,   0,   0]], dtype=int32)
+```
+
+* Same API as slicing a numpy array or reading from an h5py dataset.
+
+===
+
+### Chunks are initialized on write
+
+```python
+>>> big.info
+Name               : /big
+Type               : zarr.core.Array
+Data type          : int32
+Shape              : (100000000, 100000000)
+Chunk shape        : (10000, 10000)
+Order              : C
+Read-only          : False
+Compressor         : Blosc(cname='lz4', clevel=5, shuffle=SHUFFLE, blocksize=0)
+Store type         : zarr.storage.DirectoryStore
+No. bytes          : 40000000000000000 (35.5P)
+No. bytes stored   : 5171386 (4.9M)
+Storage ratio      : 7734870303.6
+Chunks initialized : 3/100000000
+```
+
+===
+
+### Files on disk
+
+```bash
+$ tree -a example.zarr
+example.zarr
+├── big
+│   ├── 0.0
+│   ├── 0.1
+│   ├── 1.0
+│   └── .zarray
+├── x
+│   └── .zarray
+└── .zgroup
+
+2 directories, 6 files
+```
+
+===
+
+### Array metadata
+
+```bash
+$ cat example.zarr/big/.zarray 
+{
+    "chunks": [
+        10000,
+        10000
+    ],
+    "compressor": {
+        "blocksize": 0,
+        "clevel": 5,
+        "cname": "lz4",
+        "id": "blosc",
+        "shuffle": 1
+    },
+    "dtype": "<i4",
+    "fill_value": 0,
+    "filters": null,
+    "order": "C",
+    "shape": [
+        100000000,
+        100000000
+    ],
+    "zarr_format": 2
+}
+```
+
+===
+
+### Reading unwritten regions
+
+```python
+>>> big[-1000:, -1000:]
+array([[0, 0, 0, ..., 0, 0, 0],
+       [0, 0, 0, ..., 0, 0, 0],
+       [0, 0, 0, ..., 0, 0, 0],
+       ...,
+       [0, 0, 0, ..., 0, 0, 0],
+       [0, 0, 0, ..., 0, 0, 0],
+       [0, 0, 0, ..., 0, 0, 0]], dtype=int32)
+```
+
+* No data on disk, fill value is used (in this case zero).
+
+===
+
+### Reading the whole array
+
+```python
+>>> big[:]
+MemoryError
+```
+
+* Read the whole array into memory (if you can!)
+
+====
+
+## [Storage alternatives](https://zarr.readthedocs.io/en/stable/tutorial.html#storage-alternatives)
+
+* `zarr.DirectoryStore`
+* `zarr.DictStore` (in-memory)
+* `zarr.ZipStore`
+* `zarr.DBMStore`, `zarr.LMDBStore`, `zarr.SQLiteStore`
+* `zarr.MongoDBStore`, `zarr.RedisStore`
+* `zarr.ABSStore`, `s3fs.S3Map`, `gcsfs.GCSMap`
+
+===
+
+### Local file system (DirectoryStore)
+
+```python
+>>> store = zarr.DirectoryStore('example.zarr')
+>>> root = zarr.group(store)
+>>> root.tree()
+/
+ ├── big (100000000, 100000000) int32
+ └── x (10000, 10000) int32
+>>> root['big']
+<zarr.core.Array '/big' (100000000, 100000000) int32>
+```
+
+===
+
+### Local file system (ZipStore)
+
+```bash
+$ cd example.zarr && zip -r0v ../example.zip ./*
+```
+
+```python
+>>> store = zarr.ZipStore('example.zip')
+>>> root = zarr.group(store)
+>>> root.tree()
+/
+ ├── big (100000000, 100000000) int32
+ └── x (10000, 10000) int32
+>>> root['big']
+<zarr.core.Array '/big' (100000000, 100000000) int32>
+```
+
+===
+
+### Google cloud storage (via [gcsfs](https://github.com/dask/gcsfs))
+
+```bash
+$ gsutil config
+$ gsutil rsync -ru example.zarr/ gs://zarr-demo/example.zarr/
+```
+
+```python
+>>> import gcsfs
+>>> gcs = gcsfs.GCSFileSystem(token='anon', access='read_only')
+>>> store = gcsfs.GCSMap('zarr-demo/example.zarr', gcs=gcs, check=False)
+>>> root = zarr.group(store)
+>>> root.tree()
+/
+ ├── big (100000000, 100000000) int32
+ └── x (10000, 10000) int32
+>>> root['big']
+<zarr.core.Array '/big' (100000000, 100000000) int32>
+```
+
+===
+
+### Google cloud storage
+
+<p class="stretch"><img src="scipy-2019-files/gcs.png"></p>
 
 ====
 
@@ -215,3 +514,16 @@ object stores?
 <p class="stretch"><img src="scipy-2019-files/compressors.png"></p>
 
 <small><a href="http://alimanfoo.github.io/2016/09/21/genotype-compression-benchmark.html">http://alimanfoo.github.io/2016/09/21/genotype-compression-benchmark.html</a></small>
+
+====
+
+## TODO
+
+* 
+
+====
+
+## Future
+
+* Zarr/N5
+* v3 protocol spec
