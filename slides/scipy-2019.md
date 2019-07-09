@@ -5,6 +5,8 @@ Zarr - scalable storage of tensor data for parallel and distributed computing
 
 Alistair Miles ([@alimanfoo](https://github.com/alimanfoo)) - SciPy 2019
 
+These slides: @@TODO URL
+
 ====
 
 @@TODO mosquito image
@@ -116,8 +118,8 @@ Align the chunks!
 ```python
 import dask.array as da
 
-# @@TODO check this works!
-x = da.from_array(storage)
+a = ...  # what goes here?
+x = da.from_array(a)
 y = (x - x.mean(axis=1)) / x.std(axis=1)
 u, s, v = da.svd_compressed(y, 20)
 u = u.compute()
@@ -556,6 +558,75 @@ class ZipStore(MutableMapping):
 
 ====
 
+## Parallel computing with Zarr
+
+* A Zarr array can have multiple concurrent readers*
+* A Zarr array can have multiple concurrent writers*
+* Both multi-thread and multi-process parallelism are supported
+* GIL is released during critical sections (compression and decompression)
+
+<small>* depending on the store</small>
+
+===
+
+### Dask + Zarr
+
+```python
+import dask.array as da
+import zarr
+
+# set up input
+store = ...  # some Zarr store
+root = zarr.group(store)
+big = root['big']
+big = da.from_array(big)
+
+# define computation
+output = big * 42 + ...
+
+# if output is small, compute to memory
+o = output.compute()
+
+# if output is big, compute and write directly to Zarr
+output.to_zarr(@@TODO)
+```
+
+See docs for `da.from_array`, `da.from_zarr`, `da.to_zarr`. @@TODO links
+
+===
+
+### Write locks?
+
+<p class="stretch"><img src="scipy-2019-files/nolock.png"></p>
+
+* If each writer is writing to a different region of an array, and all
+  writes are **aligned with chunk boundaries**, then locking is **not
+  required**.
+
+===
+
+### Write locks?
+
+<p class="stretch"><img src="scipy-2019-files/lock.png"></p>
+
+* If each writer is writing to a different region of an array, and
+  writes are **not aligned** with chunk boundaries, then locking **is
+  required** to avoid contention and/or data loss.
+  
+===
+
+### Write locks?
+
+* Zarr does support chunk-level write locks for either multi-thread or
+  multi-process writes.
+  
+* But generally easier and better to align writes with chunk
+  boundaries where possible.
+
+@@TODO link to docs
+
+====
+
 ## Compressors
 
 ===
@@ -566,11 +637,43 @@ class ZipStore(MutableMapping):
 
 <small><a href="http://alimanfoo.github.io/2016/09/21/genotype-compression-benchmark.html">http://alimanfoo.github.io/2016/09/21/genotype-compression-benchmark.html</a></small>
 
+===
+
+### Available compressors (via numcodecs)
+
+@@TODO
+
+===
+
+### Compressor (codec) interface
+
+@@TODO
+
+===
+
+### E.g., zlib implementation
+
+@@TODO
+
 ====
 
-## TODO
+## Zarr specification
 
-* 
+@@TODO image
+
+====
+
+## Integrations, applications and other implementations
+
+* @@TODO dask, xarray, intake (e.g., Pangeo data catalog)
+* @@TODO z5 - C++ implementation
+* @@TODO Zarr.jl - native Julia implementation
+* @@TODO Scala implementation
+* @@TODO other implementations?
+* @@TODO Unidata working on implementation in NetCDF C library
+* @@TODO OME, microscopy
+* @@TODO single cell examples
+* @@TODO Met office use cases
 
 ====
 
@@ -578,3 +681,11 @@ class ZipStore(MutableMapping):
 
 * Zarr/N5
 * v3 protocol spec
+
+Community!
+
+====
+
+## Acknowledgments
+
+@@TODO
