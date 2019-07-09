@@ -432,33 +432,46 @@ MemoryError
 
 ====
 
-## [Storage alternatives](https://zarr.readthedocs.io/en/stable/tutorial.html#storage-alternatives)
+## [Pluggable storage](https://zarr.readthedocs.io/en/stable/tutorial.html#storage-alternatives)
 
-* `zarr.DirectoryStore`
-* `zarr.DictStore` (in-memory)
-* `zarr.ZipStore`
-* `zarr.DBMStore`, `zarr.LMDBStore`, `zarr.SQLiteStore`
-* `zarr.MongoDBStore`, `zarr.RedisStore`
-* `zarr.ABSStore`, `s3fs.S3Map`, `gcsfs.GCSMap`
+`zarr.DirectoryStore`, `zarr.ZipStore`, `zarr.DBMStore`,
+`zarr.LMDBStore`, `zarr.SQLiteStore`, `zarr.MongoDBStore`,
+`zarr.RedisStore`, `zarr.ABSStore`, `s3fs.S3Map`, `gcsfs.GCSMap`, ...
 
 ===
 
-### Local file system (DirectoryStore)
+### DirectoryStore
 
 ```python
 >>> store = zarr.DirectoryStore('example.zarr')
 >>> root = zarr.group(store)
->>> root.tree()
-/
- ├── big (100000000, 100000000) int32
- └── x (10000, 10000) int32
->>> root['big']
+>>> big = root['big']
+>>> big
 <zarr.core.Array '/big' (100000000, 100000000) int32>
 ```
 
 ===
 
-### Local file system (ZipStore)
+### DirectoryStore
+
+```bash
+$ tree -a example.zarr
+example.zarr
+├── big
+│   ├── 0.0
+│   ├── 0.1
+│   ├── 1.0
+│   └── .zarray
+├── x
+│   └── .zarray
+└── .zgroup
+
+2 directories, 6 files
+```
+
+===
+
+### ZipStore
 
 ```bash
 $ cd example.zarr && zip -r0v ../example.zip ./*
@@ -467,11 +480,8 @@ $ cd example.zarr && zip -r0v ../example.zip ./*
 ```python
 >>> store = zarr.ZipStore('example.zip')
 >>> root = zarr.group(store)
->>> root.tree()
-/
- ├── big (100000000, 100000000) int32
- └── x (10000, 10000) int32
->>> root['big']
+>>> big = root['big']
+>>> big
 <zarr.core.Array '/big' (100000000, 100000000) int32>
 ```
 
@@ -489,11 +499,8 @@ $ gsutil rsync -ru example.zarr/ gs://zarr-demo/example.zarr/
 >>> gcs = gcsfs.GCSFileSystem(token='anon', access='read_only')
 >>> store = gcsfs.GCSMap('zarr-demo/example.zarr', gcs=gcs, check=False)
 >>> root = zarr.group(store)
->>> root.tree()
-/
- ├── big (100000000, 100000000) int32
- └── x (10000, 10000) int32
->>> root['big']
+>>> big = root['big']
+>>> big
 <zarr.core.Array '/big' (100000000, 100000000) int32>
 ```
 
@@ -502,6 +509,51 @@ $ gsutil rsync -ru example.zarr/ gs://zarr-demo/example.zarr/
 ### Google cloud storage
 
 <p class="stretch"><img src="scipy-2019-files/gcs.png"></p>
+
+===
+
+<p class="stretch"><img src="scipy-2019-files/storage.png"></p>
+
+===
+
+### Store interface
+
+* Any storage system can be used with Zarr if it can provide a
+  key/value interface.
+  
+  * Keys are strings, values are bytes.
+  
+* In Python, we use the MutableMapping interface.
+
+  * `__getitem__`
+  * `__setitem__`
+  * `__iter__`
+  
+* I.e., anything dict-like can be used as a Zarr store.
+
+===
+
+### E.g., ZipStore implementation
+
+```python
+class ZipStore(MutableMapping):
+
+    def __init__(self, path, ...):
+        self.zf = zipfile.ZipFile(path, ...)
+		
+    def __getitem__(self, key):
+        with self.zf.open(key) as f:
+            return f.read()
+
+    def __setitem__(self, key, value):
+        self.zf.writestr(key, value)
+    
+    def __iter__(self):
+        for key in self.zf.namelist():
+		    yield key
+```
+
+<small>(Actual implementation is slightly more complicated, but this is the essence.)</small>
 
 ====
 
