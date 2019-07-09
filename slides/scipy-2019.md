@@ -15,7 +15,13 @@ Alistair Miles ([@alimanfoo](https://github.com/alimanfoo)) - SciPy 2019
 
 ===
 
-@@TODO image of tensor -> compute -> tensor
+### Problem statement
+
+<p class="stretch"><img src="scipy-2019-files/compute1.png"></p>
+
+There is some computation we want to perform. 
+
+Inputs and outputs are tensors.
 
 5 key features...
 
@@ -26,22 +32,20 @@ Alistair Miles ([@alimanfoo](https://github.com/alimanfoo)) - SciPy 2019
 Input and/or output tensors are too big to fit comfortably in main
 memory.
 
-@@TODO image of larger than memory
-
 ===
 
 ### (2) Computation can be parallelised
 
+<p class="stretch"><img src="scipy-2019-files/compute2.png"></p>
+
 Some part of the computation can be parallelised by processing data in
 chunks.
-
-@@TODO image of tensor -> parallel compute -> compute -> parallel compute -> tensor
 
 ===
 
 ### E.g., embarassingly parallel
 
-@@TODO image of tensor -> parallel compute -> tensor
+<p class="stretch"><img src="scipy-2019-files/compute3.png"></p>
 
 ===
 
@@ -49,8 +53,6 @@ chunks.
 
 Computational complexity is moderate &rarr; significant amount of time is
 spent in reading and/or writing data.
-
-@@TODO image of tensor -> bottleneck -> parallel compute -> bottleneck -> tensor
 
 N.B., bottleneck may be due to (a) limited I/O bandwidth, (b) I/O is
 not parallel.
@@ -60,11 +62,8 @@ not parallel.
 ### (4) Data are compressible
 
 * Compression is a very active area of innovation. 
-
 * Modern compressors achieve good compression ratios with high speed.
-
 * Opportunity to trade I/O for computation. 
-
 * Compression can increase effective I/O bandwidth, sometimes
   dramatically.
 
@@ -75,16 +74,16 @@ not parallel.
 * Rich datasets &rarr; exploratory science &rarr; interactive analysis
   &rarr; many rounds of summarise, visualise, hypothesise, model,
   test, repeat.
-  
+
 * E.g., genome sequencing.
+
+  * Modern experiments sequence genomes from 1000s of individuals and
+    compare them.
 
   * Each genome is a complete molecular blueprint for an organism.
   
-  * Each genome is a history book handed down through the ages, with
-    each generation making its mark.
-	
-  * Modern experiments sequence genomes from 1000s of individuals and
-    compare them.
+  * Each genome is a history book handed down from the beginning of
+    life on Earth, with each generation making its mark.
 
 ===
 
@@ -207,11 +206,11 @@ object stores?
 ### Zarr Python
 
 ```bash
-pip install zarr
+$ pip install zarr
 ```
 
 ```bash
-conda install -c conda-forge zarr
+$ conda install -c conda-forge zarr
 ```
 
 ```python
@@ -231,20 +230,20 @@ conda install -c conda-forge zarr
 <zarr.hierarchy.Group '/'>
 ```
 
-Using DirectoryStore the data will be stored on the local file
-system. 
+Using DirectoryStore the data will be stored in a directory on the
+local file system.
 
 ===
 
 ### Creating an array
 
 ```python
->>> x = root.zeros('x', 
-...                shape=(10000, 10000), 
-...                chunks=(1000, 1000), 
-...                dtype='<i4')
->>> x
-<zarr.core.Array '/x' (10000, 10000) int32>
+>>> hello = root.zeros('hello', 
+...                    shape=(10000, 10000), 
+...                    chunks=(1000, 1000), 
+...                    dtype='<i4')
+>>> hello
+<zarr.core.Array '/hello' (10000, 10000) int32>
 ```
 
 * Creates a 2-dimensional array of 32-bit integers with 10,000 rows
@@ -259,12 +258,12 @@ and 10,000 columns.
 ### Creating an array (h5py-style API)
 
 ```python
->>> x = root.create_dataset('x', 
-...                         shape=(10000, 10000), 
-...                         chunks=(1000, 1000), 
-...                         dtype='<i4')
->>> x
-<zarr.core.Array '/x' (10000, 10000) int32>
+>>> hello = root.create_dataset('hello', 
+...                             shape=(10000, 10000), 
+...                             chunks=(1000, 1000), 
+...                             dtype='<i4')
+>>> hello
+<zarr.core.Array '/hello' (10000, 10000) int32>
 ```
 
 ===
@@ -365,7 +364,7 @@ example.zarr
 │   ├── 0.1
 │   ├── 1.0
 │   └── .zarray
-├── x
+├── hello
 │   └── .zarray
 └── .zgroup
 
@@ -452,7 +451,7 @@ MemoryError
 
 ===
 
-### DirectoryStore
+### DirectoryStore (reminder)
 
 ```bash
 $ tree -a example.zarr
@@ -462,7 +461,7 @@ example.zarr
 │   ├── 0.1
 │   ├── 1.0
 │   └── .zarray
-├── x
+├── hello
 │   └── .zarray
 └── .zgroup
 
