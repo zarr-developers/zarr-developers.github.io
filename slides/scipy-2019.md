@@ -5,7 +5,7 @@ Zarr - scalable storage of tensor data for parallel and distributed computing
 
 Alistair Miles ([@alimanfoo](https://github.com/alimanfoo)) - SciPy 2019
 
-These slides: @@TODO URL
+<small>These slides: https://zarr-developers.github.io/slides/scipy-2019.html</small>
 
 ====
 
@@ -23,7 +23,7 @@ These slides: @@TODO URL
 
 There is some computation we want to perform. 
 
-Inputs and outputs are tensors.
+Inputs and outputs are multidimensional arrays (a.k.a. tensors).
 
 5 key features...
 
@@ -64,8 +64,7 @@ not parallel.
 ### (4) Data are compressible
 
 * Compression is a very active area of innovation. 
-* Modern compressors achieve good compression ratios with high speed.
-* Opportunity to trade I/O for computation. 
+* Modern compressors achieve good compression ratios with very high speed.
 * Compression can increase effective I/O bandwidth, sometimes
   dramatically.
 
@@ -79,13 +78,17 @@ not parallel.
 
 * E.g., genome sequencing.
 
-  * Modern experiments sequence genomes from 1000s of individuals and
+  * Now feasible to sequence genomes from 100,000s of individuals and
     compare them.
 
-  * Each genome is a complete molecular blueprint for an organism.
+  * Each genome is a complete molecular blueprint for an organism
+    &rarr; can investigate many different molecular pathways and
+    processes.
   
-  * Each genome is a history book handed down from the beginning of
-    life on Earth, with each generation making its mark.
+  * Each genome is a history book handed down through the ages, with
+    each generation making its mark &rarr; can look back in time and
+    infer major demographic and evolutionary events in the history of
+    populations and species.
 
 ===
 
@@ -102,18 +105,16 @@ not parallel.
 
 ## Solution
 
-1. Chunked, parallel computing framework.
+1. Chunked, parallel tensor computing framework.
 2. Chunked, parallel tensor storage library. 
 
 Align the chunks!
 
-====
-
-## Aside...
-
 ===
 
 <p><img style="max-width:30%; max-height:30%" src="scipy-2019-files/dask.svg"></p>
+
+Parallel computing framework for chunked tensors.
 
 ```python
 import dask.array as da
@@ -121,7 +122,7 @@ import dask.array as da
 a = ...  # what goes here?
 x = da.from_array(a)
 y = (x - x.mean(axis=1)) / x.std(axis=1)
-u, s, v = da.svd_compressed(y, 20)
+u, s, v = da.linalg.svd_compressed(y, 20)
 u = u.compute()
 ```
 
@@ -133,7 +134,9 @@ u = u.compute()
 <p class="stretch"><img src="scipy-2019-files/pangeo.png"></p>
 
 * Scale up ocean / atmosphere / land / climate science.
-* Handle petabyte-scale datasets on HPC and cloud platforms.
+* Aim to handle petabyte-scale datasets on HPC and cloud platforms.
+* Using Dask.
+* Needed a tensor storage solution.
 * Interested to use cloud object stores: Amazon S3, Azure Blob Storage, Google Cloud Storage, ...
 
 ====
@@ -220,6 +223,17 @@ $ conda install -c conda-forge zarr
 >>> zarr.__version__
 '2.3.2'
 ```
+
+===
+
+### Conceptual model based on HDF5
+
+* Multiple arrays (a.k.a. datasets) can be created and organised into
+  a hierarchy of groups.
+  
+* Each array is divided into regular shaped chunks.
+
+* Each chunk is compressed before storage.
 
 ===
 
@@ -554,16 +568,16 @@ class ZipStore(MutableMapping):
 		    yield key
 ```
 
-<small>(Actual implementation is slightly more complicated, but this is the essence.)</small>
+<small>(<a href="https://github.com/zarr-developers/zarr-python/blob/e61d6ae77f18e881be0b80e38b5366793f5a2860/zarr/storage.py#L1033">Actual implementation</a> is slightly more complicated, but this is the essence.)</small>
 
 ====
 
 ## Parallel computing with Zarr
 
-* A Zarr array can have multiple concurrent readers*
-* A Zarr array can have multiple concurrent writers*
-* Both multi-thread and multi-process parallelism are supported
-* GIL is released during critical sections (compression and decompression)
+* A Zarr array can have multiple concurrent readers*.
+* A Zarr array can have multiple concurrent writers*.
+* Both multi-thread and multi-process parallelism are supported.
+* GIL is released during critical sections (compression and decompression).
 
 <small>* Depending on the store.</small>
 
@@ -588,10 +602,14 @@ output = big * 42 + ...
 o = output.compute()
 
 # if output is big, compute and write directly to Zarr
-output.to_zarr(@@TODO)
+da.to_zarr(output, store, component='output')
 ```
 
-See docs for `da.from_array`, `da.from_zarr`, `da.to_zarr`. @@TODO links
+See docs for
+[`da.from_array()`](https://docs.dask.org/en/latest/array-api.html#dask.array.from_array),
+[`da.from_zarr()`](https://docs.dask.org/en/latest/array-api.html#dask.array.from_zarr),
+[`da.to_zarr()`](https://docs.dask.org/en/latest/array-api.html#dask.array.to_zarr),
+[`da.store()`](https://docs.dask.org/en/latest/array-api.html#dask.array.store).
 
 ===
 
@@ -619,15 +637,14 @@ See docs for `da.from_array`, `da.from_zarr`, `da.to_zarr`. @@TODO links
 
 * Zarr does support chunk-level write locks for either multi-thread or
   multi-process writes.
-  
 * But generally easier and better to align writes with chunk
   boundaries where possible.
 
-@@TODO link to docs
+See Zarr tutorial for [further info on synchronisation](https://zarr.readthedocs.io/en/stable/tutorial.html#parallel-computing-and-synchronization).
 
 ====
 
-## Compressors
+## Pluggable compressors
 
 ===
 
@@ -639,7 +656,7 @@ See docs for `da.from_array`, `da.from_zarr`, `da.to_zarr`. @@TODO links
 
 ===
 
-### Available compressors (via numcodecs)
+### Available compressors (via [numcodecs](https://numcodecs.readthedocs.io/en/stable/))
 
 Blosc, Zstandard, LZ4, Zlib, BZ2, LZMA, ...
 
@@ -657,18 +674,25 @@ big2 = root.zeros('big2',
                   compressor=compressor) 
 ```
 
-@@TODO check this works
-
 ===
 
-### Compressor (codec) interface
+### Compressor interface
 
-<p class="stretch">
-<img src="scipy-2019-files/codec-api.png" style="float: right">
-The numcodecs Codec interface defines the API for filters and compressors for use with Zarr. Built around the Python buffer protocol.
+<table class="stretch">
+<tr>
+<td style="vertical-align: top">
+<p>
+The numcodecs <a href="https://numcodecs.readthedocs.io/en/stable/abc.html">Codec API</a> defines the interface for filters and compressors for use with Zarr. 
 </p>
-
-@@TODO link to buffer protocol
+<p>
+Built around the <a href="https://docs.python.org/3/c-api/buffer.html">Python buffer protocol</a>.
+</p>
+</td>
+<td style="vertical-align: top">
+<img src="scipy-2019-files/codec-api.png">
+</td>
+</tr>
+</table>
 
 ===
 
@@ -684,7 +708,7 @@ class Zlib(Codec):
         buf = ensure_contiguous_ndarray(buf)
 
         # do compression
-        return _zlib.compress(buf, self.level)
+        return zlib.compress(buf, self.level)
 
     def decode(self, buf, out=None):
 
@@ -694,7 +718,7 @@ class Zlib(Codec):
             out = ensure_contiguous_ndarray(out)
 
         # do decompression
-        dec = _zlib.decompress(buf)
+        dec = zlib.decompress(buf)
 
         return ndarray_copy(dec, out)
 
@@ -710,12 +734,10 @@ class Zlib(Codec):
 
 ## Other Zarr implementations
 
-* z5 - C++ implementation using xtensor
-* Zarr.jl - native Julia implementation
-* @@TODO - Scala implementation
-* WIP: Zarr support in NetCDF C library
-
-@@TODO links
+* [z5](https://github.com/constantinpape/z5) - C++ implementation using xtensor
+* [Zarr.jl](https://github.com/meggart/Zarr.jl) - native Julia implementation
+* [ndarray.scala](https://github.com/lasersonlab/ndarray.scala) - Scala implementation
+* WIP: [NetCDF and native cloud storage access via Zarr](https://www.unidata.ucar.edu/blogs/news/entry/netcdf-and-native-cloud-storage)
 
 ====
 
@@ -725,44 +747,69 @@ class Zlib(Codec):
 
 ### Xarray, Intake, Pangeo
 
-@@TODO
+<img src="scipy-2019-files/xarray.png">
+
+* [xarray.open_zarr()](http://xarray.pydata.org/en/stable/generated/xarray.open_zarr.html#xarray-open-zarr),
+  [xarray.Dataset.to_zarr()](http://xarray.pydata.org/en/stable/generated/xarray.Dataset.to_zarr.html#xarray-dataset-to-zarr).
+
+* [Intake
+  project](https://www.anaconda.com/intake-taking-the-pain-out-of-data-access/)
+  for data catalogs has
+  [intake-xarray](https://intake-xarray.readthedocs.io/en/latest/quickstart.html)
+  plugin with Zarr support.
+
+* Used by Pangeo for their [cloud
+  datastore](https://github.com/pangeo-data/pangeo-datastore) ...
+
+```python
+import intake
+cat_url = 'https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/master.yaml'
+cat = intake.Catalog(cat_url)
+ds = cat.atmosphere.gmet_v1.to_dask()
+```
+
+<small>(Here's the [underlying data catalog entry](https://github.com/pangeo-data/pangeo-datastore/blob/aa3f12bcc3be9584c1a9071235874c9d6af94a4e/intake-catalogs/atmosphere.yaml#L6).)</small>
 
 ===
 
-### "High momentum" weather data
+<p class="stretch"><img src="scipy-2019-files/weather.png"></p>
 
-@@TODO met office work
+<small>https://medium.com/informatics-lab/creating-a-data-format-for-high-momentum-datasets-a394fa48b671</small>
 
 ===
 
-### Open microscopy (OME)
+### Microscopy (OME)
 
-@@TODO
+<p class="stretch"><img src="scipy-2019-files/microscopy.png"></p>
+
+See [OME's position regarding file formats](https://blog.openmicroscopy.org/community/file-formats/2019/06/25/formats/).
 
 ===
 
 ### Single cell biology
 
-@@TODO
+* [Work by Laserson lab](https://github.com/lasersonlab/single-cell-experiments) using Zarr with [ScanPy](https://scanpy.readthedocs.io/en/stable/) and [AnnData](https://icb-anndata.readthedocs-hosted.com/en/stable/index.html) to scale single cell gene expression analyses.
+* The [Human Cell Atlas](https://prod.data.humancellatlas.org/) data portal uses Zarr for [storage of gene expression matrices](https://prod.data.humancellatlas.org/pipelines/hca-pipelines/data-processing-pipelines/file-formats).
+* Use Zarr for image-based transcriptomics ([starfish](https://spacetx-starfish.readthedocs.io/en/latest/))?
 
 ====
 
 ## Future
 
-* Zarr/N5 convergence.
-* Zarr protocol spec v3.
-* Community!
+* Zarr/[N5](https://github.com/saalfeldlab/n5) convergence.
+* [Zarr protocol spec v3](https://zarr-developers.github.io/zarr/specs/2019/06/19/zarr-v3-update.html).
+* [Community!](https://github.com/zarr-developers/community)
 
 ====
 
-## Acknowledgments
+## Credits
 
-* Thanks to the Zarr core development team.
+* [Zarr core development team](https://github.com/orgs/zarr-developers/teams/core-devs/members).
 
-* Thanks to everyone who has contributed code or raised or commented
-  on an issue or PR.
+* Everyone who has contributed code or raised or commented on an issue
+  or PR, thank you!
 
-* Thanks to UK MRC and Wellcome Trust for supporting @alimanfoo.
+* UK MRC and Wellcome Trust for supporting @alimanfoo.
 
 * Zarr is a community-maintained open source project - please think of
   it as yours!
