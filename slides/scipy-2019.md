@@ -11,6 +11,9 @@ Alistair Miles ([@alimanfoo](https://github.com/alimanfoo)) - SciPy 2019
 
 <p class="stretch"><img src="scipy-2019-files/malaria.png"></p>
 
+* We use the SciPy stack for all our data analysis.
+* Data growing rapidly, need to scale our analysis.
+
 ====
 
 ## Motivation: Why Zarr?
