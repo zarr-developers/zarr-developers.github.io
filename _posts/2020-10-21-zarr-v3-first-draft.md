@@ -21,7 +21,7 @@ and ask feedback on a few specific areas of interest for the specification.
 
 We encourage you to read about the high level changes to the specifications as
 to whether this would affect your workflow in a positive or negative manner and
-send us your feedback by openeing or commenting on a issues on teh [Zarr Spec
+send us your feedback by openeing or commenting on a issues on the [Zarr Spec
 Repository](https://github.com/zarr-developers/zarr-specs). 
 
 You can also follow the current draft implementation, but be careful those might
@@ -35,8 +35,8 @@ be incomplete and the spec is not final, so use with care.
 Unlike Zarr spec v2, the spec v3 has mainly the following differences:
 
   - Zarr V3 is a flat key-value store instead of a hierarchical store. Hierarchy
-    is implied. This make it easier to do concurrent creation of arrays in deep
-    hierarchy while avoiding the necessary and often costly step of creating
+    is implied. This makes it easier to do concurrent creation of arrays in deep
+    hierarchies while avoiding the necessary and often costly step of creating
     intermediary groups. 
 
   - Zarr V3 has an explicit root, while v2 roots and groups could not be
@@ -59,7 +59,7 @@ Unlike Zarr spec v2, the spec v3 has mainly the following differences:
   - `".json"` suffix for the metadata document by default, and should ease
     exploration with external tools.
 
-# Area we request feedback on. 
+# Areas we request feedback on. 
 
 
 We solicit feedback on the following area during the RFC period of this first
@@ -67,16 +67,16 @@ draft.
 
 In zarr v2, nodes names (equivalent to folder and filenames for those of you
 with a filesystem mental model) are ascii only and case insensitive. This can be
-problmatic for some datasets as case is meaningful. Even when non meaningful, it
+problematic for some datasets as case is meaningful. Even when non meaningful, it
 can help with human comprehension or reading. In zarr v3 we want to make node
-names case sensitive. This might make store implementation more complex, in
+names case sensitive. This might make store implementations more complex, in
 particular when the underlying storage backend is not, and we know that some
-current os (macOS) are case insensitive. IF you have strong belives or use case
+current operating systems (macOS) are case insensitive. If you have strong beliefs or use cases
 to make zarr case sensitive or not, we welcome your input in [issue 57](https://github.com/zarr-developers/zarr-specs/issues/57)
 
 In the same area, we are wondering whether zarr should support full unicode. It
 has many of the same issues as above, but with extra complexity as handling of
-Unicode, and casing is much more complicated, and might not be possible on al
+Unicode, and casing is much more complicated, and might not be possible on all
 platform. So far we've restrained to ascii and fixed-length encoding of nodes
 names, but if you have a compelling use case – dataset using international names
 – or could make use of it we welcome your input on [issue
@@ -94,14 +94,13 @@ core.
 
 # Next step.
 
-While we collect feedback on this first draft of the zarr specification we wil
-be working on the implementation. WE welcome you testing, reviewing and
+While we collect feedback on this first draft of the zarr specification we will
+be working on the implementation. We welcome you testing, reviewing and
 hammering on those. We also expect a number of refactor of the zarr-python
 master branch to make integration of the v3 work easier. even if you are not
 working with v3 we would highly appreciate you working using the master branch
 of zarr and reporting any error or warning you are getting in order to help us
 cleaning up the codebase.
-
 
 
 
