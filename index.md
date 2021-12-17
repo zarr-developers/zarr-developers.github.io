@@ -27,3 +27,12 @@ Zarr is a Sponsored Project of NumFOCUS, a US 501(c)(3) public charity.
 NumFOCUS Sponsored Projects rely on the generous support of corporate sponsors, institutional partners, and individual donors.
 
 <iframe allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/qyJXBlrdzBs?color=white&theme=light"> </iframe>
+
+## Community meetings
+
+A [Google calendar](https://calendar.google.com/calendar/embed?src=c_ba2k79i3u0lkf49vo0jre27j14%40group.calendar.google.com&ctz=Europe%2FBerlin) ([ics](https://calendar.google.com/calendar/ical/c_ba2k79i3u0lkf49vo0jre27j14%40group.calendar.google.com/public/basic.ics)) lists the [regular community meetings](https://github.com/zarr-developers/community/issues/1).
+
+<iframe id="calendariframe"
+  src="https://calendar.google.com/calendar/embed?ctz=local&amp;src=c_ba2k79i3u0lkf49vo0jre27j14%40group.calendar.google.com&ctz=Europe%2FBerlin" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+<script>document.getElementById("calendariframe").src = document.getElementById("calendariframe").src.replace("ctz=local", "ctz=" + Intl.DateTimeFormat().resolvedOptions().timeZone)</script>
