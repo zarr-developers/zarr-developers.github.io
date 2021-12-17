@@ -3,6 +3,12 @@
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
+author_profile: true
+sidebar:
+  title: "Sidebar"
+  nav: sidebar
+classes:
+  - dark-theme
 ---
 
 Zarr is a container for dense ND-dimensional array data, motivated by the need for a simple, transparent, open, and community-driven format that supports high-throughput distributed I/O on different storage systems.
