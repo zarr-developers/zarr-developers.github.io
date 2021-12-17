@@ -61,10 +61,19 @@ twitter:
   username: zarr_dev
 social:
   type: Organization
+  name: Zarr
+  links:
+    - "https://twitter.com/zarr_dev"
+    - "https://github.com/zarr-developers"
 
 footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/zarr_dev"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
+      url: "https://github.com/zarr-developers"
+    - label: "Gitter"
+      icon: "fab fa-gitter"
+      url: "https://gitter.im/zarr-developers/community"
