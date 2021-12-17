@@ -28,9 +28,13 @@ Zarr data can be stored in any storage system that can be represented as a key-v
 * Read and write arrays concurrently from multiple threads or processes.
 * Organize arrays into hierarchies via annotatable groups.
 
+## Sponsorship
+
 Zarr is a Sponsored Project of NumFOCUS, a US 501(c)(3) public charity.
 
 NumFOCUS Sponsored Projects rely on the generous support of corporate sponsors, institutional partners, and individual donors.
+
+## Videos
 
 <iframe allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/qyJXBlrdzBs?color=white&theme=light"> </iframe>
 

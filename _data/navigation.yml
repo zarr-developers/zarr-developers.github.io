@@ -1,0 +1,21 @@
+main:
+  - title: "Tutorial"
+    url: https://zarr.readthedocs.io/en/stable/tutorial.html
+
+sidebar:
+  - title: About
+    children:
+      - title: "Applications"
+        url: '#applications'
+      - title: "Features"
+        url: '#features'
+      - title: "Sponsorship"
+        url: "#sponsorship"
+      - title: "Community Meetings"
+        url: '#community-meetings'
+  - title: Other sites
+    children:
+      - title: "Specification"
+        url: https://zarr-specs.readthedocs.io/en/core-protocol-v3.0-dev/
+      - title: "Implementations"
+        url: https://github.com/zarr-developers/zarr_implementations
