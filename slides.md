@@ -2,6 +2,8 @@
 layout: page
 title: Slides
 permalink: /slides/
+redirect_to:
+  - https://zarr.dev/slides
 ---
 
 * [SciPy 2019](scipy-2019.html) ([PDF](scipy-2019.pdf))

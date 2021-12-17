@@ -3,6 +3,8 @@ layout: post
 title:  "Zarr protocol v3 design update"
 date:   2019-06-19
 categories: zarr specs
+redirect_to:
+  - https://zarr.dev/zarr/specs/2019/06/19/zarr-v3-update.html
 ---
 
 Today I put together some [slides summarising the current state of

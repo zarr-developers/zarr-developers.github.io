@@ -1,2 +1,3 @@
 # zarr-developers.github.io
-Zarr blog
+
+Moved. Please see <https://zarr.dev>

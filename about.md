@@ -2,6 +2,8 @@
 layout: page
 title: About
 permalink: /about/
+redirect_to:
+  - https://zarr.dev/#description
 ---
 
 Zarr is a community project to develop specifications and software for
