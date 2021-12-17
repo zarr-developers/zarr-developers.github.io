@@ -26,4 +26,4 @@ Zarr is a Sponsored Project of NumFOCUS, a US 501(c)(3) public charity.
 
 NumFOCUS Sponsored Projects rely on the generous support of corporate sponsors, institutional partners, and individual donors.
 
-<iframe allowfullscreen="allowfullscreen" src="http://www.youtube.com/embed/qyJXBlrdzBs?color=white&theme=light"> </iframe>
+<iframe allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/qyJXBlrdzBs?color=white&theme=light"> </iframe>
