@@ -1,8 +1,13 @@
 ---
-layout: post
 title:  "Zarr protocol v3 design update"
 date:   2019-06-19
 categories: zarr specs
+
+layout: home
+author_profile: false
+sidebar:
+  title: "Content"
+  nav: sidebar
 ---
 
 Today I put together some [slides summarising the current state of
