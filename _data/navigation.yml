@@ -1,16 +1,22 @@
 main:
-  - title: "Tutorial"
+  - title: "Python Tutorial"
     url: https://zarr.readthedocs.io/en/stable/tutorial.html
 
 sidebar:
   - title: About
     children:
+      - title: "Description"
+        url: '#description'
       - title: "Applications"
         url: '#applications'
       - title: "Features"
         url: '#features'
       - title: "Sponsorship"
         url: "#sponsorship"
+      - title: "Slides"
+        url: "/slides"
+      - title: "Videos"
+        url: "#videos"
       - title: "Community Meetings"
         url: '#community-meetings'
   - title: Other sites
