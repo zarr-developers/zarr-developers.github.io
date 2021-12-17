@@ -1,4 +1,4 @@
-# zarr-developers.github.io
+# zarr.dev
 
 Main Zarr website hosted at https://zarr.dev
 
