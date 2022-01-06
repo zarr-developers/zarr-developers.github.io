@@ -14,9 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Zarr blog
-
-# email: your-email@example.com
+title: Zarr
+subtitle: chunked, compressed, N-dimensional arrays
 
 description: >- # this means to ignore newlines until "baseurl:"
 
@@ -29,15 +28,18 @@ baseurl: "" # the subpath of your site, e.g. /blog
 
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-twitter_username: zarr_dev
 github_username:  zarr-developers
 gitter_url: https://gitter.im/zarr-developers/community
 
 # Build settings
 markdown: kramdown
-theme: minima
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
 plugins:
   - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-sitemap
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -50,3 +52,28 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# https://github.com/mmistakes/minimal-mistakes/blob/641ca6f3d8cd8fb0ae24e4f77b2e62a44a65e53b/_config.yml
+logo: android-chrome-512x512.png
+search: true
+search_full_content: true
+twitter:
+  username: zarr_dev
+social:
+  type: Organization
+  name: Zarr
+  links:
+    - "https://twitter.com/zarr_dev"
+    - "https://github.com/zarr-developers"
+
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/zarr_dev"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/zarr-developers"
+    - label: "Gitter"
+      icon: "fab fa-gitter"
+      url: "https://gitter.im/zarr-developers/community"
