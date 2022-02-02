@@ -13,6 +13,8 @@ sidebar:
         url: '#features'
       - title: "Sponsorship"
         url: "#sponsorship"
+      - title: "Blog Posts"
+        url: "/posts"
       - title: "Slides"
         url: "/slides"
       - title: "Videos"

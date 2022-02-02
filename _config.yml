@@ -39,6 +39,7 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 
 # Exclude from processing.
@@ -77,3 +78,9 @@ footer:
     - label: "Gitter"
       icon: "fab fa-gitter"
       url: "https://gitter.im/zarr-developers/community"
+
+defaults:
+  - scope:
+      type: "posts"
+    values:
+      permalink: blog/:year/:month/:title/
