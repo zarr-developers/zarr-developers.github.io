@@ -19,8 +19,12 @@ sidebar:
         url: "#videos"
       - title: "Community Meetings"
         url: '#community-meetings'
+      - title: "Blog"
+        url: '#blog'
   - title: Other sites
     children:
+      - title: "Documenation"
+        url: https://zarr.readthedocs.io/en/stable/
       - title: "Specification"
         url: https://zarr-specs.readthedocs.io/en/core-protocol-v3.0-dev/
       - title: "Implementations"
