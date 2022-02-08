@@ -1,4 +1,8 @@
 main:
+  - title: "Documentation"
+    url: "https://zarr.readthedocs.io/en/stable/"
+  - title: "Contribute"
+    url: "https://zarr.readthedocs.io/en/stable/contributing.html"
   - title: "Python Tutorial"
     url: https://zarr.readthedocs.io/en/stable/tutorial.html
 
@@ -23,8 +27,6 @@ sidebar:
         url: '#blog'
   - title: Other sites
     children:
-      - title: "Documenation"
-        url: https://zarr.readthedocs.io/en/stable/
       - title: "Specification"
         url: https://zarr-specs.readthedocs.io/en/core-protocol-v3.0-dev/
       - title: "Implementations"

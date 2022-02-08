@@ -7,6 +7,14 @@ author_profile: false
 sidebar:
   title: "Content"
   nav: sidebar
+excerpt: "Have beautiful data in Zarr? Show us on Twitter!"
+header:
+  overlay_image: /images/arabidopsis.png
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+  caption: "Credit: Image courtesy of [OME](https://www.openmicroscopy.org/2020/11/04/zarr-data.html) by Valuchova et al. CC-BY 4.0, [eLife 2020](https://doi.org/10.7554/eLife.52546) [(idr0077)](https://doi.org/10.17867/10000144)"
+  actions:
+    - label: "Tweet here!"
+      url: "https://twitter.com/intent/tweet?via=zarr_dev&text=I%20created%20this%20beautiful%20piece%20using%20Zarr%21&hashtags=zarrdata%2Cbeautifulzarr%2Czarr"
 ---
 
 Zarr is a community project to develop specifications and software for
@@ -15,16 +23,11 @@ tensors. A particular focus of Zarr is to provide support for storage
 using distributed systems like cloud object stores, and to enable
 efficient I/O for parallel computing applications.
 
-![arabidopsis](/images/arabidopsis.png "arabidopsis")
-<center>Image by <a href="https://www.openmicroscopy.org/2020/11/04/zarr-data.html">OME</a></center>
-
-
-Have beautiful data in Zarr? Show us on Twitter and mention [@zarr_dev](https://twitter.com/zarr_dev) to get featured!
-
 >Recent Updates
 
+- [Zarr 2.11](https://zarr.readthedocs.io/en/stable/release.html#release-2-11-0) is released! Check out the [blog](https://zarr.dev/blog/release-2-11). 🥂
 - [Sanket Verma](https://twitter.com/msankeys963/) has officially joined Zarr as the new Community Manager! 🎉 Read the blog post [here](https://zarr.dev/blog/welcoming-community-manager/).
-- [Zarr 2.11](https://github.com/zarr-developers/zarr-python/pull/853#event-6008418550) is set to release soon! 🥂
+
 
 ## Description
 
