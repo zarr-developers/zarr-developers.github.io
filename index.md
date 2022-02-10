@@ -14,7 +14,7 @@ header:
   caption: "Credit: Image courtesy of [OME](https://www.openmicroscopy.org/2020/11/04/zarr-data.html) by Valuchova et al. CC-BY 4.0, [eLife 2020](https://doi.org/10.7554/eLife.52546) [(idr0077)](https://doi.org/10.17867/10000144)"
   actions:
     - label: "Tweet here!"
-      url: "https://twitter.com/intent/tweet?via=zarr_dev&text=I%20created%20this%20beautiful%20piece%20using%20Zarr%21&hashtags=zarrdata%2Cbeautifulzarr%2Czarr"
+      url: "https://twitter.com/intent/tweet?via=zarr_dev&hashtags=beautifuldata"
 ---
 
 Zarr is a community project to develop specifications and software for
