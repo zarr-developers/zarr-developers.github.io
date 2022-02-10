@@ -7,6 +7,14 @@ author_profile: false
 sidebar:
   title: "Content"
   nav: sidebar
+excerpt: "Have beautiful data in Zarr? Show us on Twitter!"
+header:
+  overlay_image: /images/arabidopsis.png
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+  caption: "Credit: Image courtesy of [OME](https://www.openmicroscopy.org/2020/11/04/zarr-data.html) by Valuchova et al. CC-BY 4.0, [eLife 2020](https://doi.org/10.7554/eLife.52546) [(idr0077)](https://doi.org/10.17867/10000144)"
+  actions:
+    - label: "Tweet here!"
+      url: "https://twitter.com/intent/tweet?via=zarr_dev&hashtags=beautifuldata"
 ---
 
 Zarr is a community project to develop specifications and software for
@@ -14,6 +22,12 @@ storage of large N-dimensional typed arrays, also commonly known as
 tensors. A particular focus of Zarr is to provide support for storage
 using distributed systems like cloud object stores, and to enable
 efficient I/O for parallel computing applications.
+
+>Recent Updates
+
+- [Zarr 2.11](https://zarr.readthedocs.io/en/stable/release.html#release-2-11-0) is released! Check out the [blog](https://zarr.dev/blog/release-2-11). 🥂
+- [Sanket Verma](https://twitter.com/msankeys963/) has officially joined Zarr as the new Community Manager! 🎉 Read the blog post [here](https://zarr.dev/blog/welcoming-community-manager/).
+
 
 ## Description
 
@@ -65,3 +79,7 @@ A [Google calendar](https://calendar.google.com/calendar/embed?src=c_ba2k79i3u0l
   src="https://calendar.google.com/calendar/embed?ctz=local&amp;src=c_ba2k79i3u0lkf49vo0jre27j14%40group.calendar.google.com&ctz=Europe%2FBerlin" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
 <script>document.getElementById("calendariframe").src = document.getElementById("calendariframe").src.replace("ctz=local", "ctz=" + Intl.DateTimeFormat().resolvedOptions().timeZone)</script>
+
+## Blog
+
+Check out the newly launched Zarr blog [here](https://zarr.dev/blog).

@@ -1,4 +1,8 @@
 main:
+  - title: "Documentation"
+    url: "https://zarr.readthedocs.io/en/stable/"
+  - title: "Contribute"
+    url: "https://zarr.readthedocs.io/en/stable/contributing.html"
   - title: "Python Tutorial"
     url: https://zarr.readthedocs.io/en/stable/tutorial.html
 
@@ -19,6 +23,8 @@ sidebar:
         url: "#videos"
       - title: "Community Meetings"
         url: '#community-meetings'
+      - title: "Blog"
+        url: '#blog'
   - title: Other sites
     children:
       - title: "Specification"
