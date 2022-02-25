@@ -15,7 +15,19 @@ header:
   actions:
     - label: "Tweet here!"
       url: "https://twitter.com/intent/tweet?via=zarr_dev&hashtags=beautifuldata"
+feature_row:
+  - image_path: /images/chunked.png
+    alt: "Chunked Logo"
+    excerpt: Chunked, Compressed N-Dimensional Arrays
+  - image_path: /images/cloud.png
+    alt: "Cloud Logo"
+    excerpt: "Cloud Storage & Concurrent Access"
+  - image_path: /images/hierarchy.png
+    alt: "Hierarchy Logo"
+    excerpt: "Annotated Hierarchy"
 ---
+
+{% include feature_row %}
 
 Zarr is a community project to develop specifications and software for
 storage of large N-dimensional typed arrays, also commonly known as
