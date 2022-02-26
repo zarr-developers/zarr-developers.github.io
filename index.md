@@ -2,7 +2,7 @@
 # You don't need to edit this file, it's empty on purpose.
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
+layout: single
 author_profile: false
 sidebar:
   title: "Content"
@@ -69,7 +69,7 @@ NumFOCUS Sponsored Projects rely on the generous support of corporate sponsors, 
 
 ## Videos
 
-<iframe allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/qyJXBlrdzBs?color=white&theme=light"> </iframe>
+{% include video id="qyJXBlrdzBs" provider="youtube" %}
 
 ## Community meetings
 
