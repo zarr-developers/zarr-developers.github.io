@@ -69,7 +69,15 @@ NumFOCUS Sponsored Projects rely on the generous support of corporate sponsors, 
 
 ## Videos
 
-{% include video id="qyJXBlrdzBs" provider="youtube" %}
+Videos of community members talking about Zarr. If you have a video you'd like us to share, let us know!
+
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Take a look at my video about Zarr! " data-hashtags="beautifuldata" data-related="zarr_dev" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<div class="video">
+    <figure>
+        <iframe width="640" height="480" src="//www.youtube.com/watch?v=8TlAAZcJnvA&list=PLvkeNUPrCU04Xvcph4ErxsRkZq28Oucr7&index=1" frameborder="0" allowfullscreen></iframe>
+    </figure>
+</div>
 
 ## Community meetings
 
