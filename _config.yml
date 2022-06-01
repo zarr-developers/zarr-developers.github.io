@@ -28,6 +28,12 @@ baseurl: "" # the subpath of your site, e.g. /blog
 
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
+analytics:
+  provider: "google"
+  google:
+    tracking_id: "G-BCRR9QE7Z0"
+    anonymize_ip: true
+
 github_username:  zarr-developers
 gitter_url: https://gitter.im/zarr-developers/community
 
