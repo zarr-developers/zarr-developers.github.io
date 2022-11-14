@@ -21,6 +21,8 @@ sidebar:
         url: "/slides"
       - title: "Videos"
         url: "#videos"
+      - title: "ZEPs"
+        url: '#zeps'
       - title: "Community Meetings"
         url: '#community-meetings'
       - title: "Blog"
