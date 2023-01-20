@@ -9,9 +9,9 @@ sidebar:
   nav: sidebar
 excerpt: "Have beautiful data in Zarr? Show us on Twitter!"
 header:
-  overlay_image: /images/arabidopsis.png
+  overlay_image: /images/llc4320_sst.png
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
-  caption: "Credit: Image courtesy of [OME](https://www.openmicroscopy.org/2020/11/04/zarr-data.html) by Valuchova et al. CC-BY 4.0, [eLife 2020](https://doi.org/10.7554/eLife.52546) [(idr0077)](https://doi.org/10.17867/10000144)"
+  caption: "Credit: Ryan Abernathey"
   actions:
     - label: "Tweet here!"
       url: "https://twitter.com/intent/tweet?via=zarr_dev&hashtags=beautifuldata"
