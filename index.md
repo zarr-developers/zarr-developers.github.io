@@ -23,12 +23,6 @@ tensors. A particular focus of Zarr is to provide support for storage
 using distributed systems like cloud object stores, and to enable
 efficient I/O for parallel computing applications.
 
->Recent Updates
-
-- [Zarr 2.11](https://zarr.readthedocs.io/en/stable/release.html#release-2-11-0) is released! Check out the [blog](https://zarr.dev/blog/release-2-11). 🥂
-- [Sanket Verma](https://twitter.com/msankeys963/) has officially joined Zarr as the new Community Manager! 🎉 Read the blog post [here](https://zarr.dev/blog/welcoming-community-manager/).
-
-
 ## Description
 
 Zarr is motivated by the need for a simple, transparent, open, and
