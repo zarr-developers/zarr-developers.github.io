@@ -23,8 +23,8 @@ sidebar:
         url: "#videos"
       - title: "ZEPs"
         url: '#zeps'
-      - title: "Community Meetings"
-        url: '#community-meetings'
+      - title: "Community"
+        url: '/community'
       - title: "Blog"
         url: '#blog'
   - title: Other sites

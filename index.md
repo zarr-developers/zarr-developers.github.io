@@ -86,10 +86,8 @@ We hold bi-weekly ZEPs meetings to propose, discuss, review and finalize discuss
 
 > Please note ZEPs meetings are different from bi-weekly community meetings. The Zarr Community meets two times every two weeks. Please have a look at our [community calendar](https://zarr.dev/community-calls/) for exact timings.
 
-## Community meetings
-
-Zarr community meeting notes, joining instructions, agenda and calendar are now available at: [https://zarr.dev/community-calls](https://zarr.dev/community-calls)
-
 ## Blog
 
-Check out the newly launched Zarr blog [here](https://zarr.dev/blog).
+Check out the Zarr blog [here](https://zarr.dev/blog).
+
+> The GitHub repository for the blog is [here](https://github.com/zarr-developers/blog). In addition, we’re always looking for guest blog posts. For more info, please read [this](https://github.com/zarr-developers/blog#contribute-to-zarr-blog).
