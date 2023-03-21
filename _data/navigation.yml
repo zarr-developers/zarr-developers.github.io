@@ -13,6 +13,8 @@ sidebar:
         url: '#description'
       - title: "Applications"
         url: '#applications'
+      - title: "Adopters"
+        url: "/adopters"
       - title: "Features"
         url: '#features'
       - title: "Sponsorship"
