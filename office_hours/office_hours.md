@@ -8,13 +8,11 @@ sidebar:
   nav: sidebar
 ---
 
-<p><font size="4">The office hours aim to better engage with the Zarr community and also help understand the .zarr storage format to anyone new to the format and community.</font></p>
+<p><font size="4">We’ll be hosting office hours on Wednesdays every two weeks. Please join us if you have questions about Zarr and want to learn more about the .zarr storage format. We’ll discuss the specification, the implementations, what’s new in the Zarr ecosystem, how you can get involved in the community and much more.</font></p>
 
-<p><font size="4">We'll be discuss the specification, the implementations, what's new in the Zarr ecosystem these days, how you can get involved and answer any questions related to the format and the community.</font></p>
+<p><font size="4">Office hours are a great place if you want to start using Zarr and have questions about whether Zarr suits your data storage needs. We’ll have a few items on the agenda to kickstart the meeting, but the overall agenda and structure of the office hours will be shaped according to the attendees’ and community’s needs.</font></p>
 
-<p><font size="4">We'll be mostly bootstrapping the agenda and overall structure of the office hours according to the attendees' and community's needs.</font></p>
-
-<p><font size="4">The office hours will be repeated bi-weekly. Please see the Zarr community calendar for exact timings:</font></p>
+<p><font size="4">Please see the Zarr community calendar for exact timings:</font></p>
 
 <iframe id="calendariframe" src="https://calendar.google.com/calendar/embed?ctz=local&src=c_ba2k79i3u0lkf49vo0jre27j14%40group.calendar.google.com&ctz=Europe%2FBerlin" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe> <script>document.getElementById("calendariframe").src = document.getElementById("calendariframe").src.replace("ctz=local", "ctz=" + Intl.DateTimeFormat().resolvedOptions().timeZone)</script> 
 
