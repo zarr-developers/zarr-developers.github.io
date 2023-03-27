@@ -15,6 +15,8 @@ sidebar:
         url: '#applications'
       - title: "Adopters"
         url: "/adopters"
+      - title: "Office Hours"
+        url: "/office-hours"
       - title: "Features"
         url: '#features'
       - title: "Sponsorship"
