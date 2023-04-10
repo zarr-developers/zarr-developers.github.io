@@ -8,6 +8,9 @@ sidebar:
   nav: sidebar
 ---
 
+<button type="button" name="office-hours" class="btn" onclick="window.open('https://us06web.zoom.us/j/82421833659?pwd=N0pMdURQZmIrWmdjbXhBUHFWTkZYdz09');">Join here</button> 
+<button type="button" name="office-hours-playlist" class="btn" onclick="window.open('https://www.youtube.com/@zarr_dev/playlists');">Office Hours Recordings</button>
+
 <p><font size="4">We’ll be hosting office hours on Wednesdays every two weeks. Please join us if you have questions about Zarr and want to learn more about the .zarr storage format. We’ll discuss the specification, the implementations, what’s new in the Zarr ecosystem, how you can get involved in the community and much more.</font></p>
 
 <p><font size="4">Office hours are a great place if you want to start using Zarr and have questions about whether Zarr suits your data storage needs. We’ll have a few items on the agenda to kickstart the meeting, but the overall agenda and structure of the office hours will be shaped according to the attendees’ and community’s needs.</font></p>
