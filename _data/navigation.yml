@@ -26,11 +26,11 @@ sidebar:
       - title: "Videos"
         url: "#videos"
       - title: "ZEPs"
-        url: '#zeps'
+        url: '/zeps'
       - title: "Community"
         url: '/community'
       - title: "Blog"
-        url: '#blog'
+        url: '/blog'
   - title: Other sites
     children:
       - title: "Specification"

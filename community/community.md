@@ -18,6 +18,22 @@ Feel free to explore the various communication channels mentioned below.
 
 Zarr community meeting notes, joining instructions, agenda and calendar are available at: [https://zarr.dev/community-calls](https://zarr.dev/community-calls)
 
+## ZEPs
+
+ZEP stands for Zarr Enhancement Proposal. A ZEP is a design document providing information to the Zarr community, describing a modification or enhancement of the [Zarr specifications](https://zarr-specs.readthedocs.io/en/latest/), a new feature for its processes or environment.
+
+More info on ZEPs is available at: [https://zarr.dev/zeps/](https://zarr.dev/zeps/)
+
+We hold bi-weekly ZEPs meetings to propose, discuss, review and finalize discussions around [current ZEPs](https://zarr.dev/zeps/draft_zeps/) and [Zarr Specification](https://zarr-specs.readthedocs.io/en/latest/specs.html). More info available here: [https://zarr.dev/zeps/meetings/](https://zarr.dev/zeps/meetings/)
+
+> Please note ZEPs meetings are different from bi-weekly community meetings. The Zarr Community meets two times every two weeks. Please have a look at our [community calendar](https://zarr.dev/community-calls/) for exact timings.
+
+## Blog
+
+Check out the Zarr blog [here](https://zarr.dev/blog).
+
+> The GitHub repository for the blog is [here](https://github.com/zarr-developers/blog). In addition, we’re always looking for guest blog posts. For more info, please read [this](https://github.com/zarr-developers/blog#contribute-to-zarr-blog).
+
 ## Join the community
 
 Most discussions and chats related to Zarr and its [implementations](https://github.com/zarr-developers/zarr_implementations) take place on Gitter and GitHub. If you are looking to:
