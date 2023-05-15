@@ -9,6 +9,8 @@ main:
 sidebar:
   - title: About
     children:
+      - title: "Specification"
+        url: https://zarr-specs.readthedocs.io/
       - title: "Description"
         url: '#description'
       - title: "Applications"
@@ -19,6 +21,8 @@ sidebar:
         url: "/office-hours"
       - title: "Features"
         url: '#features'
+      - title: "Implementations"
+        url: '/implementations'
       - title: "Sponsorship"
         url: "#sponsorship"
       - title: "Slides"
@@ -31,9 +35,3 @@ sidebar:
         url: '/community'
       - title: "Blog"
         url: '/blog'
-  - title: Other sites
-    children:
-      - title: "Specification"
-        url: https://zarr-specs.readthedocs.io/en/core-protocol-v3.0-dev/
-      - title: "Implementations"
-        url: https://github.com/zarr-developers/zarr_implementations
