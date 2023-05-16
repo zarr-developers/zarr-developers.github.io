@@ -18,7 +18,7 @@ Implementations are listed (in alphabetical order) as follows:<br><br>
 </font>
 
 | C          | C++            | Java          | Javascript    | Julia     | Python        | R      | Rust      |
-|---         |---             |---            |---            |---        |---            |---     |---        |
+|------------|----------------|---------------|---------------|-----------|---------------|--------|-----------|
 | [NetCDF-C] | [GDAL]         | [JZarr]       |  [Zarr.js]    | [Zarr.jl] | [Zarr-Python] | [Rarr] | [Rust-N5] |
 |            | [Tensorstore]  | [N5-Zarr]     |  [Zarr-js]    |           |               |        | [Zarr]    |
 |            | [Xtensor-Zarr] | [NetCDF-Java] |               |           |               |        |           |
