@@ -13,7 +13,7 @@ href="https://zarr-specs.readthedocs.io/">specification</a>, making
 implementations across several languages possible. It is used in various
 domains, including geospatial, bio-imaging, genomics, data science, and HPC. 🌏🔬🧬<br><br>
 
-They are listed (in alphabetical order) as follows:</font>
+Implementations are listed (in alphabetical order) as follows:</font>
 
 <font size="4">
 
