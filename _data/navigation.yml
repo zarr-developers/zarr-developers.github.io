@@ -9,29 +9,31 @@ main:
 sidebar:
   - title: About
     children:
-      - title: "Specification"
-        url: https://zarr-specs.readthedocs.io/
       - title: "Description"
         url: '#description'
       - title: "Applications"
         url: '#applications'
-      - title: "Adopters"
-        url: "/adopters"
-      - title: "Office Hours"
-        url: "/office-hours"
       - title: "Features"
         url: '#features'
-      - title: "Implementations"
-        url: '/implementations'
       - title: "Sponsorship"
         url: "#sponsorship"
-      - title: "Slides"
-        url: "/slides"
       - title: "Videos"
         url: "#videos"
-      - title: "ZEPs"
-        url: '/zeps'
-      - title: "Community"
-        url: '/community'
+  - title: Subpages
+    children:
+      - title: "Adopters"
+        url: "/adopters"
       - title: "Blog"
         url: '/blog'
+      - title: "Community"
+        url: '/community'
+      - title: "Implementations"
+        url: '/implementations'
+      - title: "Office Hours"
+        url: "/office-hours"
+      - title: "Slides"
+        url: "/slides"
+      - title: "Specification"
+        url: https://zarr-specs.readthedocs.io/
+      - title: "ZEPs"
+        url: '/zeps'
