@@ -2,7 +2,6 @@
 layout: single
 author_profile: false
 title: Zarr Community
-permalink: /community/
 sidebar:
   title: "Content"
   nav: sidebar

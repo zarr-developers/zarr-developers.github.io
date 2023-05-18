@@ -2,7 +2,6 @@
 layout: single
 author_profile: false
 title: Zarr Adopters
-permalink: /adopters/
 sidebar:
   title: "Content"
   nav: sidebar

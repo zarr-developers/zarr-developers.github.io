@@ -27,6 +27,8 @@ sidebar:
         url: '/blog'
       - title: "Community"
         url: '/community'
+      - title: "Datasets"
+        url: '/datasets'
       - title: "Implementations"
         url: '/implementations'
       - title: "Office Hours"

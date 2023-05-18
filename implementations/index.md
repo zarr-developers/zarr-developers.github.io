@@ -2,7 +2,6 @@
 layout: single
 author_profile: false
 title: Zarr Implementations
-permalink: /implementations/
 sidebar:
   title: "Content"
   nav: sidebar
