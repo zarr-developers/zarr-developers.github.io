@@ -13,7 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: npm i && npm run build
+      - name: Install and Build
+        run: |
+          gem install jekyll bundler
+          bundle exec jekyll serve
       - uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: .
