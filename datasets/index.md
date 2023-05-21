@@ -11,7 +11,7 @@ sidebar:
 Zarr is <a href="https://zarr.dev/adopters/">adopted</a> by a variety of
 research groups, universities, organisations, and open-source communities.<br>
 
-Below is a list of a fews examples of public datasets.<br><br>
+Below is a list of a few examples of public datasets.<br><br>
 </font>
 
 | Dataset                                                                                                           | Hosting               | Size  |
@@ -29,6 +29,6 @@ Below is a list of a fews examples of public datasets.<br><br>
 <br>If you think your dataset would be a useful example to add to the list,
 feel free to send a PR to the website <a href="https://github.com/zarr-developers/zarr-developers.github.io/">repository</a>.<br><br>
 
-Please ensure the dataset you're adding to the website is public, free to use,
+Please ensure the dataset you're adding to the list is public, free to use,
 documented, represents Zarr's use case in a specific domain, and is stable/maintained. 
 </font>
