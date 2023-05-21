@@ -12,7 +12,7 @@ According to the <a href="https://zarr.dev/adopters/">website</a>, Zarr is
 utilised by a variety of research groups, universities, organisations, and
 open-source communities.<br><br>
 
-We have compiled a list of public datasets for the community to use.<br><br>
+Below is a list of a fews examples of public datasets.<br><br>
 </font>
 
 | Dataset                                                                                                           | Hosting               | Size  |
