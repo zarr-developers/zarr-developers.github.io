@@ -8,9 +8,8 @@ sidebar:
 ---
 
 <font size="4">
-According to the <a href="https://zarr.dev/adopters/">website</a>, Zarr is
-utilised by a variety of research groups, universities, organisations, and
-open-source communities.<br><br>
+Zarr is <a href="https://zarr.dev/adopters/">adopted</a> by a variety of
+research groups, universities, organisations, and open-source communities.<br>
 
 Below is a list of a fews examples of public datasets.<br><br>
 </font>
@@ -18,7 +17,7 @@ Below is a list of a fews examples of public datasets.<br><br>
 | Dataset                                                                                                           | Hosting               | Size  |
 | ----------------------------------------------------------------------------------------------------------------- | --------------------- | ----- |
 | [CMIP6](https://console.cloud.google.com/marketplace/details/noaa-public/cmip6)                                   | Google Cloud          | 1 PB  |
-| [IDR (OME-NGFF)](https://idr.github.io/ome-ngff-samples/)                                                         | EBI                   | 3 TB  |
+| [Image Data Resource (IDR)](https://idr.github.io/ome-ngff-samples/)                                              | EBI                   | 3 TB  |
 | [Microsoft Planetary Computer](https://planetarycomputer.microsoft.com/catalog?filter=zarr)                       | Microsoft Azure       |       |
 | [MUR Sea Surface Temperature](https://registry.opendata.aws/mur)                                                  | AWS Open Data Program | 54 TB |
 | [NASA POWER](https://registry.opendata.aws/nasa-power/)                                                           | AWS Open Data Program |       |
