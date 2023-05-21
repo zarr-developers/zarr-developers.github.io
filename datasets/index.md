@@ -26,5 +26,9 @@ Below is a list of a fews examples of public datasets.<br><br>
 | [webKnossos](https://zarr.webknossos.org/)                                                                        | scalableminds GmbH    | 70 TB |
 
 <font size="4">
-<br>If you think your dataset would be a useful example to add to the list, feel to send a PR to the website <a href="https://github.com/zarr-developers/zarr-developers.github.io/">repository</a>.<br><br>
+<br>If you think your dataset would be a useful example to add to the list,
+feel free to send a PR to the website <a href="https://github.com/zarr-developers/zarr-developers.github.io/">repository</a>.<br><br>
+
+Please ensure the dataset you're adding to the website is public, free to use,
+documented, represents Zarr's use case in a specific domain, and is stable/maintained. 
 </font>
