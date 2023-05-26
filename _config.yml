@@ -28,12 +28,19 @@ baseurl: "" # the subpath of your site, e.g. /blog
 
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
+analytics:
+  provider: "google"
+  google:
+    tracking_id: "G-BCRR9QE7Z0"
+    anonymize_ip: true
+
 github_username:  zarr-developers
 gitter_url: https://gitter.im/zarr-developers/community
 
 # Build settings
 markdown: kramdown
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin: "dirt"
 
 plugins:
   - jekyll-feed

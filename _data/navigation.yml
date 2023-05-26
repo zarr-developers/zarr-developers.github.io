@@ -17,17 +17,23 @@ sidebar:
         url: '#features'
       - title: "Sponsorship"
         url: "#sponsorship"
-      - title: "Slides"
-        url: "/slides"
       - title: "Videos"
         url: "#videos"
-      - title: "Community Meetings"
-        url: '#community-meetings'
-      - title: "Blog"
-        url: '#blog'
-  - title: Other sites
+  - title: Subpages
     children:
-      - title: "Specification"
-        url: https://zarr-specs.readthedocs.io/en/core-protocol-v3.0-dev/
+      - title: "Adopters"
+        url: "/adopters"
+      - title: "Blog"
+        url: '/blog'
+      - title: "Community"
+        url: '/community'
       - title: "Implementations"
-        url: https://github.com/zarr-developers/zarr_implementations
+        url: '/implementations'
+      - title: "Office Hours"
+        url: "/office-hours"
+      - title: "Slides"
+        url: "/slides"
+      - title: "Specification"
+        url: https://zarr-specs.readthedocs.io/
+      - title: "ZEPs"
+        url: '/zeps'
