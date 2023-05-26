@@ -22,7 +22,6 @@ Below is a list of a few examples of public datasets.<br><br>
 | [MUR Sea Surface Temperature](https://registry.opendata.aws/mur)                                                  | AWS Open Data Program | 54 TB |
 | [NASA POWER](https://registry.opendata.aws/nasa-power/)                                                           | AWS Open Data Program |       |
 | [National Water Model](https://discourse.pangeo.io/t/the-national-water-model-reanalysis-zarr-dataset-on-aws/1449)| Amazon AWS            | 5 TB  |
-| [NGFF](https://ngff.openmicroscopy.org/data/index.html)                                                           | Various providers     |       |
 | [webKnossos](https://zarr.webknossos.org/)                                                                        | scalableminds GmbH    | 70 TB |
 
 <font size="4">
