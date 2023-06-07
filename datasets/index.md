@@ -30,6 +30,6 @@ feel free to send a PR to the website <a href="https://github.com/zarr-developer
 Please ensure the dataset you're adding to the list is public, free to use,
 documented, and illustrate the application of Zarr within a specific domain.<br><br>
 
-Please only include URLs that you expect to be stable and maintained and is
-stable/maintained in the foreseeable future.
+Please only include URLs that you expect to be stable and maintained in the
+foreseeable future.
 </font>
