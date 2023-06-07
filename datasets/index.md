@@ -8,7 +8,7 @@ sidebar:
 ---
 
 <font size="4">
-Zarr is <a href="https://zarr.dev/adopters/">adopted</a> by a variety of
+Zarr has been <a href="https://zarr.dev/adopters/">adopted</a> by a variety of
 research groups, universities, organisations, and open-source communities.<br>
 
 Below is a list of a few examples of public datasets.<br><br>
