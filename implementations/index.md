@@ -20,7 +20,7 @@ Implementations are listed (in alphabetical order) as follows:<br><br>
 | C          | C++            | Java          | Javascript    | Julia     | Python        | R      | Rust      |
 |------------|----------------|---------------|---------------|-----------|---------------|--------|-----------|
 | [NetCDF-C] | [GDAL]         | [JZarr]       |  [Zarr.js]    | [Zarr.jl] | [Zarr-Python] | [Rarr] | [Rust-N5] |
-|            | [Tensorstore]  | [N5-Zarr]     |  [Zarr-js]    |           |               |        | [Zarr]    |
+|            | [Tensorstore]  | [N5-Zarr]     |  [Zarr-js]    |           | [Zarrita]     |        | [Zarr]    |
 |            | [Xtensor-Zarr] | [NetCDF-Java] |               |           |               |        |           |
 |            | [Z5]           |               |               |           |               |        |           |
 
@@ -30,6 +30,7 @@ Implementations are listed (in alphabetical order) as follows:<br><br>
 [Zarr.js]: https://github.com/gzuidhof/zarr.js
 [Zarr.jl]: https://github.com/JuliaIO/Zarr.jl
 [Zarr-Python]: https://github.com/zarr-developers/zarr-python
+[Zarrita]: https://github.com/scalableminds/zarrita
 [Rarr]: https://github.com/grimbough/Rarr
 [Rust-N5]: https://github.com/aschampion/rust-n5
 [Tensorstore]: https://github.com/google/tensorstore/
