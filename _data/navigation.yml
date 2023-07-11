@@ -29,6 +29,8 @@ sidebar:
         url: '/community'
       - title: "Conventions"
         url: '/conventions'
+      - title: "Datasets"
+        url: '/datasets'
       - title: "Implementations"
         url: '/implementations'
       - title: "Office Hours"
