@@ -16,12 +16,12 @@ domains, including geospatial, bio-imaging, genomics, data science, and HPC. �
 Implementations are listed (in alphabetical order) as follows:<br><br>
 </font>
 
-| C          | C++            | Java          | Javascript    | Julia     | Python        | R      | Rust      |
-|------------|----------------|---------------|---------------|-----------|---------------|--------|-----------|
-| [NetCDF-C] | [GDAL]         | [JZarr]       |  [Zarr.js]    | [Zarr.jl] | [Zarr-Python] | [Rarr] | [Rust-N5] |
-|            | [Tensorstore]  | [N5-Zarr]     |  [Zarr-js]    |           | [Zarrita]     |        | [Zarr]    |
-|            | [Xtensor-Zarr] | [NetCDF-Java] |               |           |               |        |           |
-|            | [Z5]           |               |               |           |               |        |           |
+| C          | C++            | Java          | Javascript    | Julia     | Python        | R         | Rust      |
+|------------|----------------|---------------|---------------|-----------|---------------|-----------|-----------|
+| [NetCDF-C] | [GDAL]         | [JZarr]       |  [Zarr.js]    | [Zarr.jl] | [Zarr-Python] | [Rarr]    | [Rust-N5] |
+|            | [Tensorstore]  | [N5-Zarr]     |  [Zarr-js]    |           | [Zarrita]     | [Pizzarr] | [Zarr]    |
+|            | [Xtensor-Zarr] | [NetCDF-Java] |               |           |               |           |           |
+|            | [Z5]           |               |               |           |               |           |           |
 
 [NetCDF-C]: https://github.com/Unidata/netcdf-c
 [GDAL]: https://gdal.org/drivers/raster/zarr.html
@@ -39,6 +39,7 @@ Implementations are listed (in alphabetical order) as follows:<br><br>
 [Xtensor-Zarr]: https://github.com/xtensor-stack/xtensor-zarr
 [NetCDF-Java]: https://github.com/Unidata/netcdf-java
 [Z5]: https://github.com/constantinpape/z5
+[Pizzarr]: https://keller-mark.github.io/pizzarr/
 
 <font size="4">
 → Feel free to add any missing implementations by sending a PR to the website <a href="https://github.com/zarr-developers/zarr-developers.github.io/">repository</a>. 🤝🏻<br><br>
