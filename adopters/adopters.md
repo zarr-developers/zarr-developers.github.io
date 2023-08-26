@@ -32,6 +32,12 @@ sidebar:
 
 ---
 
+<a href= "https://research.google/"><img src="../adopters/logos/google_research.png" alt="Google Research" width="600" height="400"></a>
+
+<font size="3">→ Google Research has released a number of open source projects for working with Zarr data (including <a href="https://github.com/google/neuroglancer/">Neuroglancer</a>, <a href="https://github.com/google/tensorstore/">TensorStore</a>, <a href="https://github.com/google/xarray-beam/">Xarray-Beam</a>, and <a href="https://github.com/google/xarray-tensorstore/">Xarray-TensorStore</a>) and uses Zarr for distributing <a href="https://github.com/google-research/arco-era5/">large-scale weather datasets</a>.</font>
+
+---
+
 <a href="https://www.janelia.org/"><img src="../adopters/logos/hhmi.png" alt="HHMI" width="600" height="300"></a>
 
 <font size="3">→ Zarr is used extensively within Janelia Research Campus for efficiently storing and accessing large imaging datasets</font>
@@ -82,7 +88,7 @@ OME logo used by <a href="https://www.openmicroscopy.org/artwork/">permission</a
 
 <a href="https://www.unidata.ucar.edu/"><img src="../adopters/logos/unidata.png" alt="Unidata" width="600" height="300"></a>
 
-<font size="3">→ <a href="https://www.unidata.ucar.edu/">Unidata</a> is developing its netCDF libaries to support Zarr datasets amongst the atmospheric and geoscientific community.</font>
+<font size="3">→ Unidata is developing its netCDF libaries to support Zarr datasets amongst the atmospheric and geoscientific community.</font>
 
 ---
 
