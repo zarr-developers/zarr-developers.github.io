@@ -20,7 +20,7 @@ Implementations are listed (in alphabetical order) as follows:<br><br>
 |------------|----------------|---------------|---------------|-----------|---------------|-----------|-----------|
 | [NetCDF-C] | [GDAL]         | [JZarr]       |  [Zarr.js]    | [Zarr.jl] | [Zarr-Python] | [Rarr]    | [Rust-N5] |
 |            | [Tensorstore]  | [N5-Zarr]     |  [Zarr-js]    |           | [Zarrita]     | [Pizzarr] | [Zarr]    |
-|            | [Xtensor-Zarr] | [NetCDF-Java] |               |           |               |           |           |
+|            | [Xtensor-Zarr] | [NetCDF-Java] |               |           |               |           | [Zarrs]   |
 |            | [Z5]           |               |               |           |               |           |           |
 
 [NetCDF-C]: https://github.com/Unidata/netcdf-c
@@ -40,6 +40,7 @@ Implementations are listed (in alphabetical order) as follows:<br><br>
 [NetCDF-Java]: https://github.com/Unidata/netcdf-java
 [Z5]: https://github.com/constantinpape/z5
 [Pizzarr]: https://keller-mark.github.io/pizzarr/
+[Zarrs]: https://github.com/LDeakin/zarrs
 
 <font size="4">
 → Feel free to add any missing implementations by sending a PR to the website <a href="https://github.com/zarr-developers/zarr-developers.github.io/">repository</a>. 🤝🏻<br><br>
