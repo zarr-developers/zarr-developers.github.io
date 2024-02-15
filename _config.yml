@@ -76,7 +76,7 @@ social:
 footer:
   links:
     - label: "Twitter"
-      icon: "fa-brands fa-square-x-twitter"
+      icon: "fa-brands fa-x-twitter"
       url: "https://twitter.com/zarr_dev"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
