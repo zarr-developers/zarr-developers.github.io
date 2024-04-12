@@ -35,7 +35,7 @@ Check out the Zarr blog [here](https://zarr.dev/blog).
 
 ## Join the community
 
-Most discussions and chats related to Zarr and its [implementations](https://github.com/zarr-developers/zarr_implementations) take place on Gitter and GitHub. If you are looking to:
+Most discussions and chats related to Zarr and its [implementations](https://github.com/zarr-developers/zarr_implementations) take place on ZulipChat and GitHub. If you are looking to:
 
 - Interact with the maintainers, contributors and users of the project; join the ZulipChat → [here](https://ossci.zulipchat.com/)
 - Want to ask questions related to [`zarr-python`](https://github.com/zarr-developers/zarr-python) usage, create a new discussion on GitHub → [here](https://github.com/zarr-developers/zarr-python/discussions)
