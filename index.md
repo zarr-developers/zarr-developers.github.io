@@ -38,7 +38,7 @@ See the following GitHub repositories for more information:
 * [Zarr Specs](https://github.com/zarr-developers/zarr-specs)
 * [Numcodecs](https://github.com/zarr-developers/numcodecs)
 * [Z5](https://github.com/constantinpape/z5)
-* [N5](https://github.com/zarr-developers/numcodecs)
+* [N5](https://github.com/saalfeldlab/n5)
 * [Zarr.jl](https://github.com/meggart/Zarr.jl)
 * [ndarray.scala](https://github.com/lasersonlab/ndarray.scala)
 
