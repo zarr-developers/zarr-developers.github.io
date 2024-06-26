@@ -46,6 +46,7 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 
 # Exclude from processing.
