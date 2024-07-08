@@ -274,6 +274,7 @@ DEPENDENCIES
   github-pages
   jekyll-feed (~> 0.13)
   jekyll-include-cache
+  jekyll-redirect-from
   jekyll-sitemap
   kramdown-parser-gfm
   tzinfo-data
