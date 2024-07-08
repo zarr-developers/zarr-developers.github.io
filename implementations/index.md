@@ -16,12 +16,12 @@ domains, including geospatial, bio-imaging, genomics, data science, and HPC. �
 Implementations are listed (in alphabetical order) as follows:<br><br>
 </font>
 
-| C          | C++            | Java          | Javascript    | Julia     | Python        | R         | Rust      |
-|------------|----------------|---------------|---------------|-----------|---------------|-----------|-----------|
-| [NetCDF-C] | [GDAL]         | [JZarr]       |  [Zarr.js]    | [Zarr.jl] | [Zarr-Python] | [Rarr]    | [Rust-N5] |
-|            | [Tensorstore]  | [N5-Zarr]     |  [Zarr-js]    |           | [Zarrita]     | [Pizzarr] | [Zarr]    |
-|            | [Xtensor-Zarr] | [NetCDF-Java] |  [Zarrita.js] |           |               |           | [Zarrs]   |
-|            | [Z5]           |               |               |           |               |           |           |
+| C          | C++            | Java          | Javascript    | Julia     | OCaml     | Python        | R         | Rust      |
+|------------|----------------|---------------|---------------|-----------|-----------|---------------|-----------|-----------|
+| [NetCDF-C] | [GDAL]         | [JZarr]       |  [Zarr.js]    | [Zarr.jl] | [Zarr-ml] | [Zarr-Python] | [Rarr]    | [Rust-N5] |
+|            | [Tensorstore]  | [N5-Zarr]     |  [Zarr-js]    |           |           | [Zarrita]     | [Pizzarr] | [Zarr]    |
+|            | [Xtensor-Zarr] | [NetCDF-Java] |  [Zarrita.js] |           |           |               |           | [Zarrs]   |
+|            | [Z5]           |               |               |           |           |               |           |           |
 
 [NetCDF-C]: https://github.com/Unidata/netcdf-c
 [GDAL]: https://gdal.org/drivers/raster/zarr.html
@@ -42,6 +42,7 @@ Implementations are listed (in alphabetical order) as follows:<br><br>
 [Pizzarr]: https://keller-mark.github.io/pizzarr/
 [Zarrs]: https://github.com/LDeakin/zarrs
 [Zarrita.js]: https://github.com/manzt/zarrita.js
+[Zarr-ml]: https://github.com/zoj613/zarr-ml
 
 <font size="4">
 → Feel free to add any missing implementations by sending a PR to the website <a href="https://github.com/zarr-developers/zarr-developers.github.io/">repository</a>. 🤝🏻<br><br>
