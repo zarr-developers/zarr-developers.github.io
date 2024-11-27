@@ -43,6 +43,6 @@ Most discussions and chats related to Zarr and its [implementations](https://git
 
 Also, find us on:
 
-- [Twitter](https://twitter.com/zarr_dev)
+- [Bluesky](https://bsky.app/profile/zarr.dev)
 - [GitHub](https://github.com/zarr-developers)
 - [YouTube](https://www.youtube.com/@zarr_dev/playlists)
