@@ -65,20 +65,18 @@ plugins:
 logo: android-chrome-512x512.png
 search: true
 search_full_content: true
-twitter:
-  username: zarr_dev
 social:
   type: Organization
   name: Zarr
   links:
-    - "https://twitter.com/zarr_dev"
+    - "https://bsky.app/profile/zarr.dev"
     - "https://github.com/zarr-developers"
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/zarr_dev"
+    - label: "Bluesky"
+      icon: "fab fa-fw fa-bluesky-square"
+      url: "https://bsky.app/profile/zarr.dev"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/zarr-developers"
