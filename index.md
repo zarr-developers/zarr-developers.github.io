@@ -7,14 +7,14 @@ author_profile: false
 sidebar:
   title: "Content"
   nav: sidebar
-excerpt: "Have beautiful data in Zarr? Show us on Twitter!"
+excerpt: "Have beautiful data in Zarr? Show us on Bluesky!"
 header:
   overlay_image: /images/llc4320_sst.png
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
   caption: "Credit: Ryan Abernathey"
   actions:
-    - label: "Tweet here!"
-      url: "https://twitter.com/intent/tweet?via=zarr_dev&hashtags=beautifuldata"
+    - label: "Share here!"
+      url: "https://bsky.app/intent/compose?text=@zarr.dev%20%23beautifuldata"
 ---
 
 Zarr is a community project to develop specifications and software for
@@ -65,8 +65,6 @@ NumFOCUS Sponsored Projects rely on the generous support of corporate sponsors, 
 
 [Videos](https://www.youtube.com/playlist?list=PLvkeNUPrCU04Xvcph4ErxsRkZq28Oucr7)
 of community members talking about Zarr. If you have a video you'd like us to share, let us know!
-
-<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Take a look at my video about Zarr! " data-hashtags="beautifuldata" data-related="zarr_dev" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <div class="video">
     <figure>
