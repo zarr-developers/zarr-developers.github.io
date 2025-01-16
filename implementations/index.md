@@ -96,6 +96,8 @@ Zarr version 2 and 3 implementations are listed (in alphabetical order per langu
 <font size="4">
 → Feel free to add any missing implementations by sending a PR to the website <a href="https://github.com/zarr-developers/zarr-developers.github.io/">repository</a>. 🤝🏻<br><br>
 
+→ Please make sure that the implementation you add has minimal documentation, essential tests, and an active user base. <br><br>
+
 → Get involved in various Zarr implementations by fixing bugs, resolving issues, improving documentation, or contributing to the codebase.
 If you've been doing any of these activities recently, we invite you to join our <a href="https://zarr.dev/community-calls/">community meetings</a> and share your work with us. We'd be delighted to showcase your efforts. 💪🏻
 </font>
