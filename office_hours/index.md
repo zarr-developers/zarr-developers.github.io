@@ -8,7 +8,7 @@ sidebar:
   nav: sidebar
 ---
 
-<button type="button" name="office-hours" class="btn" onclick="window.open('https://us06web.zoom.us/j/82421833659?pwd=N0pMdURQZmIrWmdjbXhBUHFWTkZYdz09');">Join here</button> 
+<button type="button" name="office-hours" class="btn" onclick="window.open('https://us06web.zoom.us/j/83046491212?pwd=MV5dMCnYIy6E57Rn8IpmwasLX27wOd.1');">Join here</button> 
 
 <p><font size="4">We’re hosting office hours on Wednesdays every two weeks. Please join us if you have questions about Zarr and want to learn more about the storage format. We’ll discuss the specification, the implementations, what’s new in the Zarr ecosystem, how you can get involved in the community and much more.</font></p>
 
