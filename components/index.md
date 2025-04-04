@@ -32,18 +32,28 @@ Concrete implementations of the abstract components can be implemented in any la
 The canonical reference implementation is [Zarr-Python](https://github.com/zarr-developers/zarr-python), but there are many [other implementations](https://zarr.dev/implementations/). 
 Zarr-Python contains reference examples of useful constructs that can be re-implemented in other languages.
 
-**Zarr-Python Abstract Base Classes**: Zarr-python's [`zarr.abc`](https://zarr.readthedocs.io/en/stable/api/zarr/abc/index.html) module contains abstract base classes enforcing a particular python realization of the specification's Key-Value Store interface, based on a `MutableMapping`-like API. 
+**Abstract Base Classes**: Zarr-python's [`zarr.abc`](https://zarr.readthedocs.io/en/stable/api/zarr/abc/index.html) module contains abstract base classes enforcing a particular python realization of the specification's Key-Value Store interface, based on a `MutableMapping`-like API. 
 This component is concrete in the sense that it is implemented in a specific programming language, and enforces particular syntax for getting and setting values in a key-value store.
 
-**Zarr-Python Store Implementations**: Zarr-python's [`zarr.storage`](https://zarr.readthedocs.io/en/stable/api/zarr/abc/index.html) module contains concrete implementations of the `Store` ABC for interacting with particular storage systems, such as a local filesystem or object storage. These write data in the Native Zarr Format. 
-It's expected that most users of zarr will just use one of these implementations.
+**Store Implementations**: Zarr-python's [`zarr.storage`](https://zarr.readthedocs.io/en/stable/api/zarr/abc/index.html) module contains concrete implementations of the `Store` ABC for interacting with particular storage systems, such as a local filesystem or object storage. 
+These write data in the Native Zarr Format. 
+It's expected that most users of zarr from python will just use one of these implementations.
 
-**Zarr-Python User API**: Zarr-python's [`zarr.api`](https://zarr.readthedocs.io/en/stable/api/zarr/abc/index.html) module contains functions and classes for interacting with any concrete implementation of the `zarr.abc.Store` interface. 
+**User API**: Zarr-python's [`zarr.api`](https://zarr.readthedocs.io/en/stable/api/zarr/abc/index.html) module contains functions and classes for interacting with any concrete implementation of the `zarr.abc.Store` interface. 
 This allows user applications to use a standard zarr API to read and write from a variety of common storage systems.
 
 ## Component Flexibility
 
-One of Zarr's greatest strengths is its flexibility.
-Here are a few interesting zarr-related projects, with descriptions of how they do or don't make use of different zarr components.
+One of Zarr's greatest strengths is its flexibility, or "hackability". In addition to the generality of using key-value stores as the main abstraction, individual projects can achieve powerful functionality by intelligently using only some of the Zarr components.
+Here are a few interesting zarr-related projects, which selectively make use of a subset of different zarr components.
 
-TODO
+- **VirtualiZarr**
+
+- **NCZarr** is in some sense the opposite of VirtualiZarr - it 
+
+- **Tensorstore** is a general storage library written in C++ that can write to Zarr (so is spec-compliant non-python store implementation) but also to other array formats such as N5.
+It can write to multiple different storage sytems, so effectively has its own set of concrete store implementations.
+Additional features are provided, notably using an Optionally-Cooperative Distributed B+Tree (OCDBT) on top of a base key-value store to implement ACID transactions. 
+It still stores all data using the native Zarr Format, but versions keys at the store level.
+
+- **Icechunk** 
