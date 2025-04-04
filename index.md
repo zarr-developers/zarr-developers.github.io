@@ -45,6 +45,7 @@ or look through [other Zarr implementations](https://zarr.dev/implementations/) 
 ## Features
 
 * Chunk multi-dimensional arrays along any dimension.
+* Compress array chunks via an extensible system of compressors.
 * Store arrays in memory, on disk, inside a Zip file, on S3, etc.
 * Read and write arrays concurrently from multiple threads or processes.
 * Organize arrays into hierarchies via annotatable groups.
