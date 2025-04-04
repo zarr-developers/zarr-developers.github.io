@@ -32,15 +32,9 @@ can be represented as a key-value store, including most commonly POSIX file
 systems and cloud object storage but also zip files as well as relational and
 document databases.
 
-See the following GitHub repositories for more information:
-
-* [Zarr Python](https://github.com/zarr-developers/zarr)
-* [Zarr Specs](https://github.com/zarr-developers/zarr-specs)
-* [Numcodecs](https://github.com/zarr-developers/numcodecs)
-* [Z5](https://github.com/constantinpape/z5)
-* [N5](https://github.com/saalfeldlab/n5)
-* [Zarr.jl](https://github.com/meggart/Zarr.jl)
-* [ndarray.scala](https://github.com/lasersonlab/ndarray.scala)
+For more details read about the various [Components of Zarr](https://zarr.dev/componenets/), 
+see the canonical [Zarr-Python](https://github.com/zarr-developers/zarr-python) implementation, 
+or look through [other Zarr implementations](https://zarr.dev/implementations/) for one in your preferred language.
 
 ## Applications
 
