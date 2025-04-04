@@ -24,7 +24,7 @@ It consists of a heirarchical tree of groups and arrays, with optional arbitrary
 **Format**: If the keys in the abstract key-value store interface are mapped unaltered to paths in a POSIX filesystem or prefixes in object storage, the data written to disk will follow the "Native Zarr Format". 
 Most, but not all, zarr implementations will serialize to this format.
 
-**Extensions**: Zarr provides a core set of generally-useful features, but extensions to this core are encouraged. These might take the form of domain-specific [metadata conventions](https://zarr.dev/conventions/), new codecs, or additions to the data model via [extension points](https://zarr-specs.readthedocs.io/en/latest/v3/core/v3.0.html#extension-points). These can be enforced by implementations or client libraries however they like, but generally should be opt-in.
+**Extensions**: Zarr provides a core set of generally-useful features, but extensions to this core are encouraged. These might take the form of domain-specific [metadata conventions](https://zarr.dev/conventions/), new codecs, or additions to the data model via [extension points](https://zarr-specs.readthedocs.io/en/latest/v3/core/v3.0.html#extension-points). These can be abstract, or enforced by implementations or client libraries however they like, but generally should be opt-in.
 
 ## Concrete components
 
@@ -44,16 +44,21 @@ This allows user applications to use a standard zarr API to read and write from 
 
 ## Component Flexibility
 
-One of Zarr's greatest strengths is its flexibility, or "hackability". In addition to the generality of using key-value stores as the main abstraction, individual projects can achieve powerful functionality by intelligently using only some of the Zarr components.
-Here are a few interesting zarr-related projects, which selectively make use of a subset of different zarr components.
+One of Zarr's greatest strengths is its flexibility, or "hackability". 
+In addition to the generality of using key-value stores as the main abstraction, individual projects can achieve powerful functionality by intelligently using only some of the Zarr components.
+Here are a few interesting zarr-related projects, which selectively make use of a subset of different zarr components, both abstract and concrete.
+
+- **MongoDBStore** is a concrete store implementation in python, which stores values in a MongoDB NoSQL database under zarr keys. It is therefore spec-compliant, and can be interacted with via the zarr-python user API, but does not write data in the native zarr format.
 
 - **VirtualiZarr**
 
 - **NCZarr** is in some sense the opposite of VirtualiZarr - it 
 
-- **Tensorstore** is a general storage library written in C++ that can write to Zarr (so is spec-compliant non-python store implementation) but also to other array formats such as N5.
-It can write to multiple different storage sytems, so effectively has its own set of concrete store implementations.
+- **Tensorstore** is a general storage library written in C++ that can write to the Zarr format (so is a spec-compliant non-python "native" store implementation) but also to other array formats such as N5.
+As it can write to multiple different storage sytems, it effectively has its own set of concrete store implementations.
 Additional features are provided, notably using an Optionally-Cooperative Distributed B+Tree (OCDBT) on top of a base key-value store to implement ACID transactions. 
 It still stores all data using the native Zarr Format, but versions keys at the store level.
 
-- **Icechunk** 
+- **Icechunk** is a cloud-native tensor storage engine which also provides ACID transactions, but does so via indirection between a zarr-spec-compliant key-value store interface and a specialized non-zarr-native storage layout on-disk (for which Icechunk has it's own format spec). 
+Nevertheless the `icechunk-python` client implements a concrete subclass of the zarr-python `Store` ABC, so libraries such as xarray can use the zarr-python user API to read and write to icechunk stores, which they effectively can treat as version-controlled zarr stores. 
+Icechunk also integrates with VirtualiZarr, together allowing data stored in non-zarr formats to be committed to a persistent icechunk store and read back via the zarr-python API without copying the original data.
