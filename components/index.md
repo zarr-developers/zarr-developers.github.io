@@ -24,7 +24,7 @@ It consists of a heirarchical tree of groups and arrays, with optional arbitrary
 **Format**: If the keys in the abstract key-value store interface are mapped unaltered to paths in a POSIX filesystem or prefixes in object storage, the data written to disk will follow the "Native Zarr Format". 
 Most, but not all, zarr implementations will serialize to this format.
 
-**Extensions**: 
+**Extensions**: Zarr provides a core set of generally-useful features, but extensions to this core are encouraged. These might take the form of domain-specific [metadata conventions](https://zarr.dev/conventions/), new codecs, or additions to the data model via [extension points](https://zarr-specs.readthedocs.io/en/latest/v3/core/v3.0.html#extension-points). These can be enforced by implementations or client libraries however they like, but generally should be opt-in.
 
 ## Concrete components
 
