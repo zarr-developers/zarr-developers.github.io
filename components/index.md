@@ -19,7 +19,7 @@ These abstract components together describe what type of data can be stored in z
 
 **Format**: If the keys in the abstract key-value store interface are mapped unaltered to paths in a POSIX filesystem or prefixes in object storage, the data written to disk will follow the "Native Zarr Format". Most, but not all, zarr implementations will serialize to this format.
 
-**Extensions**:
+**Extensions**: 
 
 ## Concrete components
 
@@ -30,3 +30,9 @@ Concrete implementations of the abstract components can be implemented in any la
 **Zarr-Python Store Implementations**: Zarr-python's [`zarr.storage`](https://zarr.readthedocs.io/en/stable/api/zarr/abc/index.html) module contains concrete implementations of the `Store` ABC for interacting with particular storage systems, such as a local filesystem or object storage. These write data in the Native Zarr Format. It's expected that most users of zarr will just use one of these implementations.
 
 **Zarr-Python User API**: Zarr-python's [`zarr.api`](https://zarr.readthedocs.io/en/stable/api/zarr/abc/index.html) module contains functions and classes for interacting with any concrete implementation of the `zarr.abc.Store` interface. This allows user applications to use a standard zarr API to read and write from a variety of common storage systems.
+
+## Component Flexibility
+
+One of Zarr's greatest strengths is its flexibility. Here are a few interesting zarr-related projects, with descriptions of how they do or don't make use of different zarr components.
+
+TODO
