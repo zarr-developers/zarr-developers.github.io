@@ -27,6 +27,8 @@ sidebar:
         url: '/blog'
       - title: "Community"
         url: '/community'
+      - title: "Components"
+        url: '/components'
       - title: "Conventions"
         url: '/conventions'
       - title: "Datasets"

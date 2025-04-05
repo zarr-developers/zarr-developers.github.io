@@ -32,7 +32,7 @@ can be represented as a key-value store, including most commonly POSIX file
 systems and cloud object storage but also zip files as well as relational and
 document databases.
 
-For more details read about the various [Components of Zarr](https://zarr.dev/componenets/), 
+For more details read about the various [Components of Zarr](https://zarr.dev/components/), 
 see the canonical [Zarr-Python](https://github.com/zarr-developers/zarr-python) implementation, 
 or look through [other Zarr implementations](https://zarr.dev/implementations/) for one in your preferred language.
 
