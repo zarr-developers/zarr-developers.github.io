@@ -7,12 +7,27 @@ sidebar:
   nav: sidebar
 ---
 
-One of Zarr's greatest strengths is its flexibility, or "hackability". 
-In addition to the generality of using key-value stores as the main abstraction, individual projects can achieve powerful functionality by intelligently using only some of the Zarr components.
+One of Zarr's greatest strengths is its flexibility, or "hackability".
+
+## Types of flexibility
+
+This flexibility comes in several forms:
+- The Zarr protocol is device agnostic.
+- The Zarr data model is domain agnostic.
+- Key-value stores are an almost universal abstraction in data systems, and so can almost always be mapped to existing system interfaces.
+- The Zarr format on-disk is extremely simple.
+- Storing each chunk under a different key allows implementations to scale their IO throughput in a variety of simple ways.
+- The reference Zarr implementation is written in Python, a very hackable language, with ABCs you can use when creating new store implementations.
+- Components are seperated: the protocol, file format, standard API, ABC, and store implementations are all separate.
+- There is no requirement to use more than one zarr component - individual projects can achieve powerful functionality by intelligently using only some of the Zarr components.
+- You can define your own codecs.
+- You are free to create your own domain-specific metadata standard and enforce it upon zarr stores however you like.
+- Zarr v3 has nascent support for other extension points, including defining your own type of chunk grid, data types, and more.
 
 ## Examples
 
-Here are a few zarr-related projects, which each make use of a selected subset of different zarr components to achieve interesting functionality.
+Here are a few zarr-related software projects, which each make use of a selected subset of different zarr components to achieve interesting functionality. 
+These particular projects are more than simply zarr implementations written in a different language (you can find a [list of implementations here](https://zarr.dev/implementations/)).
 
 - **MongoDBStore** is a concrete store implementation in python, which stores values in a MongoDB NoSQL database under zarr keys. 
 It is therefore spec-compliant, and can be interacted with via the zarr-python user API, but does not write data in the native zarr format.
@@ -32,7 +47,8 @@ As it can write to multiple different storage sytems, it effectively has its own
 Additional features are provided, notably using an Optionally-Cooperative Distributed B+Tree (OCDBT) on top of a base key-value store to implement ACID transactions. 
 It still stores all data using the native Zarr Format, but versions keys at the store level.
 
-- **Icechunk** is a cloud-native tensor storage engine which also provides ACID transactions, but does so via indirection between a zarr-spec-compliant key-value store interface and a specialized non-zarr-native storage layout on-disk (for which Icechunk has it's own format spec). 
+- **Icechunk** is a cloud-native tensor storage engine which also provides ACID transactions, but does so via indirection between a zarr-spec-compliant key-value store interface and a specialized non-zarr-native storage layout on-disk (for which Icechunk has it's own format specification). 
 Whilst the core icechunk client is written in rust, the `icechunk-python` client implements a concrete subclass of the zarr-python `Store` ABC. 
 Therefore libraries such as xarray can use the zarr-python user API to read and write to icechunk stores, effectively treating them as version-controlled zarr stores. 
-Icechunk also integrates with VirtualiZarr as a serialization format for the byte range references, together allowing data stored in non-zarr formats to be committed to a persistent icechunk store and read back via the zarr-python API without copying the original data.
+Icechunk also integrates with VirtualiZarr as a serialization format for byte range references. 
+Together they allow data stored in non-zarr formats to be committed to a persistent icechunk store and read back later via the zarr-python API without duplicating the original data chunks.
