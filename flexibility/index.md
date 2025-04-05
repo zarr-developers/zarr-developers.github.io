@@ -8,6 +8,7 @@ sidebar:
 ---
 
 One of Zarr's greatest strengths is its flexibility, or "hackability".
+This largely comes from the separation of distinct [Zarr Components](https://zarr.dev/components/), but there are a range of other properties that make zarr flexible too.
 
 ## Types of flexibility
 

@@ -49,6 +49,7 @@ or look through [other Zarr implementations](https://zarr.dev/implementations/) 
 * Store arrays in memory, on disk, inside a Zip file, on S3, etc.
 * Read and write arrays concurrently from multiple threads or processes.
 * Organize arrays into hierarchies via annotatable groups.
+* Extend easily thanks to the [flexible design](https://zarr.dev/flexibility/).
 
 ## Sponsorship
 
