@@ -23,10 +23,14 @@ sidebar:
     children:
       - title: "Components"
         url: '/components'
+      - title: "Flexibility"
+        url: '/flexibility'
       - title: "Implementations"
         url: '/implementations'
       - title: "Specification"
         url: https://zarr-specs.readthedocs.io/
+      - title: "ZEPs"
+        url: '/zeps'
   - title: Community
     children:
       - title: "Adopters"
@@ -43,5 +47,3 @@ sidebar:
         url: "/office-hours"
       - title: "Slides"
         url: "/slides"
-      - title: "ZEPs"
-        url: '/zeps'
