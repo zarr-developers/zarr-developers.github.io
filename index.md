@@ -40,7 +40,9 @@ or look through [other Zarr implementations](https://zarr.dev/implementations/) 
 
 * Simple and fast serialization of NumPy-like arrays, accessible from languages including Python, C, C++, Rust, Javascript and Java
 * Multi-scale n-dimensional image storage, e.g. in light and electron microscopy
-* Geospatial rasters, e.g. following the NetCDF / CF metadata conventions
+* Gridded scientific data in various domains, such as CFD or Plasma Physics
+* Geospatial rasters, e.g. following the NetCDF data model
+* Checkpointing ML model weights.
 
 ## Features
 
