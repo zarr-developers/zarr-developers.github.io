@@ -50,9 +50,9 @@ Here are a few interesting zarr-related projects, which selectively make use of 
 
 - **MongoDBStore** is a concrete store implementation in python, which stores values in a MongoDB NoSQL database under zarr keys. It is therefore spec-compliant, and can be interacted with via the zarr-python user API, but does not write data in the native zarr format.
 
-- **VirtualiZarr**
+- **VirtualiZarr** 
 
-- **NCZarr** is in some sense the opposite of VirtualiZarr - it 
+- **NCZarr** and **Lindi** can both in some sense be considered as the opposite of VirtualiZarr - they allow interacting with zarr-formatted data on disk via a non-zarr API. Lindi maps zarr's data model to the HDF data model and allows access to via the `h5py` library through the [`LindiH5pyFile`](https://github.com/NeurodataWithoutBorders/lindi/blob/b125c111880dd830f2911c1bc2084b2de94f6d71/lindi/LindiH5pyFile/LindiH5pyFile.py#L28) class. [NCZarr](https://docs.unidata.ucar.edu/nug/current/nczarr_head.html) allows interacting with zarr-formatted data via the netcdf-c library. Note that both libraries implement optional additional optimizations by going beyond the zarr specification and format on disk, which is not recommended.
 
 - **Tensorstore** is a general storage library written in C++ that can write to the Zarr format (so is a spec-compliant non-python "native" store implementation) but also to other array formats such as N5.
 As it can write to multiple different storage sytems, it effectively has its own set of concrete store implementations.
@@ -60,5 +60,6 @@ Additional features are provided, notably using an Optionally-Cooperative Distri
 It still stores all data using the native Zarr Format, but versions keys at the store level.
 
 - **Icechunk** is a cloud-native tensor storage engine which also provides ACID transactions, but does so via indirection between a zarr-spec-compliant key-value store interface and a specialized non-zarr-native storage layout on-disk (for which Icechunk has it's own format spec). 
-Nevertheless the `icechunk-python` client implements a concrete subclass of the zarr-python `Store` ABC, so libraries such as xarray can use the zarr-python user API to read and write to icechunk stores, which they effectively can treat as version-controlled zarr stores. 
+Whilst the core icechunk client is written in rust, the `icechunk-python` client implements a concrete subclass of the zarr-python `Store` ABC. 
+Therefore libraries such as xarray can use the zarr-python user API to read and write to icechunk stores, effectively treating them as version-controlled zarr stores. 
 Icechunk also integrates with VirtualiZarr, together allowing data stored in non-zarr formats to be committed to a persistent icechunk store and read back via the zarr-python API without copying the original data.
