@@ -38,14 +38,16 @@ or look through [other Zarr implementations](https://zarr.dev/implementations/) 
 
 ## Applications
 
-* Simple and fast serialization of NumPy-like arrays, accessible from languages including Python, C, C++, Rust, Javascript and Java
 * Multi-scale n-dimensional image storage, e.g. in light and electron microscopy
+* Genomics data, e.g. for quantitative and population genetics.
 * Gridded scientific data in various domains, such as CFD or Plasma Physics
-* Geospatial rasters, e.g. following the NetCDF data model
+* Geospatial rasters, e.g. following the NetCDF data model.
 * Checkpointing ML model weights.
 
 ## Features
 
+* Serialize NumPy-like arrays in a simple and fast way.
+* Access from languages including Python, C, C++, Rust, Javascript and Java.
 * Chunk multi-dimensional arrays along any dimension.
 * Compress array chunks via an extensible system of compressors.
 * Store arrays in memory, on disk, inside a Zip file, on S3, etc.
