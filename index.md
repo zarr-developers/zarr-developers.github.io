@@ -38,9 +38,9 @@ or look through [other Zarr implementations](https://zarr.dev/implementations/) 
 
 ## Applications
 
-* Multi-scale n-dimensional image storage, e.g. in light and electron microscopy
+* Multi-scale n-dimensional image storage, e.g. in light and electron microscopy.
 * Genomics data, e.g. for quantitative and population genetics.
-* Gridded scientific data in various domains, such as CFD or Plasma Physics
+* Gridded scientific data in various domains, such as CFD or Plasma Physics.
 * Geospatial rasters, e.g. following the NetCDF data model.
 * Checkpointing ML model weights.
 
