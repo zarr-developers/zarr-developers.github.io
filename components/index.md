@@ -42,3 +42,5 @@ It's expected that most users of zarr from python will just use one of these imp
 
 **User API**: Zarr-python's [`zarr.api`](https://zarr.readthedocs.io/en/stable/api/zarr/abc/index.html) module contains functions and classes for interacting with any concrete implementation of the `zarr.abc.Store` interface. 
 This allows user applications to use a standard zarr API to read and write from a variety of common storage systems.
+
+These various components allow for a huge amount of [flexibility](https://zarr.dev/flexibility/).

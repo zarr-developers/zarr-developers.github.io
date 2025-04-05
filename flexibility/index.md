@@ -23,6 +23,7 @@ This flexibility comes in several forms:
 - You can define your own codecs.
 - You are free to create your own domain-specific metadata standard and enforce it upon zarr stores however you like.
 - Zarr v3 has nascent support for other extension points, including defining your own type of chunk grid, data types, and more.
+- [Zarr Enhancement Proposals](https://zarr.dev/zeps/) (or "ZEPs") provide a mechanism for enhancing or adding to the specification in a community-standardized way.
 
 ## Examples
 
@@ -52,3 +53,5 @@ Whilst the core icechunk client is written in rust, the `icechunk-python` client
 Therefore libraries such as xarray can use the zarr-python user API to read and write to icechunk stores, effectively treating them as version-controlled zarr stores. 
 Icechunk also integrates with VirtualiZarr as a serialization format for byte range references. 
 Together they allow data stored in non-zarr formats to be committed to a persistent icechunk store and read back later via the zarr-python API without duplicating the original data chunks.
+
+We also have a full list of [zarr implementations](https://zarr.dev/implementations/).
