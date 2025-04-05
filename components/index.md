@@ -9,13 +9,14 @@ sidebar:
 
 Zarr consists of several components, both abstract and concrete. 
 These span both the physical storage layer and the conceptual structural layer. 
-Zarr-related projects all follow the Zarr specification (and hence data model), but otherwise may choose to implement other layers however they wish.
+Zarr-related projects all use the Zarr Protocol (and hence data model), described by the [Zarr Specification](), but otherwise may choose to implement other layers however they wish.
 
 ## Abstract components
 
 These abstract components together describe what type of data can be stored in zarr, and how to store it, without assuming you are working in a particular programming language, or with a particular storage system.
 
-**Specification**: All zarr-related projects obey the [Zarr Specification](https://zarr-specs.readthedocs.io/), which formally describes how to serialize and de-serialize array data as byte streams as well as store metadata via an [Abstract Key-Value Store Interface](https://zarr-specs.readthedocs.io/en/latest/v3/core/v3.0.html#abstract-store-interface). 
+**Protocol**: All zarr-related projects use the Zarr Protocol, described in the [Zarr Specification](https://zarr-specs.readthedocs.io/), which allows transfer of chunked array data and metadata between devices (or between memory regions of the same device). 
+The protocol works by serializing and de-serializing array data as byte streams and storing both this data and accompanying metadata via an [Abstract Key-Value Store Interface](https://zarr-specs.readthedocs.io/en/latest/v3/core/v3.0.html#abstract-store-interface). 
 A system of [Codecs](https://zarr-specs.readthedocs.io/en/latest/v3/core/v3.0.html#chunk-encoding) is used to describe the encoding and serialization steps.
 
 **Data Model**: The specification's description of the [Stored Representation](https://zarr-specs.readthedocs.io/en/latest/v3/core/v3.0.html#stored-representation) implies a particular data model, based on the [HDF Abstract Data Model](https://support.hdfgroup.org/documentation/hdf5/latest/_h5_d_m__u_g.html). 
@@ -32,11 +33,11 @@ Concrete implementations of the abstract components can be implemented in any la
 The canonical reference implementation is [Zarr-Python](https://github.com/zarr-developers/zarr-python), but there are many [other implementations](https://zarr.dev/implementations/). 
 Zarr-Python contains reference examples of useful constructs that can be re-implemented in other languages.
 
-**Abstract Base Classes**: Zarr-python's [`zarr.abc`](https://zarr.readthedocs.io/en/stable/api/zarr/abc/index.html) module contains abstract base classes enforcing a particular python realization of the specification's Key-Value Store interface, based on a `MutableMapping`-like API. 
+**Abstract Base Classes**: Zarr-python's [`zarr.abc`](https://zarr.readthedocs.io/en/stable/api/zarr/abc/index.html) module contains abstract base classes enforcing a particular python realization of the specification's Key-Value Store interface, using a `Store` ABC, which is based on a `MutableMapping`-like API. 
 This component is concrete in the sense that it is implemented in a specific programming language, and enforces particular syntax for getting and setting values in a key-value store.
 
-**Store Implementations**: Zarr-python's [`zarr.storage`](https://zarr.readthedocs.io/en/stable/api/zarr/abc/index.html) module contains concrete implementations of the `Store` ABC for interacting with particular storage systems, such as a local filesystem or object storage. 
-These write data in the Native Zarr Format. 
+**Store Implementations**: Zarr-python's [`zarr.storage`](https://zarr.readthedocs.io/en/stable/api/zarr/abc/index.html) module contains concrete implementations of the `Store` ABC for interacting with particular storage systems.
+The zarr-python store implementations which write to local filesystems or object storage write data in the Native Zarr Format. 
 It's expected that most users of zarr from python will just use one of these implementations.
 
 **User API**: Zarr-python's [`zarr.api`](https://zarr.readthedocs.io/en/stable/api/zarr/abc/index.html) module contains functions and classes for interacting with any concrete implementation of the `zarr.abc.Store` interface. 
