@@ -15,7 +15,7 @@ Zarr-related projects all follow the Zarr specification (and hence data model), 
 
 These abstract components together describe what type of data can be stored in zarr, and how to store it, without assuming you are working in a particular programming language, or with a particular storage system.
 
-**Specification**: All zarr-related projects obey the [Zarr Specification](https://zarr-specs.readthedocs.io/), which formally describes how to serialize and de-serialize array data and metadata as byte streams via an [Abstract Key-Value Store Interface](https://zarr-specs.readthedocs.io/en/latest/v3/core/v3.0.html#abstract-store-interface). 
+**Specification**: All zarr-related projects obey the [Zarr Specification](https://zarr-specs.readthedocs.io/), which formally describes how to serialize and de-serialize array data as byte streams as well as store metadata via an [Abstract Key-Value Store Interface](https://zarr-specs.readthedocs.io/en/latest/v3/core/v3.0.html#abstract-store-interface). 
 A system of [Codecs](https://zarr-specs.readthedocs.io/en/latest/v3/core/v3.0.html#chunk-encoding) is used to describe the encoding and serialization steps.
 
 **Data Model**: The specification's description of the [Stored Representation](https://zarr-specs.readthedocs.io/en/latest/v3/core/v3.0.html#stored-representation) implies a particular data model, based on the [HDF Abstract Data Model](https://support.hdfgroup.org/documentation/hdf5/latest/_h5_d_m__u_g.html). 
