@@ -20,7 +20,7 @@ The protocol works by serializing and de-serializing array data as byte streams 
 A system of [Codecs](https://zarr-specs.readthedocs.io/en/latest/v3/core/v3.0.html#chunk-encoding) is used to describe the encoding and serialization steps.
 
 **Data Model**: The specification's description of the [Stored Representation](https://zarr-specs.readthedocs.io/en/latest/v3/core/v3.0.html#stored-representation) implies a particular data model, based on the [HDF Abstract Data Model](https://support.hdfgroup.org/documentation/hdf5/latest/_h5_d_m__u_g.html). 
-It consists of a heirarchical tree of groups and arrays, with optional arbitrary metadata at every node. This model is completely domain-agnostic.
+It consists of a hierarchical tree of groups and arrays, with optional arbitrary metadata at every node. This model is completely domain-agnostic.
 
 **Format**: If the keys in the abstract key-value store interface are mapped unaltered to paths in a POSIX filesystem or prefixes in object storage, the data written to disk will follow the "Native Zarr Format". 
 Most, but not all, zarr implementations will serialize to this format.
