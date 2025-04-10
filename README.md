@@ -4,16 +4,33 @@ Main Zarr website hosted at https://zarr.dev
 
 ## Building
 
+1. Install `rvm`. On ubuntu,
+
 ```
-conda create -n zarr.dev -c conda-forge rb-bundler c-compiler compilers cxx-compiler
-conda activate zarr.dev
-bundle install
-bundle exec jekyll serve
+gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys 409b6b1796c275462a1703113804bb82d39dc0e3 7d2baf1cf37b13e2069d6956105bd0e739499bdb && curl -sSL https://get.rvm.io | bash -s stable
 ```
 
-Note: using conda-forge packages directly failed on eventmachine (Dec 2021):
+2. Install Ruby
 ```
-conda create -n zarr.dev -c conda-forge rb-jekyll rb-bundler rb-public_suffix rb-minima rb-jekyll-feed
-conda activate zarr.dev
+rvm autolibs disable && rvm install ruby 3.1.2
+```
+
+Note that if the above fails, you may need to specify the path for the `rvm` command in your system.
+
+3. Install `bundler`
+
+```
+gem install bundler
+```
+
+4. In the root of the repository, run:
+
+```
+bundle install
+```
+
+5. Build and serve the site locally:
+
+```
 bundle exec jekyll serve
 ```
