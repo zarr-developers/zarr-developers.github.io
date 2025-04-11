@@ -86,3 +86,6 @@ footer:
     - label: "Zulip"
       icon: "fas fa-comments"
       url: "https://ossci.zulipchat.com/"
+
+head_scripts:
+  - assets/js/language_switcher.js

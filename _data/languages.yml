@@ -1,0 +1,10 @@
+languages:
+  - name: English
+    code: en
+    url: /en/
+  - name: Español
+    code: es
+    url: /es/
+  - name: Português
+    code: pt
+    url: /pt/
