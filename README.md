@@ -4,7 +4,13 @@ Main Zarr website hosted at https://zarr.dev
 
 ## Building
 
-1. Install `rvm`. On ubuntu,
+To build the webpage, you will need a working Ruby installation.
+
+If you are on Ubuntu and want to install the requirements locally,
+follow the steps below as root. Alternatively, see the Dockerfile
+for an alternative.
+
+1. Install `rvm`.
 
 ```
 gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys 409b6b1796c275462a1703113804bb82d39dc0e3 7d2baf1cf37b13e2069d6956105bd0e739499bdb && curl -sSL https://get.rvm.io | bash -s stable
@@ -12,7 +18,7 @@ gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys 409b6b1796c275462a1703113
 
 2. Install Ruby
 ```
-rvm autolibs disable && rvm install ruby 3.1.2
+rvm autolibs disable && rvm install ruby 3.4.3
 ```
 
 Note that if the above fails, you may need to specify the path for the `rvm` command in your system.
