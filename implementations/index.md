@@ -19,6 +19,7 @@ Zarr version 2 and 3 implementations are listed (in alphabetical order per langu
 | Language               | Implementation         | V2| V3| Latest Release/Commit        |
 |------------------------|------------------------|---|---|------------------------------|
 | C                      | [NetCDF-C]             | ✓ |   | ![][NetCDF-C-re]             |
+| C++                    | [cpp-zarr]             | ✓ |   | ![][cpp-zarr-re]             |
 | C++                    | [GDAL]                 | ✓ |   | ![][GDAL-re]                 |
 | C++/Python             | [TensorStore]          | ✓ | ✓ | ![][tensorstore-lu]          |
 | C++                    | [xtensor-zarr]         | ✓ | ✗ | ![][xtensor-zarr-lu]         |
@@ -48,6 +49,8 @@ Zarr version 2 and 3 implementations are listed (in alphabetical order per langu
 
 [NetCDF-C]: https://github.com/Unidata/netcdf-c
 [NetCDF-C-re]: https://img.shields.io/github/release-date-pre/Unidata/netcdf-c
+[cpp-zarr]: https://github.com/abcucberkeley/cpp-zarr
+[cpp-zarr-re]: https://img.shields.io/github/release-date/abcucberkeley/cpp-zarr
 [GDAL]: https://gdal.org/drivers/raster/zarr.html
 [GDAL-re]: https://img.shields.io/github/release-date-pre/OSGeo/gdal
 [JZarr]: https://github.com/bcdev/jzarr
