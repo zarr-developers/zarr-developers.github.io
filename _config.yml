@@ -75,8 +75,11 @@ social:
 footer:
   links:
     - label: "Bluesky"
-      icon: "fab fa-fw fa-bluesky-square"
+      icon: "fab fa-fw fa-bluesky"
       url: "https://bsky.app/profile/zarr.dev"
+    - label: "Mastodon"
+      icon: "fab fa-fw fa-mastodon"
+      url: "https://fosstodon.org/@zarr"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/zarr-developers"
