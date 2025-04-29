@@ -1,0 +1,7 @@
+<script>
+    current_language = localStorage.getItem("current_language");
+    if (current_language == null) {
+        current_language = "content/en/";
+    }
+    window.location.replace(current_language+"index.html");
+</script>
