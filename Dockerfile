@@ -10,4 +10,4 @@ RUN apt-get install ruby-dev -y
 RUN apt-get install make gcc g++ -y
 RUN bundle install
 RUN cat Gemfile.lock
-ENTRYPOINT bundle exec jekyll serve
+ENTRYPOINT bundle exec jekyll serve --source content/

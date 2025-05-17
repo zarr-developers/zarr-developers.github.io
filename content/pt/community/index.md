@@ -1,47 +1,47 @@
 ---
 layout: single
 author_profile: false
-title: Zarr Community
+title: Comunidade do Zarr
 sidebar:
-  title: "Content"
-  nav: sidebar-pt
+  title: Conteúdo
+  nav: sidebar
 ---
 
-Zarr is a community-driven open-source data format specification developed and maintained by diverse [contributors](https://github.com/orgs/zarr-developers/teams). The Zarr contributors aim to maintain an open, equal, diverse, and inclusive community. Please read the [Zarr Code of Conduct](https://github.com/zarr-developers/.github/blob/main/CODE_OF_CONDUCT.md) for the appropriate way to interact with the community and help each other.
+Zarr é uma especificação de formato de dados de código aberto impulsionada pela comunidade desenvolvida e mantida pela diversidade de [contribuidores](https://github.com/orgs/zarr-developers/teams). Os contribuidores do Zarr pretendem manter uma comunidade aberta, igual, diversa e inclusiva. Por favor, leia o [Código de Conduta de Zarr](https://github.com/zarr-developers/.github/blob/main/CODE_OF_CONDUCT.md) para a maneira apropriada de interagir com a comunidade e ajudar uns aos outros.
 
-The Zarr community meets two times every two weeks via [community](https://zarr.dev/community-calls) and [ZEP meetings](https://zarr.dev/zeps/meetings/). Please have a look at our [community calendar](https://zarr.dev/community-calls/) for exact timings.
+A comunidade do Zarr encontra duas vezes a cada duas semanas via [comunidade](https://zarr.dev/community-calls) e [reuniões do ZPE](https://zarr.dev/zeps/meetings/). Dê uma olhada no nosso [calendário da comunidade](https://zarr.dev/community-calls/) para ver os horários exatos.
 
-Feel free to explore the various communication channels mentioned below.
+Sinta-se à vontade para explorar os vários canais de comunicação mencionados abaixo.
 
-## Community meetings
+## Reuniões da comunidade
 
-Zarr community meeting notes, joining instructions, agenda and calendar are available at: [https://zarr.dev/community-calls](https://zarr.dev/community-calls)
+Notas de reunião da comunidade Zarr, a participação em instruções, agenda e calendário estão disponíveis em: [https://zarr.dev/community-calls](https://zarr.dev/community-calls)
 
 ## ZEPs
 
-ZEP stands for Zarr Enhancement Proposal. A ZEP is a design document providing information to the Zarr community, describing a modification or enhancement of the [Zarr specifications](https://zarr-specs.readthedocs.io/en/latest/), a new feature for its processes or environment.
+O ZEP significa Zarr Enhancement Proposal (Proposta de Melhoria do Zarr, em inglês). O ZEP é um documento de design que fornece informações à comunidade Zarr, descrevendo uma modificação ou melhoria das [especificações do Zarr](https://zarr-specs.readthedocs.io/en/latest/), uma nova característica para seus processos ou ambiente.
 
-More info on ZEPs is available at: [https://zarr.dev/zeps/](https://zarr.dev/zeps/)
+Mais informações sobre ZEPs está disponível em: [https://zarr.dev/zeps/](https://zarr.dev/zeps/)
 
-We hold bi-weekly ZEPs meetings to propose, discuss, review and finalize discussions around [current ZEPs](https://zarr.dev/zeps/draft_zeps/) and [Zarr Specification](https://zarr-specs.readthedocs.io/en/latest/specs.html). More info available here: [https://zarr.dev/zeps/meetings/](https://zarr.dev/zeps/meetings/)
+Realizamos reuniões bi-semanais de ZEPs para propor, discutir, revisar e finalizar discussões sobre [ZEPs atuais](https://zarr.dev/zeps/draft_zeps/) e [especificação do Zarr](https://zarr-specs.readthedocs.io/en/latest/specs.html). Mais informações disponíveis aqui: [https://zarr.dev/zeps/meetings/](https://zarr.dev/zeps/meetings/)
 
-> Please note ZEPs meetings are different from bi-weekly community meetings. The Zarr Community meets two times every two weeks. Please have a look at our [community calendar](https://zarr.dev/community-calls/) for exact timings.
+> Observe que as reuniões da ZEPs são diferentes das reuniões semestrais da comunidade. A Comunidade do Zarr reúne duas vezes por duas semanas. Dê uma olhada no nosso [calendário da comunidade](https://zarr.dev/community-calls/) para ver os horários exatos.
 
 ## Blog
 
-Check out the Zarr blog [here](https://zarr.dev/blog).
+Confira o blog do Zarr [aqui](https://zarr.dev/blog).
 
-> The GitHub repository for the blog is [here](https://github.com/zarr-developers/blog). In addition, we’re always looking for guest blog posts. For more info, please read [this](https://github.com/zarr-developers/blog#contribute-to-zarr-blog).
+> O repositório do GitHub para o blog está [hereaquihttps://github.com/zarr-developers/blog). Além disso, sempre procuramos postagens no blog para convidados. Para mais informações, por favor, leia [isso](https://github.com/zarr-developers/blog#contribute-to-zarr-blog).
 
-## Join the community
+## Junte-se à comunidade
 
-Most discussions and chats related to Zarr and its [implementations](https://github.com/zarr-developers/zarr_implementations) take place on ZulipChat and GitHub. If you are looking to:
+A maioria das discussões e bate-papo relacionados a Zarr e seus [implementações](https://github.com/zarr-developers/zarr_implementations) ocorrem no ZulipChat e GitHub. Se você está buscando:
 
-- Interact with the maintainers, contributors and users of the project; join the ZulipChat → [here](https://ossci.zulipchat.com/)
-- Want to ask questions related to [`zarr-python`](https://github.com/zarr-developers/zarr-python) usage, create a new discussion on GitHub → [here](https://github.com/zarr-developers/zarr-python/discussions)
-- Contribute and engage in discussion related to Zarr Specification; check out the `zarr-specs` [repo](https://github.com/zarr-developers/zarr-specs/) or create an issue → [here](https://github.com/zarr-developers/zarr-specs/issues)
+- Interagir com os mantenedores, contribuidores e usuários do projeto; junte-se ao ZulipChat → [aqui](https://ossci.zulipchat.com/)
+- Quer fazer perguntas relacionadas ao uso de [`zarr-python`](https://github.com/zarr-developers/zarr-python), crie uma nova discussão no GitHub → [aqui](https://github.com/zarr-developers/zarr-python/discussions)
+- Contribuir e participar de discussões relacionadas à Especificação do Zarr; confira o [repo](https://github.com/zarr-developers/zarr-specs/) do `zarr-specs` ou crie uma issue → [aqui](https://github.com/zarr-developers/zarr-specs/issues)
 
-Also, find us on:
+Além disso, encontre-nos:
 
 - [Bluesky](https://bsky.app/profile/zarr.dev)
 - [GitHub](https://github.com/zarr-developers)

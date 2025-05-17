@@ -1,0 +1,10 @@
+title: Zarr
+subtitle: chunked, compressed, N-dimensional arrays
+description: >-
+
+  Zarr is an open source project developing specifications and
+  software libraries for storage of data that is structured as
+  N-dimensional typed arrays (also known as tensors) in a way that is
+  compatible with parallel and distributed computing applications.
+
+content: Content

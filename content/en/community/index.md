@@ -4,7 +4,7 @@ author_profile: false
 title: Zarr Community
 sidebar:
   title: "Content"
-  nav: sidebar-en
+  nav: sidebar
 ---
 
 Zarr is a community-driven open-source data format specification developed and maintained by diverse [contributors](https://github.com/orgs/zarr-developers/teams). The Zarr contributors aim to maintain an open, equal, diverse, and inclusive community. Please read the [Zarr Code of Conduct](https://github.com/zarr-developers/.github/blob/main/CODE_OF_CONDUCT.md) for the appropriate way to interact with the community and help each other.

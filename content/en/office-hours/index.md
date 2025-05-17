@@ -4,7 +4,7 @@ author_profile: false
 title: Zarr Office Hours
 sidebar:
   title: "Content"
-  nav: sidebar-en
+  nav: sidebar
 ---
 
 <button type="button" name="office-hours" class="btn" onclick="window.open('https://us06web.zoom.us/j/83046491212?pwd=MV5dMCnYIy6E57Rn8IpmwasLX27wOd.1');">Join here</button> 

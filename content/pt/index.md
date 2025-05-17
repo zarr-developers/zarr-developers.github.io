@@ -1,70 +1,59 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: single
 author_profile: false
 sidebar:
-  title: "Content"
-  nav: sidebar-pt
-excerpt: "Have beautiful data in Zarr? Show us on Bluesky!"
+  title: Conteúdo
+  nav: sidebar
+excerpt: Possui belos dados no Zarr? Mostre-nos no Bluesky!
 header:
-  overlay_image: /images/llc4320_sst.png
-  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
-  caption: "Credit: Ryan Abernathey"
+  overlay_image: /assets/img/llc4320_sst.png
+  overlay_filter: 0.5
+  caption: "Crédito: Ryan Abernathey"
   actions:
-    - label: "Share here!"
-      url: "https://bsky.app/intent/compose?text=@zarr.dev%20%23beautifuldata"
+    - label: Compartilhe aqui!
+      url: https://bsky.app/intent/compose?text=@zarr.dev%20%23beautifuldata
 ---
 
-Zarr is a community project to develop specifications and software for
-storage of large N-dimensional typed arrays, also commonly known as
-tensors. A particular focus of Zarr is to provide support for storage
-using distributed systems like cloud object stores, and to enable
-efficient I/O for parallel computing applications.
+Zarr é um projeto da comunidade para desenvolver especificações e software para armazenamento de grandes matrizes tipadas n-dimensionais, também comumente conhecidas como tensores. Um foco particular de Zarr é fornecer suporte para o armazenamento
+usando sistemas distribuídos como armazenagem de objetos em nuvem, e para habilitar E/S eficiente para aplicações de computação paralela.
 
-## Description
+## Descrição
 
-Zarr is motivated by the need for a simple, transparent, open, and
-community-driven format that supports high-throughput distributed I/O on
-different storage systems. Zarr data can be stored in any storage system that
-can be represented as a key-value store, including most commonly POSIX file
-systems and cloud object storage but also zip files as well as relational and
-document databases.
+Zarr é motivado pela necessidade de um formato simples, transparente, aberto e baseado em uma comunidade que suporte alta taxa de E/S distribuída em sistemas de armazenamento diferentes. Os dados do Zarr podem ser armazenados em qualquer sistema de armazenamento que pode ser representado como uma loja de valor chave, incluindo mais comumente sistemas de arquivos POSIX e armazenamento em nuvem de objetos, mas também arquivos zipados, bem como bancos de dados de documentos e relacionais.
 
-See the following GitHub repositories for more information:
+Veja os seguintes repositórios do GitHub para mais informações:
 
-* [Zarr Python](https://github.com/zarr-developers/zarr)
-* [Zarr Specs](https://github.com/zarr-developers/zarr-specs)
-* [Numcodecs](https://github.com/zarr-developers/numcodecs)
-* [Z5](https://github.com/constantinpape/z5)
-* [N5](https://github.com/saalfeldlab/n5)
-* [Zarr.jl](https://github.com/meggart/Zarr.jl)
-* [ndarray.scala](https://github.com/lasersonlab/ndarray.scala)
+- [Zarr Python](https://github.com/zarr-developers/zarr)
+- [Zarr Specs](https://github.com/zarr-developers/zarr-specs)
+- [Numcodecs](https://github.com/zarr-developers/numcodecs)
+- [Z5](https://github.com/constantinpape/z5)
+- [N5](https://github.com/saalfeldlab/n5)
+- [Zarr.jl](https://github.com/meggart/Zarr.jl)
+- [ndarray.scala](https://github.com/lasersonlab/ndarray.scala)
 
-## Applications
+## Aplicações
 
-* Simple and fast serialization of NumPy-like arrays, accessible from languages including Python, C, C++, Rust, Javascript and Java
-* Multi-scale n-dimensional image storage, e.g. in light and electron microscopy
-* Geospatial rasters, e.g. following the NetCDF / CF metadata conventions
+- Serialização simples e rápida de matrizes do tipo NumPy, acessível a partir de linguagens como Python, C, C++, Rust, Javascript e Java
+- Armazenamento de imagens n-dimensionais em várias escalas, por exemplo, em microscópio leve e elétrons
+- Interpretadores geoespaciais, por exemplo, seguindo as convenções de metadados NetCDF / CFC
 
-## Features
+## Recursos
 
-* Chunk multi-dimensional arrays along any dimension.
-* Store arrays in memory, on disk, inside a Zip file, on S3, etc.
-* Read and write arrays concurrently from multiple threads or processes.
-* Organize arrays into hierarchies via annotatable groups.
+- Divide matrizes multidimensionais ao longo de qualquer dimensão.
+- Armazenar matrizes na memória, em disco, dentro de um arquivo Zip, no S3, etc.
+- Lê e escreve matrizes simultaneamente a partir de múltiplos tópicos ou processos.
+- Organiza matrizes em hierarquias através de grupos anotáveis.
 
-## Sponsorship
+## Patrocínio
 
-Zarr is a Sponsored Project of NumFOCUS, a US 501(c)(3) public charity.
+Zarr é um Projeto Patrocinado da NumFOCUS, uma instituição pública de caridade conforme a lei US 501(c)(3).
 
-NumFOCUS Sponsored Projects rely on the generous support of corporate sponsors, institutional partners, and individual donors.
+Projetos Patrocinados pela NumFOCUS dependem do generoso apoio de patrocinadores corporativos, parceiros institucionais e doadores individuais.
 
-## Videos
+## Vídeos
 
-[Videos](https://www.youtube.com/playlist?list=PLvkeNUPrCU04Xvcph4ErxsRkZq28Oucr7)
-of community members talking about Zarr. If you have a video you'd like us to share, let us know!
+[Vídeos](https://www.youtube.com/playlist?list=PLvkeNUPrCU04Xvcph4ErxsRkZq28Oucr7)
+dos membros da comunidade falando sobre Zarr. Se você tem um vídeo que gostaria que compartilhássemos, nos avise!
 
 <div class="video">
     <figure>

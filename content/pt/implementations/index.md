@@ -1,53 +1,53 @@
 ---
 layout: single
 author_profile: false
-title: Zarr Implementations
+title: Implementações do Zarr
 sidebar:
-  title: "Content"
-  nav: sidebar-pt
+  title: Conteúdo
+  nav: sidebar
 ---
 
 <font size="4">
-Zarr is a data storage format based on an open-source <a
-href="https://zarr-specs.readthedocs.io/">specification</a>, making
-implementations across several languages possible. It is used in various
-domains, including geospatial, bio-imaging, genomics, data science, and HPC. 🌏🔬🧬<br><br>
+Zarr é um formato de armazenamento de dados baseado em uma <a
+href="https://zarr-specs.readthedocs.io/">especificação</a> de código aberto, tornando
+implementações através de vários idiomas possível. Ele é usado em vários
+domínios, incluindo geoespacial, bioimagem, genômica, ciência de dados e HPC. 🌏🔬🧬<br><br>
 
-Zarr version 2 and 3 implementations are listed (in alphabetical order per language) as follows:<br><br>
-</font>
+As implementações das versões 2 e 3 do Zarr são listadas (em ordem alfabética por idioma) da seguinte forma:<br><br> </font>
 
-| Language               | Implementation         | V2| V3| Latest Release/Commit        |
-|------------------------|------------------------|---|---|------------------------------|
-| C                      | [NetCDF-C]             | ✓ |   | ![][NetCDF-C-re]             |
-| C++                    | [GDAL]                 | ✓ |   | ![][GDAL-re]                 |
-| C++/Python             | [TensorStore]          | ✓ | ✓ | ![][tensorstore-lu]          |
-| C++                    | [xtensor-zarr]         | ✓ | ✗ | ![][xtensor-zarr-lu]         |
-| C++                    | [z5]                   | ✓ |   | ![][z5-re]                   |
-| Java                   | [JZarr]                | ✓ |   | ![][JZarr-lu]                |
-| Java                   | [n5-zarr]              | ✓ |   | ![][n5-zarr-lu]              |
-| Java                   | [netCDF-Java]          | ✓ |   | ![][netCDF-Java-re]          |
-| Java                   | [zarr-java]            | ? | ? | ![][zarr-java-re]            |
-| Javascript             | [Zarr.js]              | ✓ |   | ![][Zarr.js-re]              |
-| Javascript             | [zarr-js]              | ✓ |   | ![][zarr-js-lu]              |
-| Javascript             | [zarrita.js]           | ✓ | ✓ | ![][zarrita.js-re]           |
-| Julia                  | [Zarr.jl]              | ✓ |   | ![][Zarr.jl-re]              |
-| OCaml                  | [zarr-ml]              |   | ✓ | ![][zarr-ml-re]              |
-| Python                 | [Zarr-Python]          | ✓ | ✓ | ![][Zarr-Python-re]          |
-| Python                 | [Zarrita]              | ✓ | ✓ | ![][Zarrita-lu]              |
-| R                      | [pizzarr]              | ✓ |   | ![][pizzarr-lu]              |
-| R                      | [Rarr]                 | ✓ |   | ![][Rarr-lu]                 |
-| Rust                   | [charizarr]            |   | ? | ![][charizarr-lu]            |
-| Rust                   | [rust-N5]              |   |   | ![][rust-N5-lu]              |
-| Rust                   | [zarr]                 |   | ? | ![][zarr-lu]                 |
-| Rust                   | [zarr3-rs]             |   | ? | ![][zarr3-rs-lu]             |
-| Rust/Python/C          | [zarrs]                | ✓ | ✓ | ![][zarrs-re]                |
+| Linguagem     | Implementação  | V2 | V3 | Último lançamento/Commit |
+| ------------- | -------------- | -- | -- | ------------------------ |
+| C             | [NetCDF-C]     | ✓  |    | ![][NetCDF-C-re]         |
+| C++           | [cpp-zarr]     | ✓  |    | ![][cpp-zarr-re]         |
+| C++           | [GDAL]         | ✓  |    | ![][GDAL-re]             |
+| C++/Python    | [TensorStore]  | ✓  | ✓  | ![][tensorstore-lu]      |
+| C++           | [xtensor-zarr] | ✓  | ✗  | ![][xtensor-zarr-lu]     |
+| C++           | [z5]           | ✓  |    | ![][z5-re]               |
+| Java          | [JZarr]        | ✓  |    | ![][JZarr-lu]            |
+| Java          | [n5-zarr]      | ✓  |    | ![][n5-zarr-lu]          |
+| Java          | [netCDF-Java]  | ✓  |    | ![][netCDF-Java-re]      |
+| Java          | [zarr-java]    | ?  | ?  | ![][zarr-java-re]        |
+| Javascript    | [Zarr.js]      | ✓  |    | ![][Zarr.js-re]          |
+| Javascript    | [zarr-js]      | ✓  |    | ![][zarr-js-lu]          |
+| Javascript    | [zarrita.js]   | ✓  | ✓  | ![][zarrita.js-re]       |
+| Julia         | [Zarr.jl]      | ✓  |    | ![][Zarr.jl-re]          |
+| OCaml         | [zarr-ml]      |    | ✓  | ![][zarr-ml-re]          |
+| Python        | [Zarr-Python]  | ✓  | ✓  | ![][Zarr-Python-re]      |
+| Python        | [Zarrita]      | ✓  | ✓  | ![][Zarrita-lu]          |
+| R             | [pizzarr]      | ✓  |    | ![][pizzarr-lu]          |
+| R             | [Rarr]         | ✓  |    | ![][Rarr-lu]             |
+| Rust          | [charizarr]    |    | ?  | ![][charizarr-lu]        |
+| Rust          | [rust-N5]      |    |    | ![][rust-N5-lu]          |
+| Rust          | [zarr]         |    | ?  | ![][zarr-lu]             |
+| Rust          | [zarr3-rs]     |    | ?  | ![][zarr3-rs-lu]         |
+| Rust/Python/C | [zarrs]        | ✓  | ✓  | ![][zarrs-re]            |
 
-<sup>✓ Likely conformant</sup>
-<sup>? Unknown conformance</sup>
-<sup>✗ Nonconformant</sup>
+<sup>✓ Provavelmente compatível</sup> <sup>? Compatibilidade desconhecida</sup> <sup>✗ Não compatível</sup>
 
 [NetCDF-C]: https://github.com/Unidata/netcdf-c
 [NetCDF-C-re]: https://img.shields.io/github/release-date-pre/Unidata/netcdf-c
+[cpp-zarr]: https://github.com/abcucberkeley/cpp-zarr
+[cpp-zarr-re]: https://img.shields.io/github/release-date/abcucberkeley/cpp-zarr
 [GDAL]: https://gdal.org/drivers/raster/zarr.html
 [GDAL-re]: https://img.shields.io/github/release-date-pre/OSGeo/gdal
 [JZarr]: https://github.com/bcdev/jzarr
@@ -59,7 +59,7 @@ Zarr version 2 and 3 implementations are listed (in alphabetical order per langu
 [Zarr-Python]: https://github.com/zarr-developers/zarr-python
 [Zarr-Python-re]: https://img.shields.io/github/release-date-pre/zarr-developers/zarr-python
 [Zarrita]: https://github.com/scalableminds/zarrita
-[Zarrita-lu]: https://img.shields.io/github/last-commit/scalableminds/zarrita
+[Zarrita-lu]: https://img.shields.io/github/last-commit/scalableminds/zarritaLikely
 [Rarr]: https://github.com/grimbough/Rarr
 [Rarr-lu]: https://img.shields.io/github/last-commit/grimbough/Rarr
 [rust-N5]: https://github.com/aschampion/rust-n5
@@ -93,9 +93,7 @@ Zarr version 2 and 3 implementations are listed (in alphabetical order per langu
 [zarr-java]: https://github.com/zarr-developers/zarr-java
 [zarr-java-re]: https://img.shields.io/github/release-date-pre/zarr-developers/zarr-java
 
-<font size="4">
-→ Feel free to add any missing implementations by sending a PR to the website <a href="https://github.com/zarr-developers/zarr-developers.github.io/">repository</a>. 🤝🏻<br><br>
+<font size="4">→ Sinta-se à vontade para adicionar quaisquer implementações faltantes enviando uma PR para o site <a href="https://github.com/zarr-developers/zarr-developers.github.io/">repositório</a>. 🤝🏻<br><br>
 
-→ Get involved in various Zarr implementations by fixing bugs, resolving issues, improving documentation, or contributing to the codebase.
-If you've been doing any of these activities recently, we invite you to join our <a href="https://zarr.dev/community-calls/">community meetings</a> and share your work with us. We'd be delighted to showcase your efforts. 💪🏻
-</font>
+→ envolva-se em várias implementações do Zarr corrigindo erros, resolvendo problemas, melhorando a documentação ou contribuindo para o código.
+Se você tem feito qualquer dessas atividades recentemente, nós convidamos você a participar de nossas <a href="https://zarr.dev/community-calls/">reuniões da comunidade</a> e compartilhar seu trabalho conosco. Estaríamos encantados em mostrar seus esforços. 💪🏻 </font>

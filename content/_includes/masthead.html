@@ -1,0 +1,59 @@
+{%- comment -%}
+https://github.com/mmistakes/minimal-mistakes/blob/4.26.2/_includes/masthead.html
+{%- endcomment -%}
+
+{% assign page_language = page.url | slice: 1, 2 %}
+{% assign languages = "" | split: ',' %}
+{% for lang_data in site.languages %}
+  {% assign languages = languages | push: lang_data.prefix %}
+{% endfor %}
+
+{% unless languages contains page_language %}
+  {% assign page_language = site.default_language %}
+{% endunless %}
+
+{% capture logo_path %}{{ site.logo }}{% endcapture %}
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        {% unless logo_path == empty %}
+          <a class="site-logo" href="{{ ('/' |append: page_language | append: '/') | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+        {% endunless %}
+        <a class="site-title" href="{{ ('/' |append: page_language | append: '/') | relative_url }}">
+          {{ site.data[page_language].messages.title }}
+          <span class="site-subtitle">{{ site.data[page_language].messages.subtitle }}</span>
+        </a>
+        <ul class="visible-links">
+          {%- for link in site.data[page_language].navigation.main -%}
+            <li class="masthead__menu-item">
+              <a
+                href="{{ link.url | relative_url }}"
+                {% if link.description %} title="{{ link.description }}"{% endif %}
+                {% if link.target %} target="{{ link.target }}"{% endif %}
+              >{{ link.title }}</a>
+            </li>
+          {%- endfor -%}
+        </ul>                
+        {% if site.search == true %}
+        <div class="masthead__dropdown">
+        <select class="" style="box-shadow: none; background-color: unset; margin-bottom: 0px;" onchange="change_language()" id="select_language">
+          {% for lang_data in site.languages %}
+          <option value="{{ lang_data.prefix }}">{{ lang_data.label }}</option>
+          {% endfor %}
+        </select>
+        </div>
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
+          <i class="fas fa-search"></i>
+        </button>
+        {% endif %}
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>

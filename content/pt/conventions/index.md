@@ -1,18 +1,16 @@
 ---
 layout: single
 author_profile: false
-title: Zarr Conventions
+title: Convenções do Zarr
 sidebar:
-  title: "Content"
-  nav: sidebar-pt
+  title: Conteúdo
+  nav: sidebar
 ---
 
-<font size="4">
-The Zarr storage format is used in various domains and has active communities
-for each field. These communities have established several conventions on top
-of Zarr.<br><br>
+<font size="4">O formato de armazenamento do Zarr é usado em vários domínios e tem comunidades ativas para cada campo. Estas comunidades estabeleceram várias convenções no topo
+de Zarr.<br><br>
 
-Here are some of the conventions that are currently in use:<br>
+Aqui estão algumas das convenções que estão em uso:<br>
 
 <ul>
 <li><a href="https://anndata.readthedocs.io/en/latest/">Anndata</a></li>
@@ -23,6 +21,4 @@ Here are some of the conventions that are currently in use:<br>
 <li><a href="https://docs.xarray.dev/en/stable/internals/zarr-encoding-spec.html">Xarray</a></li>
 </ul>
 
-If you're working on/know a new convention and want to add it to the list, feel free
-to send a PR to the website <a href="https://github.com/zarr-developers/zarr-developers.github.io/">repository</a>.
-</font>
+Se você está trabalhando em/saiba uma nova convenção e quer adicioná-la à lista, sinta-se livre para enviar um PR para o site <a href="https://github.com/zarr-developers/zarr-developers.github.io/">repositório</a>. </font>

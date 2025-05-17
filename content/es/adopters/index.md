@@ -1,98 +1,98 @@
 ---
 layout: single
 author_profile: false
-title: Zarr Adopters
+title: Usuarios de Zarr
 sidebar:
-  title: "Content"
-  nav: sidebar-es
+  title: Contenido
+  nav: sidebar
 ---
 
-<p style="font-family:Trebuchet MS"><font size="4">💡 If you're using Zarr in any way and would like to be added on this page, please drop your logo and blurb <a href="https://github.com/zarr-developers/community/issues/60">here</a>.</font></p>
+<p style="font-family:Trebuchet MS"><font size="4">💡 Si estás utilizando Zarr de alguna manera y te gustaría que te agreguemos en esta página, coloca tu logotipo y publicidad <a href="https://github.com/zarr-developers/community/issues/60">aquí</a>.</font></p>
 
-<p style="font-family:Trebuchet MS"><font size="4"> Thanks to the amazing community, Zarr is widely adopted and used by these groups. Here are the logos (in alphabetical order):</font></p>
+<p style="font-family:Trebuchet MS"><font size="4"> Gracias a la increíble comunidad, Zarr es ampliamente adoptado y utilizado por estos grupos. Estos son los logos (en orden alfabético):</font></p>
 
-<a href="https://carbonplan.org/"><img src="../adopters/logos/carbonplan.svg" alt="Carbonplan" width="600" height="300"></a>
+<a href="https://carbonplan.org/"><img src="{{ '/assets/img/logos/carbonplan.svg' | relative_url }}" alt="Carbonplan" width="600" height="300"></a>
 
-<font size="3">→ Zarr is used by <a href="https://carbonplan.org/">CarbonPlan</a> as a storage format for analysis and visualization of climate data.</font>
-
----
-
-<a href="https://www.columbia.edu/"><img src="../adopters/logos/columbia.png" alt="Columbia" width="700" height="300"></a>
+<font size="3">→ Zarr es utilizado por <a href="https://carbonplan.org/">CarbonPlan</a> como formato de almacenamiento para el análisis y visualización de datos climáticos.</font>
 
 ---
 
-<a href="https://lamont.columbia.edu/"><img src="../adopters/logos/ldeo.png" alt="LDEO" width="700" height="400"></a>
+<a href="https://www.columbia.edu/"><img src="{{ '/assets/img/logos/columbia.png' | relative_url }}" alt="Columbia" width="700" height="300"></a>
 
 ---
 
-<a href="https://dandiarchive.org/"><img src="../adopters/logos/dandi.svg" alt="DANDI" width="500" height="300"></a>
-
-<font size="3">→ Zarr is currently used by DANDI for lightsheet microscopy and some ex vivo MRI datasets, and is being considered as a backend for Neurodata Without Borders (NWB) neurophysiology datasets.</font>
+<a href="https://lamont.columbia.edu/"><img src="{{ '/assets/img/logos/ldeo.png' | relative_url }}"  alt="LDEO" width="700" height="400"></a>
 
 ---
 
-<a href= "https://research.google/"><img src="../adopters/logos/google_research.png" alt="Google Research" width="600" height="400"></a>
+<a href="https://dandiarchive.org/"><img src="{{ '/assets/img/logos/dandi.svg' | relative_url }}"  alt="DANDI" width="500" height="300"></a>
 
-<font size="3">→ Google Research has released a number of open source projects for working with Zarr data (including <a href="https://github.com/google/neuroglancer/">Neuroglancer</a>, <a href="https://github.com/google/tensorstore/">TensorStore</a>, <a href="https://github.com/google/xarray-beam/">Xarray-Beam</a>, and <a href="https://github.com/google/xarray-tensorstore/">Xarray-TensorStore</a>) and uses Zarr for distributing <a href="https://github.com/google-research/arco-era5/">large-scale weather datasets</a>.</font>
-
----
-
-<a href="https://www.janelia.org/"><img src="../adopters/logos/hhmi.png" alt="HHMI" width="600" height="300"></a>
-
-<font size="3">→ Zarr is used extensively within Janelia Research Campus for efficiently storing and accessing large imaging datasets</font>
+<font size="3">→ DANDI utiliza actualmente Zarr para microscopía de lámina luminosa y algunos conjuntos de datos de resonancia magnética ex vivo, y se está considerando como motor para conjuntos de datos de neurofisiología de Neurodata Without Borders (NWB).</font>
 
 ---
 
-<a href="https://leap.columbia.edu/"><img src="../adopters/logos/leap.webp" alt="LEAP" width="550" height="300"></a>
+<a href= "https://research.google/"><img src="{{ '/assets/img/logos/google_research.png' | relative_url }}"  alt="Google Research" width="600" height="400"></a>
 
-<font size="3">→ Zarr is used by the <a href="https://leap.columbia.edu/">LEAP Project</a> (Learning the Earth with Artificial Intelligence and Physics) at Columbia University as the data format for the LEAP-Pangeo data library. LEAP researchers use Zarr to perform data analytics and machine learning for climate modeling.</font>
-
----
-
-<a href="https://planetarycomputer.microsoft.com/catalog?filter=zarr"><img src="../adopters/logos/microsoft.png" alt="Microsoft" width="600" height="300"></a>
-
-<font size="3">→ Zarr is used by the <a href="https://planetarycomputer.microsoft.com/">Microsoft Planetary Computer</a> as a cloud-native storage format for chunked, N-dimensional arrays of geospatial data.</font>
+<font size="3">→ Google Research ha publicado una serie de proyectos de código abierto para trabajar con datos de Zarr (incluidos <a href="https://github.com/google/neuroglancer/">Neuroglancer</a>, <a href="https://github.com/google/tensorstore/">TensorStore</a>, <a href="https://github.com/google/xarray-beam/">Xarray-Beam</a> y <a href="https://github.com/google/xarray-tensorstore/">Xarray-TensorStore</a>) y utiliza Zarr para distribuir <a href="https://github.com/google-research/arco-era5/">conjuntos de datos meteorológicos a gran escala</a>.</font>
 
 ---
 
-<a href="https://www.nasa.gov/"><img src="../adopters/logos/nasa.webp" alt="NASA" width="600" height="300"></a>
+<a href="https://www.janelia.org/"><img src="{{ '/assets/img/logos/hhmi.png' | relative_url }}"  alt="HHMI" width="600" height="300"></a>
 
-<font size="3">→ Zarr is used by NASA as an analysis-ready data store for chunked, N-dimensional arrays of geospatial data.</font>
-
----
-
-<a href="https://ncar.ucar.edu/"><img src="../adopters/logos/ncar.svg" alt="NCAR" width="600" height="300"></a>
+<font size="3">→ Zarr se utiliza ampliamente en el Janelia Research Campus para almacenar y acceder de manera eficiente a grandes conjuntos de datos de imágenes</font>
 
 ---
 
-<a href="https://www.openmicroscopy.org/"><img src="../adopters/logos/ome_logo.svg" alt="OME" width="600" height="300"></a>
+<a href="https://leap.columbia.edu/"><img src="{{ '/assets/img/logos/leap.webp' | relative_url }}"  alt="LEAP" width="550" height="300"></a>
 
-<font size="3">→ The <a href="https://www.openmicroscopy.org/">Open Microscopy Environment (OME)</a> community is developing a format, OME-Zarr, using Zarr to store large, n-dimensional biological images as part of the <a href="https://ngff.openmicroscopy.org/">Next-generation file format (NGFF)</a> effort."
-
-OME logo used by <a href="https://www.openmicroscopy.org/artwork/">permission</a>, trademarked <a href="https://www.glencoesoftware.com/">Glencoe Software, Inc.</a></font>
+<font size="3">→ Zarr es utilizado por el <a href="https://leap.columbia.edu/">Proyecto LEAP</a> (Aprendiendo la Tierra con Inteligencia Artificial y Física) de la Universidad de Columbia como formato de datos para la biblioteca de datos LEAP-Pangeo. Los investigadores de LEAP utilizan Zarr para realizar análisis de datos y aprendizaje automático para la modelización climática.</font>
 
 ---
 
-<a href="https://pangeo.io/"><img src="../adopters/logos/pangeo.png" alt="Pangeo" width="550" height="300"></a>
+<a href="https://planetarycomputer.microsoft.com/catalog?filter=zarr"><img src="{{ '/assets/img/logos/microsoft.png' | relative_url }}"  alt="Microsoft" width="600" height="300"></a>
 
-<font size="3">→ Zarr is used extensively within the <a href="https://pangeo.io/">Pangeo Project</a> as a cloud native storage format for ocean, weather, climate, and geospatial data.</font>
-
----
-
-<a href="https://scalableminds.com/"><img src="../adopters/logos/scalableminds.svg" alt="scalableminds" width="500" height="250"></a>
-
-<font size="3">→ scalable minds uses Zarr to store and process peta-scale 3D images of brain tissue for Connectomics analyses.</font>
+<font size="3">→ <a href="https://planetarycomputer.microsoft.com/">Microsoft Planetary Computer</a> utiliza Zarr como formato de almacenamiento nativo de la nube para matrices fragmentadas  N-dimensionales de datos geoespaciales.</font>
 
 ---
 
-<a href="https://www.unidata.ucar.edu/"><img src="../adopters/logos/unidata.png" alt="Unidata" width="600" height="300"></a>
+<a href="https://www.nasa.gov/"><img src="{{ '/assets/img/logos/nasa.webp' | relative_url }}"  alt="NASA" width="600" height="300"></a>
 
-<font size="3">→ <a href="https://www.unidata.ucar.edu/">Unidata</a> is developing its netCDF libaries to support Zarr datasets amongst the atmospheric and geoscientific community.</font>
+<font size="3">→ La NASA utiliza Zarr como un almacén de datos listo para el análisis para matrices fragmentadas N-dimensionales de datos geoespaciales.</font>
 
 ---
 
-<a href="https://webknossos.org/"><img src="../adopters/logos/webknossos.svg" alt="Webknossos" width="600" height="300"></a>
+<a href="https://ncar.ucar.edu/"><img src="{{ '/assets/img/logos/ncar.svg' | relative_url }}"  alt="NCAR" width="600" height="300"></a>
 
-<font size="3">→ WEBKNOSSOS is a web-based platform for visualizing, collaboratively annotating and sharing large 3D images. Zarr is used for accessing remotely stored images as well as securely streaming annotation data to client applications.</font>
+---
+
+<a href="https://www.openmicroscopy.org/"><img src="{{ '/assets/img/logos/ome_logo.svg' | relative_url }}" alt="OME" width="600" height="300"></a>
+
+<font size="3">→ La comunidad <a href="https://www.openmicroscopy.org/">Open Microscopy Environment (OME)</a> está desarrollando un formato, OME-Zarr, que utiliza Zarr para almacenar imágenes biológicas grandes y N-dimensionales como parte del esfuerzo del <a href="https://ngff.openmicroscopy.org/">formato de archivo de próxima generación (NGFF)</a>".
+
+Logotipo de OME utilizado con <a href="https://www.openmicroscopy.org/artwork/">permiso</a>, marca registrada <a href="https://www.glencoesoftware.com/">Glencoe Software, Inc.</a></font>
+
+---
+
+<a href="https://pangeo.io/"><img src="{{ '/assets/img/logos/pangeo.png' | relative_url }}"  alt="Pangeo" width="550" height="300"></a>
+
+<font size="3">→ Zarr se utiliza ampliamente en el <a href="https://pangeo.io/">Proyecto Pangeo</a> como formato de almacenamiento nativo en la nube para datos oceánicos, meteorológicos, climáticos y geoespaciales.</font>
+
+---
+
+<a href="https://scalableminds.com/"><img src="{{ '/assets/img/logos/scalableminds.svg' | relative_url }}" alt="scalableminds" width="500" height="250"></a>
+
+<font size="3">→ scalable minds utiliza Zarr para almacenar y procesar imágenes 3D a peta-escala de tejido cerebral para análisis de conexiones.</font>
+
+---
+
+<a href="https://www.unidata.ucar.edu/"><img src="{{ '/assets/img/logos/unidata.png' | relative_url }}"  alt="Unidata" width="600" height="300"></a>
+
+<font size="3">→ <a href="https://www.unidata.ucar.edu/">Unidata</a> está desarrollando sus bibliotecas netCDF para respaldar los conjuntos de datos de Zarr entre la comunidad atmosférica y geocientífica.</font>
+
+---
+
+<a href="https://webknossos.org/"><img src="{{ '/assets/img/logos/webknossos.svg' | relative_url }}"  alt="Webknossos" width="600" height="300"></a>
+
+<font size="3">→ WEBKNOSSOS es una plataforma web para visualizar, anotar y compartir imágenes 3D de gran tamaño. Zarr se utiliza para acceder a imágenes almacenadas de forma remota, así como para transmitir de forma segura datos de anotaciones a aplicaciones cliente.</font>
 
 ---

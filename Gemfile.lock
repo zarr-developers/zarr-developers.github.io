@@ -1,3 +1,8 @@
+PATH
+  remote: content/_plugins/copy
+  specs:
+    copy (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -303,11 +308,11 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  copy!
   github-pages
   jekyll-feed (~> 0.17)
   jekyll-include-cache (~> 0.2)
   jekyll-redirect-from
-  jekyll-sitemap (~> 1.4)
   kramdown-parser-gfm
   tzinfo-data
   webrick (~> 1.8)
