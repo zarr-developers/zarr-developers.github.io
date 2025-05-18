@@ -13,4 +13,4 @@ build:
     - ~/.rvm/bin/rvm autolibs disable && ~/.rvm/bin/rvm install ruby 3.4.3
     - PATH="$HOME/.rvm/rubies/ruby-3.4.3/bin:$PATH" gem install bundler
     - PATH="$HOME/.rvm/rubies/ruby-3.4.3/bin:$PATH" bundle install
-    - PATH="$HOME/.rvm/rubies/ruby-3.4.3/bin:$PATH" bundle exec jekyll build --destination _readthedocs/html --baseurl $(echo -n "$READTHEDOCS_CANONICAL_URL" | cut -d '/' -f 4-)
+    - PATH="$HOME/.rvm/rubies/ruby-3.4.3/bin:$PATH" bundle exec jekyll build --source content/ --destination _readthedocs/html --baseurl $(echo -n "$READTHEDOCS_CANONICAL_URL" | cut -d '/' -f 4-)
