@@ -5,8 +5,9 @@ require 'fileutils'
 
 class Copy
   def self.copy_data_folder_for_translations(site)
-    source_dir = File.join(site.source, "_data", "en")
-    target_dir = File.join(site.source, "en", "_data", "en")
+    default_lang = site.config["default_language"]
+    source_dir = File.join(site.source, "_data", default_lang)
+    target_dir = File.join(site.source, default_lang, "_data", default_lang)
 
     # Ensure the target directory exists
     FileUtils.mkdir_p(target_dir)
@@ -23,10 +24,11 @@ class Copy
   end
 
   def self.copy_translations_to_data_folder(site)
+    default_lang = site.config["default_language"]
     languages = site.config["languages"]
     languages.each do |data|
       lang = data["prefix"]
-      if lang != "en"
+      if lang != default_lang
         source_dir = File.join(site.source, lang, "_data", lang)
         target_dir = File.join(site.source, "_data", lang)
 
