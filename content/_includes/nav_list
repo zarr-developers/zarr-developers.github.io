@@ -15,7 +15,7 @@ https://github.com/mmistakes/minimal-mistakes/blob/4.26.2/_includes/nav_list
 <nav class="nav__list">
   {% if page.sidebar.title %}<h3 class="nav__title" style="padding-left: 0;">{{ page.sidebar.title }}</h3>{% endif %}
   <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">{{ site.data.ui-text[page_language].menu_label | default: "Toggle Menu" }}</label>
+  <label for="ac-toc">{{ site.data[page_language].messages["toggle-menu"] }}</label>
   <ul class="nav__items">
     {% for navname in include.nav %}
       {% assign navigation = site.data[page_language].navigation[navname] %}

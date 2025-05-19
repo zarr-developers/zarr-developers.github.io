@@ -7,4 +7,4 @@ description: >-
   N-dimensional typed arrays (also known as tensors) in a way that is
   compatible with parallel and distributed computing applications.
 
-content: Content
+toggle-menu: Toggle Menu
