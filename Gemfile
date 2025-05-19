@@ -19,7 +19,7 @@ gem "github-pages", group: :jekyll_plugins
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.17"
   gem "jekyll-include-cache", "~> 0.2"
-  gem "jekyll-sitemap", "~> 1.4"
+  gem "copy", :path => "./content/_plugins/copy/"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

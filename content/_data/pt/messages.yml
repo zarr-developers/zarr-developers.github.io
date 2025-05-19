@@ -1,0 +1,7 @@
+title: Zarr
+subtitle: matrizes N-dimensionais, compactadas e fragmentadas
+description: >-
+
+  Zarr é um projeto de código aberto que desenvolve especificações e bibliotecas de software para armazenamento de dados que é estruturado como matrizes tipadas N-dimensionais (também conhecidas como tensoras) de uma forma que é compatível com aplicações de computação paralelas e distribuídas.
+content: Conteúdo
+toggle-menu: Menu

@@ -38,5 +38,5 @@ bundle install
 5. Build and serve the site locally:
 
 ```
-bundle exec jekyll serve
+bundle exec jekyll serve --source content/
 ```

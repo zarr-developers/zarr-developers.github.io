@@ -1,0 +1,42 @@
+main:
+  - title: "Documentação"
+    url: "https://zarr.readthedocs.io/en/stable/"
+  - title: "Contribuir"
+    url: "https://zarr.readthedocs.io/en/stable/developers/contributing.html"
+  - title: "Python Quickstart"
+    url: "https://zarr.readthedocs.io/en/stable/quickstart.html"
+sidebar:
+  - title: "Sobre"
+    children:
+      - title: "Descrição"
+        url: '#descrição'
+      - title: "Aplicações"
+        url: '#aplicações'
+      - title: "Recursos"
+        url: '#recursos'
+      - title: "Patrocínio"
+        url: "#patrocínio"
+      - title: "Vídeos"
+        url: "#vídeos"
+  - title: "Subpáginas"
+    children:
+      - title: "Adotantes"
+        url: "adopters/"
+      - title: "Blog"
+        url: "/blog/"
+      - title: "Comunidade"
+        url: "community/"
+      - title: "Convenções"
+        url: "conventions/"
+      - title: "Conjuntos de dados"
+        url: "datasets/"
+      - title: "Implementacões"
+        url: "implementations/"
+      - title: "Reuniões"
+        url: "office-hours/"
+      - title: "Apresentações (EN)"
+        url: "/slides/"
+      - title: "Especificação"
+        url: "https://zarr-specs.readthedocs.io/"
+      - title: "ZEPs"
+        url: "/zeps/"

@@ -1,0 +1,42 @@
+main:
+  - title: "Documentation"
+    url: "https://zarr.readthedocs.io/en/stable/"
+  - title: "Contribute"
+    url: "https://zarr.readthedocs.io/en/stable/developers/contributing.html"
+  - title: "Python Quickstart"
+    url: "https://zarr.readthedocs.io/en/stable/quickstart.html"
+sidebar:
+  - title: About
+    children:
+      - title: "Description"
+        url: "#description"
+      - title: "Applications"
+        url: "#applications"
+      - title: "Features"
+        url: "#features"
+      - title: "Sponsorship"
+        url: "#sponsorship"
+      - title: "Videos"
+        url: "#videos"
+  - title: Subpages
+    children:
+      - title: "Adopters"
+        url: "adopters/"
+      - title: "Blog"
+        url: "/blog/"
+      - title: "Community"
+        url: "community/"
+      - title: "Conventions"
+        url: "conventions/"
+      - title: "Datasets"
+        url: "datasets/"
+      - title: "Implementations"
+        url: "implementations/"
+      - title: "Office Hours"
+        url: "office-hours/"
+      - title: "Slides"
+        url: "/slides/"
+      - title: "Specification"
+        url: https://zarr-specs.readthedocs.io/
+      - title: "ZEPs"
+        url: "/zeps/"

@@ -1,0 +1,73 @@
+{%- comment -%}
+https://github.com/mmistakes/minimal-mistakes/blob/4.26.2/_includes/nav_list
+{%- endcomment -%}
+
+{% assign page_language = page.url | slice: 1, 2 %}
+{% assign languages = "" | split: ',' %}
+{% for lang_data in site.languages %}
+  {% assign languages = languages | push: lang_data.prefix %}
+{% endfor %}
+
+{% unless languages contains page_language %}
+  {% assign page_language = site.default_language %}
+{% endunless %}
+
+<nav class="nav__list">
+  {% if page.sidebar.title %}<h3 class="nav__title" style="padding-left: 0;">{{ page.sidebar.title }}</h3>{% endif %}
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">{{ site.data[page_language].messages["toggle-menu"] }}</label>
+  <ul class="nav__items">
+    {% for navname in include.nav %}
+      {% assign navigation = site.data[page_language].navigation[navname] %}
+      {% for nav in navigation %}
+        <li>
+          {% if nav.url %}
+            {% assign url_prefix = nav.url | slice: 0, 1 %}
+            {% assign http_prefix = nav.url | slice: 0, 4 %}
+            {% case url_prefix %}
+              {% when "#" %}
+                {% assign url_prefix_to_add = '/' | append: page_language | append: '/' %}
+              {% when "/" %}
+                {% assign url_prefix_to_add = '' %}
+              {% else %}
+                {% case http_prefix %}
+                  {% when "http" %}
+                    {% assign url_prefix_to_add = '' %}
+                  {% else %}
+                    {% assign url_prefix_to_add = '/' | append: page_language | append: '/' %}
+                {% endcase %}
+            {% endcase %}
+            {% assign nav_url = url_prefix_to_add | append: nav.url %}
+            <a href="{{ nav_url | relative_url }}"><span class="nav__sub-title">{{ nav.title }}</span></a>
+          {% else %}
+            <span class="nav__sub-title">{{ nav.title }}</span>
+          {% endif %}
+
+          {% if nav.children != null %}
+          <ul>
+            {% for child in nav.children %}
+              {% assign url_prefix = child.url | slice: 0, 1 %}
+              {% assign http_prefix = child.url | slice: 0, 4 %}
+              {% case url_prefix %}
+                {% when "#" %}
+                  {% assign url_prefix_to_add = '/' | append: page_language | append: '/' %}
+                {% when "/" %}
+                  {% assign url_prefix_to_add = '' %}
+                {% else %}
+                  {% case http_prefix %}
+                    {% when "http" %}
+                      {% assign url_prefix_to_add = '' %}
+                    {% else %}
+                      {% assign url_prefix_to_add = '/' | append: page_language | append: '/' %}
+                  {% endcase %}
+              {% endcase %}
+              {% assign child_url = url_prefix_to_add | append: child.url %}
+              <li><a href="{{ child_url | relative_url }}"{% if child_url == page.url %} class="active"{% endif %}>{{ child.title }}</a></li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    {% endfor %}
+  </ul>
+</nav>
