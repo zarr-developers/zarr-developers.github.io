@@ -4,6 +4,15 @@ require "jekyll"
 require 'fileutils'
 
 class Copy
+  def self.copy_cname(site)
+    source_file = File.join(site.source, "CNAME")
+    target_file = File.join(site.dest, "CNAME")
+    FileUtils.copy(source_file, target_file)
+    Jekyll.logger.info "\t\tSource: #{source_file.sub! site.source, "/content"}"
+    Jekyll.logger.info "\t\tTarget: #{target_file.sub! site.dest, "/_site"}"
+    Jekyll.logger.info "\n"
+  end
+
   def self.copy_data_folder_for_translations(site)
     default_lang = site.config["default_language"]
     source_dir = File.join(site.source, "_data", default_lang)
@@ -55,4 +64,9 @@ Jekyll::Hooks.register :site, :after_init do |site|
   Copy.copy_data_folder_for_translations(site)
   Jekyll.logger.info "\n\t# Copy translation files:\n"
   Copy.copy_translations_to_data_folder(site)
+end
+
+Jekyll::Hooks.register :site, :post_write do |site|
+  Jekyll.logger.info "\n\t# Copy CNAME file:\n"
+  Copy.copy_cname(site)
 end
