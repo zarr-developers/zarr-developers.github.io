@@ -31,6 +31,12 @@ sidebar:
 
 ---
 
+<a href="https://esa.int/"><img src="../adopters/logos/esa.png" alt="ESA" width="500" height="300"></a>
+
+<font size="3">→ ESA is introducing Zarr for the management of the Copernicus Sentinel data and the future Copernicus Expansion missions under the name of <a href="https://eopf.copernicus.eu/">EOPF (Earth observation processing Framework)</a>. An initial set of data can be accessed through the <a href="https://zarr.eopf.copernicus.eu/">Sample Service</a>.</font>
+
+---
+
 <a href= "https://research.google/"><img src="../adopters/logos/google_research.png" alt="Google Research" width="600" height="400"></a>
 
 <font size="3">→ Google Research has released a number of open source projects for working with Zarr data (including <a href="https://github.com/google/neuroglancer/">Neuroglancer</a>, <a href="https://github.com/google/tensorstore/">TensorStore</a>, <a href="https://github.com/google/xarray-beam/">Xarray-Beam</a>, and <a href="https://github.com/google/xarray-tensorstore/">Xarray-TensorStore</a>) and uses Zarr for distributing <a href="https://github.com/google-research/arco-era5/">large-scale weather datasets</a>.</font>
