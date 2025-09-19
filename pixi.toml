@@ -1,0 +1,20 @@
+[project]
+name = "zarr-website"
+version = "0.1.0"
+description = "Zarr developers website built with Jekyll"
+channels = ["conda-forge"]
+platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
+
+[dependencies]
+ruby = ">=3.0"
+c-compiler = "*"
+cxx-compiler = "*"
+make = "*"
+pkg-config = "*"
+ca-certificates = "*"
+openssl = "*"
+
+[tasks]
+dev = { cmd = "bundle exec jekyll serve --host 0.0.0.0 --port 4000 --livereload --force_polling", env = { SSL_CERT_FILE = "$CONDA_PREFIX/ssl/cacert.pem" } }
+build = { cmd = "bundle exec jekyll build", env = { SSL_CERT_FILE = "$CONDA_PREFIX/ssl/cacert.pem" } }
+install = "bundle install"

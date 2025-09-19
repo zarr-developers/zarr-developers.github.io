@@ -4,7 +4,29 @@ Main Zarr website hosted at https://zarr.dev
 
 ## Building
 
-To build the webpage, you will need a working Ruby installation.
+### Option 1: Using Pixi (Recommended)
+
+The easiest way to build and serve the site is using [Pixi](https://pixi.sh), which manages all dependencies automatically.
+
+1. Install Pixi:
+```bash
+curl -fsSL https://pixi.sh/install.sh | bash
+```
+
+2. Start the development server:
+```bash
+pixi run dev
+```
+
+The site will be available at http://localhost:4000 with live reload enabled. Pixi will automatically install all dependencies on first run.
+
+Additional commands:
+- `pixi run build` - Build the site for production
+- `pixi run install` - Install/update Ruby gems (if needed manually)
+
+### Option 2: Manual Ruby Installation
+
+To build the webpage manually, you will need a working Ruby installation.
 
 If you are on Ubuntu and want to install the requirements locally,
 follow the steps below as root. Alternatively, see the Dockerfile
