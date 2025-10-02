@@ -9,3 +9,343 @@
 <meta name="application-name" content="Zarr">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
+
+<!-- Dark/Light Mode CSS Variables and Styles -->
+<style>
+:root {
+  /* Light mode colors (default) */
+  --bg-color: #ffffff;
+  --text-color: #494e52;
+  --text-muted: #7a8288;
+  --link-color: #52adc8;
+  --link-hover-color: #367d93;
+  --primary-color: #fff;
+  --secondary-color: #f3f3f3;
+  --border-color: #f2f3f3;
+  --code-bg: #fafafa;
+  --masthead-bg: #fff;
+  --footer-bg: #f3f3f3;
+  --notice-bg: #f8f9fa;
+  --notice-info-bg: #d1ecf1;
+  --notice-warning-bg: #fff3cd;
+  --notice-danger-bg: #f8d7da;
+  --notice-success-bg: #d4edda;
+}
+
+[data-theme="dark"] {
+  /* Dark mode colors */
+  --bg-color: #1a1a1a;
+  --text-color: #eaeaea;
+  --text-muted: #a8a8a8;
+  --link-color: #79b8cc;
+  --link-hover-color: #a4cdd9;
+  --primary-color: #1a1a1a;
+  --secondary-color: #2d2d2d;
+  --border-color: #404040;
+  --code-bg: #2d2d2d;
+  --masthead-bg: #1a1a1a;
+  --footer-bg: #2d2d2d;
+  --notice-bg: #2d2d2d;
+  --notice-info-bg: #1e3a4a;
+  --notice-warning-bg: #4a3e1e;
+  --notice-danger-bg: #4a1e1e;
+  --notice-success-bg: #1e4a2e;
+}
+
+/* Apply CSS variables to override theme colors */
+html, body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+.masthead {
+  background: var(--masthead-bg) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+.masthead__inner-wrap {
+  background: var(--masthead-bg) !important;
+}
+
+.masthead__menu {
+  background: var(--masthead-bg) !important;
+}
+
+.greedy-nav {
+  background: var(--masthead-bg) !important;
+}
+
+.greedy-nav a,
+.site-title,
+.masthead__menu-item a,
+.greedy-nav .visible-links a {
+  color: var(--text-color) !important;
+}
+
+.greedy-nav a:hover,
+.site-title:hover,
+.masthead__menu-item a:hover,
+.greedy-nav .visible-links a:hover {
+  color: var(--link-hover-color) !important;
+}
+
+.greedy-nav .hidden-links {
+  background: var(--masthead-bg) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.greedy-nav .hidden-links a {
+  color: var(--text-color) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+.greedy-nav .hidden-links a:hover {
+  background: var(--secondary-color) !important;
+  color: var(--link-hover-color) !important;
+}
+
+.greedy-nav__toggle {
+  color: var(--text-color) !important;
+}
+
+.greedy-nav__toggle:hover {
+  color: var(--link-hover-color) !important;
+}
+
+.search__toggle {
+  color: var(--text-color) !important;
+}
+
+.search__toggle:hover {
+  color: var(--link-hover-color) !important;
+}
+
+.page__footer {
+  background: var(--footer-bg) !important;
+  color: var(--text-muted) !important;
+}
+
+.page__content {
+  background: var(--bg-color) !important;
+}
+
+.sidebar {
+  background: var(--bg-color) !important;
+}
+
+.notice, .notice--primary {
+  background-color: var(--notice-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-color) !important;
+}
+
+.notice--info {
+  background-color: var(--notice-info-bg) !important;
+}
+
+.notice--warning {
+  background-color: var(--notice-warning-bg) !important;
+}
+
+.notice--danger {
+  background-color: var(--notice-danger-bg) !important;
+}
+
+.notice--success {
+  background-color: var(--notice-success-bg) !important;
+}
+
+code, pre {
+  background: var(--code-bg) !important;
+  color: var(--text-color) !important;
+}
+
+a {
+  color: var(--link-color) !important;
+}
+
+a:hover {
+  color: var(--link-hover-color) !important;
+}
+
+/* Table styling for light/dark mode */
+table {
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  border-collapse: collapse !important;
+}
+
+table th,
+table td {
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+  padding: 0.5rem !important;
+}
+
+table th {
+  background: var(--secondary-color) !important;
+  color: var(--text-color) !important;
+  font-weight: bold !important;
+}
+
+table tbody tr:nth-child(even) {
+  background: var(--secondary-color) !important;
+}
+
+table tbody tr:hover {
+  background: var(--notice-bg) !important;
+}
+
+/* Ensure table links are visible */
+table a {
+  color: var(--link-color) !important;
+}
+
+table a:hover {
+  color: var(--link-hover-color) !important;
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem;
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+}
+
+.theme-toggle:hover {
+  background: var(--secondary-color);
+  border-color: var(--link-color);
+}
+
+.theme-toggle-icon {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
+</style>
+
+<!-- Dark/Light Mode JavaScript -->
+<script>
+(function() {
+  // Theme management
+  const THEME_KEY = 'zarr-theme';
+  const THEME_DARK = 'dark';
+  const THEME_LIGHT = 'light';
+
+  // Get saved theme or detect browser preference
+  function getInitialTheme() {
+    // Check browser preference first
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return THEME_DARK;
+    }
+
+    return THEME_LIGHT;
+  }
+
+  // Get theme with user preference override
+  function getCurrentTheme() {
+    const savedTheme = localStorage.getItem(THEME_KEY);
+    if (savedTheme) {
+      return savedTheme;
+    }
+    return getInitialTheme();
+  }
+
+  // Apply theme to document
+  function applyTheme(theme) {
+    if (theme === THEME_DARK) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+    localStorage.setItem(THEME_KEY, theme);
+  }
+
+  // Toggle between themes
+  function toggleTheme() {
+    const currentTheme = getCurrentTheme();
+    const newTheme = currentTheme === THEME_DARK ? THEME_LIGHT : THEME_DARK;
+    applyTheme(newTheme);
+    updateToggleButton();
+  }
+
+  // Update toggle button appearance
+  function updateToggleButton() {
+    const button = document.querySelector('.theme-toggle');
+    if (!button) return;
+
+    const currentTheme = getCurrentTheme();
+    const icon = button.querySelector('.theme-toggle-icon');
+    const text = button.querySelector('.theme-toggle-text');
+
+    if (currentTheme === THEME_LIGHT) {
+      icon.innerHTML = '☀️';
+      text.textContent = 'Light';
+      button.setAttribute('aria-label', 'Switch to light mode');
+    } else {
+      icon.innerHTML = '🌙';
+      text.textContent = 'Dark';
+      button.setAttribute('aria-label', 'Switch to dark mode');
+    }
+  }
+
+  // Initialize theme on page load
+  function initTheme() {
+    const initialTheme = getCurrentTheme();
+    applyTheme(initialTheme);
+
+    // Wait for DOM to be ready, then update button
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', updateToggleButton);
+    } else {
+      updateToggleButton();
+    }
+  }
+
+  // Listen for system theme changes
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+      // Only respond to system changes if user hasn't set a preference
+      if (!localStorage.getItem(THEME_KEY)) {
+        const newTheme = e.matches ? THEME_DARK : THEME_LIGHT;
+        applyTheme(newTheme);
+        updateToggleButton();
+      }
+    });
+  }
+
+  // Debug function - clear saved preference to test system detection
+  function clearThemePreference() {
+    localStorage.removeItem(THEME_KEY);
+    const systemTheme = getInitialTheme();
+    applyTheme(systemTheme);
+    updateToggleButton();
+    console.log('Theme preference cleared. Using system preference:', systemTheme);
+  }
+
+  // Make functions globally available
+  window.toggleTheme = toggleTheme;
+  window.updateToggleButton = updateToggleButton;
+  window.clearThemePreference = clearThemePreference;
+
+  // Initialize immediately
+  initTheme();
+})();
+</script>
