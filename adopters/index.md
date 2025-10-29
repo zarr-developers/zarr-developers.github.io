@@ -61,7 +61,7 @@ sidebar:
 
 ---
 
-<a href="http://www.mindearth.ai/"><img src="../adopters/logos/mind_earth_positive.svg" alt="MindEarth" width="600"></a>
+<a href="http://www.mindearth.ai/"><img src="../adopters/logos/mind_earth_positive.svg" alt="MindEarth" width="600" class="mindearth-logo mindearth-light"><img src="../adopters/logos/mind_earth_negative.svg" alt="MindEarth" width="600" class="mindearth-logo mindearth-dark"></a>
 
 <font size="3">→ <a href="http://www.mindearth.ai/">MindEarth</a> is a European startup specializing in geospatial analytics, artificial intelligence and high-frequency mobility data. It supports companies, public authorities and institutions in spatial planning, environmental monitoring and risk assessment.
 
