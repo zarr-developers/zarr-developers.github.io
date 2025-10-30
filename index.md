@@ -32,28 +32,28 @@ can be represented as a key-value store, including most commonly POSIX file
 systems and cloud object storage but also zip files as well as relational and
 document databases.
 
-See the following GitHub repositories for more information:
-
-* [Zarr Python](https://github.com/zarr-developers/zarr)
-* [Zarr Specs](https://github.com/zarr-developers/zarr-specs)
-* [Numcodecs](https://github.com/zarr-developers/numcodecs)
-* [Z5](https://github.com/constantinpape/z5)
-* [N5](https://github.com/saalfeldlab/n5)
-* [Zarr.jl](https://github.com/meggart/Zarr.jl)
-* [ndarray.scala](https://github.com/lasersonlab/ndarray.scala)
+For more details read about the various [components of Zarr](https://zarr.dev/components/), 
+see the canonical [Zarr-Python](https://github.com/zarr-developers/zarr-python) implementation, 
+or look through [other Zarr implementations](https://zarr.dev/implementations/) for one in your preferred language.
 
 ## Applications
 
-* Simple and fast serialization of NumPy-like arrays, accessible from languages including Python, C, C++, Rust, Javascript and Java
-* Multi-scale n-dimensional image storage, e.g. in light and electron microscopy
-* Geospatial rasters, e.g. following the NetCDF / CF metadata conventions
+* Multi-scale n-dimensional image storage, e.g. in light and electron microscopy.
+* Genomics data, e.g. for quantitative and population genetics.
+* Gridded scientific data in various domains, such as CFD or Plasma Physics.
+* Geospatial rasters, e.g. following the NetCDF data model.
+* Checkpointing ML model weights.
 
 ## Features
 
+* Serialize NumPy-like arrays in a simple and fast way.
+* Access from languages including Python, C, C++, Rust, Javascript and Java.
 * Chunk multi-dimensional arrays along any dimension.
+* Compress array chunks via an extensible system of compressors.
 * Store arrays in memory, on disk, inside a Zip file, on S3, etc.
 * Read and write arrays concurrently from multiple threads or processes.
 * Organize arrays into hierarchies via annotatable groups.
+* Extend easily thanks to the [flexible design](https://zarr.dev/flexibility/).
 
 ## Sponsorship
 

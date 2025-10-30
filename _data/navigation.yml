@@ -19,7 +19,19 @@ sidebar:
         url: "#sponsorship"
       - title: "Videos"
         url: "#videos"
-  - title: Subpages
+  - title: Technical
+    children:
+      - title: "Components"
+        url: '/components'
+      - title: "Flexibility"
+        url: '/flexibility'
+      - title: "Implementations"
+        url: '/implementations'
+      - title: "Specification"
+        url: https://zarr-specs.readthedocs.io/
+      - title: "ZEPs"
+        url: '/zeps'
+  - title: Community
     children:
       - title: "Adopters"
         url: "/adopters"
@@ -31,13 +43,7 @@ sidebar:
         url: '/conventions'
       - title: "Datasets"
         url: '/datasets'
-      - title: "Implementations"
-        url: '/implementations'
       - title: "Office Hours"
         url: "/office-hours"
       - title: "Slides"
         url: "/slides"
-      - title: "Specification"
-        url: https://zarr-specs.readthedocs.io/
-      - title: "ZEPs"
-        url: '/zeps'
