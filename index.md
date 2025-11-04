@@ -39,12 +39,12 @@ See the following GitHub repositories for more information:
 * [Numcodecs](https://github.com/zarr-developers/numcodecs)
 * [Z5](https://github.com/constantinpape/z5)
 * [N5](https://github.com/saalfeldlab/n5)
-* [Zarr.jl](https://github.com/meggart/Zarr.jl)
+* [Zarr.jl](https://github.com/JuliaIO/Zarr.jl)
 * [ndarray.scala](https://github.com/lasersonlab/ndarray.scala)
 
 ## Applications
 
-* Simple and fast serialization of NumPy-like arrays, accessible from languages including Python, C, C++, Rust, Javascript and Java
+* Simple and fast serialization of NumPy-like arrays, accessible from languages including Python, C, C++, Rust, Javascript, Java and Julia
 * Multi-scale n-dimensional image storage, e.g. in light and electron microscopy
 * Geospatial rasters, e.g. following the NetCDF / CF metadata conventions
 
