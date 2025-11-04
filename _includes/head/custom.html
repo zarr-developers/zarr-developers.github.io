@@ -239,6 +239,23 @@ table a:hover {
     margin-top: 0.5rem;
   }
 }
+
+/* Theme-aware logo images */
+.mindearth-light {
+  display: block !important;
+}
+
+.mindearth-dark {
+  display: none !important;
+}
+
+[data-theme="dark"] .mindearth-light {
+  display: none !important;
+}
+
+[data-theme="dark"] .mindearth-dark {
+  display: block !important;
+}
 </style>
 
 <!-- Dark/Light Mode JavaScript -->
