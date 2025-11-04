@@ -61,6 +61,15 @@ sidebar:
 
 ---
 
+<a href="http://www.mindearth.ai/"><img src="../adopters/logos/mind_earth_positive.svg" alt="MindEarth" width="600"></a>
+
+<font size="3">→ <a href="http://www.mindearth.ai/">MindEarth</a> is a European startup specializing in geospatial analytics, artificial intelligence and high-frequency mobility data. It supports companies, public authorities and institutions in spatial planning, environmental monitoring and risk assessment.
+
+By integrating satellite data, artificial intelligence models and proprietary analytics, MindEarth generates high-value strategic insights to support sustainable, data-driven and impact-oriented decision-making. Its mission is to transform territorial complexity into actionable knowledge, fostering more resilient, efficient and informed development.</font>
+
+
+---
+
 <a href="https://www.nasa.gov/"><img src="../adopters/logos/nasa.webp" alt="NASA" width="600" height="300"></a>
 
 <font size="3">→ Zarr is used by NASA as an analysis-ready data store for chunked, N-dimensional arrays of geospatial data.</font>
