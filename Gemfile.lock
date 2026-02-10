@@ -290,7 +290,7 @@ GEM
       concurrent-ruby (~> 1.0)
     unicode-display_width (1.8.0)
     uri (1.0.3)
-    webrick (1.9.1)
+    webrick (1.9.2)
 
 PLATFORMS
   aarch64-linux-gnu
@@ -310,7 +310,7 @@ DEPENDENCIES
   jekyll-sitemap (~> 1.4)
   kramdown-parser-gfm
   tzinfo-data
-  webrick (~> 1.8)
+  webrick (~> 1.9)
 
 BUNDLED WITH
    2.6.8
