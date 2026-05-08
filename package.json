@@ -5,7 +5,9 @@
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "docs:verify": "node scripts/verify-redirects.mjs && node scripts/verify-links.mjs",
+    "verify": "npm run docs:build && npm run docs:verify"
   },
   "devDependencies": {
     "js-yaml": "4.1.1",

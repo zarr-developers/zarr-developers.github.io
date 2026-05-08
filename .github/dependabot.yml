@@ -1,7 +1,32 @@
 # .github/dependabot.yml
+#
+# Bundler was removed in b0cb0f9 (Jekyll/Bundler stripped) — the old
+# 'bundler' entry no longer applied. Replaced here with the ecosystems
+# this repo actually uses, each with cooldown windows that give time to
+# spot a malicious update before merging (per the dependabot-cooldown
+# audit guidance).
+
 version: 2
 updates:
-  - package-ecosystem: 'bundler'
+  # npm — vitepress and js-yaml live in package.json.
+  - package-ecosystem: 'npm'
     directory: '/'
     schedule:
-      interval: 'daily'
+      interval: 'weekly'
+    cooldown:
+      default-days: 7
+      semver-major-days: 30
+      semver-minor-days: 7
+      semver-patch-days: 3
+
+  # GitHub Actions — workflow uses SHA-pinned actions; dependabot
+  # rolls forward to newer pinned SHAs over time.
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    cooldown:
+      default-days: 7
+      semver-major-days: 30
+      semver-minor-days: 7
+      semver-patch-days: 3

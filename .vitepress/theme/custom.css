@@ -3,9 +3,6 @@
   --vp-c-brand-2: #c93d80;
   --vp-c-brand-3: #c93d80;
   --vp-c-brand-soft: rgba(201, 61, 128, 0.14);
-
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, #d97e6a 20%, #c93d80 80%);
-  --vp-home-hero-image-filter: blur(56px);
 }
 
 .dark {
@@ -15,20 +12,47 @@
   --vp-c-brand-soft: rgba(229, 122, 169, 0.16);
 }
 
-.VPHero .VPImage {
-  border-radius: 14px;
-  box-shadow: 0 24px 64px -16px rgba(149, 47, 124, 0.45),
-              0 8px 24px -8px rgba(149, 47, 124, 0.25);
+/* The hero image area is filled by ZarrHero.vue (chunked-cube SVG).
+   Suppress VitePress's default radial blur behind it — the SVG carries
+   its own visual identity and the magenta blur washed it out. */
+.VPHero .image-bg {
+  display: none;
 }
 
+/* Dark-mode overrides for components — kept here (unscoped) because
+   Vue's scoped CSS mishandles `:global(.dark) .selector` rules for
+   non-inheriting properties. Class selectors match regardless of the
+   data-v hash on each component's elements. */
+
+.dark .zarr-hero {
+  --zarr-coral-1: #f5d2dc;
+  --zarr-coral-2: #e89bb8;
+  --zarr-coral-3: #c25e92;
+  --zarr-stroke: #faf7f2;
+  --zarr-grid: rgba(255, 255, 255, 0.12);
+  --zarr-glow: rgba(232, 155, 184, 0.7);
+}
+
+/* Many adopter logos (CarbonPlan, ESA, LEAP, etc.) are dark-monochrome
+   and vanish on a dark background. Pill them onto a near-white canvas
+   in dark mode so every card reads, light or dark. Right long-term fix
+   is curated dark-variant logos per adopter — this keeps the page
+   legible in the meantime. */
+.dark .zarr-wall__logo-frame {
+  background: #f7f7f8;
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+.dark .zarr-wall__logo-frame img {
+  max-height: 60px;
+}
+
+/* Give the cube room to breathe on desktop. Default VitePress sizing
+   makes the SVG too small relative to the hero text column. */
 @media (min-width: 960px) {
   .VPHero .image-container {
-    width: 420px;
-    height: 420px;
-  }
-  .VPHero .image-src {
-    max-width: 100%;
-    max-height: 100%;
+    width: 480px;
+    height: 480px;
   }
 }
 
@@ -79,4 +103,52 @@
   font-size: 0.95em;
   line-height: 1.6;
   margin: 0;
+}
+
+/* === refresh additions (2026-05-08) === */
+
+:root {
+  /* Hero name gradient (variant D copy) */
+  --zarr-hero-name-gradient: linear-gradient(120deg, #d97e6a, #c93d80);
+
+  /* Section vertical rhythm */
+  --zarr-section-gap: 96px;
+
+  /* Marquee */
+  --zarr-marquee-speed: 40s;
+  --zarr-marquee-logo-h: 36px;
+  --zarr-marquee-fade: 80px;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --zarr-section-gap: 64px;
+    --zarr-marquee-logo-h: 28px;
+  }
+}
+
+/* Hero name → magenta gradient text */
+.VPHero .name .clip {
+  background: var(--zarr-hero-name-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Section rhythm helper used by home + reformatted pages */
+.zarr-section {
+  margin-top: var(--zarr-section-gap);
+}
+
+/* Marquee keyframes (component scopes its own selectors) */
+@keyframes zarr-scroll-x {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zarr-marquee-track {
+    animation: none !important;
+    transform: none !important;
+  }
 }
