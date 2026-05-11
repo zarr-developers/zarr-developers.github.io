@@ -2,7 +2,7 @@
 //
 // Cross-domain balance required. Current per-domain counts:
 //   bio       : 1 (IDR)
-//   geo       : 5 (CMIP6, MUR SST, NASA POWER, NWM, Planetary Computer)
+//   geo       : 6 (CMIP6, Earthmover Marketplace, MUR SST, NASA POWER, NWM, Planetary Computer)
 //   ml-hpc    : 0
 //   genomics  : 0
 //   other     : 1 (webKnossos)
@@ -17,6 +17,14 @@ export const datasets: Dataset[] = [
     blurb: 'Coupled Model Intercomparison Project Phase 6 climate model output.',
     hosting: 'Google Cloud',
     size: '1 PB',
+    domain: 'geo',
+  },
+  {
+    name: 'Earthmover Marketplace',
+    href: 'https://app.earthmover.io/marketplace',
+    blurb: 'Curated catalog of analysis-ready, versioned Zarr datasets via Icechunk.',
+    hosting: 'Earthmover',
+    size: '~2 PB',
     domain: 'geo',
   },
   {

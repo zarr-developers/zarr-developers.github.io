@@ -2,7 +2,7 @@
 //
 // Cross-domain balance is required. Current per-domain counts:
 //   bio       : 5 (DANDI, HHMI Janelia, OME, scalableminds, WEBKNOSSOS)
-//   geo       : 8 (CarbonPlan, ESA, NASA, Pangeo, Unidata, LEAP, LDEO, NCAR)
+//   geo       : 9 (CarbonPlan, Earthmover, ESA, NASA, Pangeo, Unidata, LEAP, LDEO, NCAR)
 //   ml-hpc    : 0
 //   genomics  : 0
 //   other     : 3 (Google Research, Microsoft, Columbia)
@@ -25,6 +25,13 @@ export const adopters: Adopter[] = [
     href: 'https://dandiarchive.org/',
     blurb: 'Lightsheet microscopy and ex-vivo MRI datasets; backend candidate for Neurodata Without Borders.',
     domain: 'bio',
+  },
+  {
+    name: 'Earthmover',
+    logo: '/adopters/logos/earthmover.svg',
+    href: 'https://earthmover.io/',
+    blurb: 'Cloud-native data platform for scientific arrays. Builds Arraylake, Icechunk (versioned Zarr store) and the Earthmover Marketplace of analysis-ready datasets.',
+    domain: 'geo',
   },
   {
     name: 'ESA',
