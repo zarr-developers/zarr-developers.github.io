@@ -48,7 +48,7 @@ export const implementations: Implementation[] = [
     activity: 'https://img.shields.io/github/release-date-pre/JuliaIO/Zarr.jl' },
   { language: 'R',       name: 'pizzarr',      href: 'https://github.com/keller-mark/pizzarr',           v2: true,  v3: false,
     activity: 'https://img.shields.io/github/last-commit/keller-mark/pizzarr' },
-  { language: 'R',       name: 'Rarr',         href: 'https://github.com/grimbough/Rarr',                v2: true,  v3: false,
+  { language: 'R',       name: 'Rarr',         href: 'https://github.com/grimbough/Rarr',                v2: true,  v3: true,
     activity: 'https://img.shields.io/github/last-commit/grimbough/Rarr' },
   { language: 'OCaml',   name: 'zarr-ml',      href: 'https://github.com/zoj613/zarr-ml',                v2: false, v3: true,
     activity: 'https://img.shields.io/github/release-date-pre/zoj613/zarr-ml' },
