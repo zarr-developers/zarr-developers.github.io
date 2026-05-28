@@ -5,6 +5,7 @@ import './custom.css'
 
 import AdoptersMarquee from './AdoptersMarquee.vue'
 import ImplementationsGrid from './ImplementationsGrid.vue'
+import LeaderboardTabs from './LeaderboardTabs.vue'
 import LogoWall from './LogoWall.vue'
 import BackingBand from './BackingBand.vue'
 import PageHero from './PageHero.vue'
@@ -21,6 +22,7 @@ export default {
   enhanceApp({ app }: EnhanceAppContext) {
     app.component('AdoptersMarquee', AdoptersMarquee)
     app.component('ImplementationsGrid', ImplementationsGrid)
+    app.component('LeaderboardTabs', LeaderboardTabs)
     app.component('LogoWall', LogoWall)
     app.component('BackingBand', BackingBand)
     app.component('PageHero', PageHero)
