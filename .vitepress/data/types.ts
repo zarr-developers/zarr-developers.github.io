@@ -54,3 +54,21 @@ export interface BackingEntry {
   href: string
   kind: 'fiscal-host' | 'standards-body' | 'sponsor'
 }
+
+export type LeaderboardTech =
+  | 'native-zarr-v2'
+  | 'native-zarr-v3'
+  | 'icechunk'
+  | 'virtual-icechunk'
+  | 'virtualizarr'
+
+export interface LeaderboardEntry {
+  nickname: string              // short display name, e.g. "ERA5 Reanalysis"
+  store_link: string            // e.g. "s3://bucket/path.zarr"
+  size_bytes: number            // total on-disk size in bytes
+  total_chunks: number          // total chunk count across all arrays
+  tech: LeaderboardTech
+  submitted_by: string          // GitHub handle (no @)
+  last_verified: string         // ISO date string, e.g. "2026-05-01"
+  docs_url?: string             // optional link to blog / repo / notebook
+}

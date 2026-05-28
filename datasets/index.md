@@ -3,8 +3,11 @@ title: Zarr Datasets
 ---
 
 <script setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { datasets } from '../.vitepress/data/datasets'
+import { leaderboard } from '../.vitepress/data/leaderboard'
+
+const tab = ref('browse')
 
 const DOMAIN_LABELS = {
   bio: 'Bio-imaging',
@@ -27,9 +30,6 @@ const grouped = computed(() => {
     .map((k) => ({ key: k, label: DOMAIN_LABELS[k] ?? k, items: buckets.get(k) }))
 })
 
-// Approximate total scale, parsing the (free-text) `size` field.
-// Unrecognized units are silently skipped — the displayed value is a
-// lower bound prefixed with "~".
 const totalTB = computed(() => {
   let tb = 0
   for (const d of datasets) {
@@ -65,14 +65,31 @@ const totalDisplay = computed(() => {
   </template>
 </PageHero>
 
-<div v-for="group in grouped" :key="group.key" class="datasets-section">
-  <h2 class="datasets-section__h">{{ group.label }}</h2>
-  <LogoWall :entries="group.items" />
+<!-- Tab bar -->
+<div class="tab-bar">
+  <button class="tab-btn" :class="{ active: tab === 'browse' }" @click="tab = 'browse'">
+    Browse Datasets
+  </button>
+  <button class="tab-btn" :class="{ active: tab === 'leaderboard' }" @click="tab = 'leaderboard'">
+    Leaderboard
+  </button>
 </div>
 
-<p class="datasets-note">
-  Please ensure the dataset you're contributing is public, free to use, documented, and illustrates Zarr within a specific domain. Only include URLs you expect to be stable and maintained in the foreseeable future.
-</p>
+<!-- Browse tab -->
+<div v-if="tab === 'browse'">
+  <div v-for="group in grouped" :key="group.key" class="datasets-section">
+    <h2 class="datasets-section__h">{{ group.label }}</h2>
+    <LogoWall :entries="group.items" />
+  </div>
+  <p class="datasets-note">
+    Please ensure the dataset you're contributing is public, free to use, documented, and illustrates Zarr within a specific domain. Only include URLs you expect to be stable and maintained in the foreseeable future.
+  </p>
+</div>
+
+<!-- Leaderboard tab -->
+<div v-if="tab === 'leaderboard'">
+  <LeaderboardTabs :entries="leaderboard" :limit="5" />
+</div>
 
 <style scoped>
 .datasets-stats {
@@ -91,8 +108,38 @@ const totalDisplay = computed(() => {
 .datasets-stats .dot {
   color: var(--vp-c-text-3);
 }
+
+/* ── tab bar ────────────────────────────────────────────── */
+.tab-bar {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 36px;
+  border-bottom: 2px solid var(--vp-c-divider);
+}
+.tab-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  font-family: inherit;
+}
+.tab-btn:hover { color: var(--vp-c-text-1); }
+.tab-btn.active {
+  color: var(--vp-c-brand-1);
+  border-bottom-color: var(--vp-c-brand-1);
+}
+
 .datasets-section {
   margin-top: 56px;
+}
+.datasets-section:first-child {
+  margin-top: 0;
 }
 .datasets-section__h {
   font-size: 14px;
