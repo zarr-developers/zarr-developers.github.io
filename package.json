@@ -10,7 +10,7 @@
     "verify": "npm run docs:build && npm run docs:verify"
   },
   "devDependencies": {
-    "js-yaml": "4.1.1",
+    "js-yaml": "4.2.0",
     "vitepress": "1.6.4"
   },
   "overrides": {
