@@ -43,6 +43,13 @@ export const implementations: Implementation[] = [
     activity: 'https://img.shields.io/github/release-date-pre/manzt/zarrita.js' },
   { language: 'JavaScript', name: 'Zarr.js',    href: 'https://github.com/gzuidhof/zarr.js',             v2: true,  v3: false,
     activity: 'https://img.shields.io/github/release-date-pre/gzuidhof/zarr.js' },
+  // MATLAB
+  { language: 'MATLAB',  name: 'zarr-matlab',  href: 'https://github.com/catalystneuro/zarr-matlab',      v2: false, v3: true,
+    activity: 'https://img.shields.io/github/release-date-pre/catalystneuro/zarr-matlab' },
+  { language: 'MATLAB',  name: 'zarr-matlab (zarrs)', href: 'https://github.com/scalableminds/zarr-matlab', v2: false, v3: true,
+    activity: 'https://img.shields.io/github/last-commit/scalableminds/zarr-matlab' },
+  { language: 'MATLAB',  name: 'MATLAB-support-for-Zarr-files', href: 'https://github.com/mathworks/MATLAB-support-for-Zarr-files', v2: true, v3: false,
+    activity: 'https://img.shields.io/github/last-commit/mathworks/MATLAB-support-for-Zarr-files' },
   // Julia / R / OCaml / Elixir
   { language: 'Julia',   name: 'Zarr.jl',      href: 'https://github.com/JuliaIO/Zarr.jl',               v2: true,  v3: false,
     activity: 'https://img.shields.io/github/release-date-pre/JuliaIO/Zarr.jl' },
