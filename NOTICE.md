@@ -68,6 +68,7 @@ endorsement of Zarr by the named organization.
 | `microsoft.png` | Microsoft Corporation |
 | `nasa.webp` | National Aeronautics and Space Administration (NASA) |
 | `ncar.svg` | NSF National Center for Atmospheric Research |
+| `nemar.svg` | Neuroelectromagnetic Data Archive and Tools Resource (NEMAR) |
 | `ome_logo.svg` | Open Microscopy Environment (OME) |
 | `pangeo.png` | Pangeo Project |
 | `scalableminds.svg` | scalable minds GmbH |
