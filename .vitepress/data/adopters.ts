@@ -1,7 +1,7 @@
 // .vitepress/data/adopters.ts
 //
 // Cross-domain balance is required. Current per-domain counts:
-//   bio       : 5 (DANDI, HHMI Janelia, OME, scalableminds, WEBKNOSSOS)
+//   bio       : 6 (DANDI, HHMI Janelia, NEMAR, OME, scalableminds, WEBKNOSSOS)
 //   geo       : 9 (CarbonPlan, Earthmover, ESA, NASA, Pangeo, Unidata, LEAP, LDEO, NCAR)
 //   ml-hpc    : 0
 //   genomics  : 0
@@ -74,6 +74,13 @@ export const adopters: Adopter[] = [
     href: 'https://www.nasa.gov/',
     blurb: 'Analysis-ready data store for chunked, N-dimensional arrays of geospatial data.',
     domain: 'geo',
+  },
+  {
+    name: 'NEMAR',
+    logo: '/adopters/logos/nemar.svg',
+    href: 'https://nemar.org/',
+    blurb: 'Public archive of human electromagnetic data (EEG, MEG, iEEG, EMG) from 777 datasets. Every dataset is actively converted to Zarr and served through a Zarr API.',
+    domain: 'bio',
   },
   {
     name: 'OME',
