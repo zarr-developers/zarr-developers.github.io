@@ -2,7 +2,7 @@
 //
 // Cross-domain balance required. Current per-domain counts:
 //   bio       : 1 (IDR)
-//   geo       : 6 (CMIP6, Earthmover Marketplace, MUR SST, NASA POWER, NWM, Planetary Computer)
+//   geo       : 7 (CMIP6, Earthmover Marketplace, MUR SST, NASA POWER, NWM, Planetary Computer, WSF)
 //   ml-hpc    : 0
 //   genomics  : 0
 //   other     : 1 (webKnossos)
@@ -72,5 +72,13 @@ export const datasets: Dataset[] = [
     hosting: 'scalableminds GmbH',
     size: '70 TB',
     domain: 'other',
+  },
+  {
+    name: 'World Settlement Footprint (WSF)',
+    href: 'https://source.coop/mindearth/wsf',
+    blurb: 'Global 10 m GeoZarr of built-up areas, recording when settlements appeared, with biannual updates since 2016. Population data to follow.',
+    hosting: 'Source Cooperative',
+    size: '11 GB',
+    domain: 'geo',
   },
 ]
