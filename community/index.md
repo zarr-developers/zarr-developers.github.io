@@ -28,6 +28,7 @@ title: Zarr Community
       <li><a href="https://zarr.dev/zeps/">Zarr Enhancement Proposals (ZEPs)</a> — how the spec evolves</li>
       <li><a href="https://github.com/zarr-developers/zarr-specs">zarr-specs</a> — issues, discussion, drafts</li>
       <li><a href="https://github.com/zarr-developers/governance">Governance</a> — steering council, voting</li>
+      <li><a href="/affiliated-projects">Affiliated projects</a> — projects under the Zarr umbrella</li>
     </ul>
   </article>
 

@@ -48,6 +48,20 @@ export interface Implementation {
   activity?: string
 }
 
+export interface AffiliatedProject {
+  name: string
+  repo: string                // GitHub "owner/name"; drives the star badge
+  docs?: string               // documentation site, if the project has one
+  blurb: string               // 1–2 sentences, plain text (no markdown)
+  kind: 'specification' | 'implementation' | 'tool' | 'conventions'
+  affiliated: string          // ISO date of the ZSC affiliation decision
+  /**
+   * 'approved' once the project meets every affiliation criterion;
+   * 'pending' while it is still publishing its governance document.
+   */
+  status: 'approved' | 'pending'
+}
+
 export interface BackingEntry {
   name: string
   logo: string                // absolute path under /backing/logos/...
