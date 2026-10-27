@@ -14,8 +14,8 @@ title: Zarr Community
     <h2 class="community-card__h">Meet</h2>
     <p class="community-card__lead">Bi-weekly community calls and ZEP meetings, open to all.</p>
     <ul class="community-card__list">
-      <li><a href="https://zarr.dev/community-calls">Community calls</a> — agenda, joining info, calendar</li>
-      <li><a href="https://zarr.dev/zeps/meetings/">ZEP meetings</a> — proposal review and discussion</li>
+      <li><a href="https://zarr.dev/community-calls/" target="_self">Community calls</a> — agenda, joining info, calendar</li>
+      <li><a href="https://zarr.dev/zeps/meetings/" target="_self">ZEP meetings</a> — proposal review and discussion</li>
       <li><a href="/office-hours">Office hours</a> — drop in with questions</li>
     </ul>
   </article>
@@ -25,7 +25,7 @@ title: Zarr Community
     <h2 class="community-card__h">Build</h2>
     <p class="community-card__lead">Propose changes to the spec, ship implementations, contribute conventions.</p>
     <ul class="community-card__list">
-      <li><a href="https://zarr.dev/zeps/">Zarr Enhancement Proposals (ZEPs)</a> — how the spec evolves</li>
+      <li><a href="https://zarr.dev/zeps/" target="_self">Zarr Enhancement Proposals (ZEPs)</a> — how the spec evolves</li>
       <li><a href="https://github.com/zarr-developers/zarr-specs">zarr-specs</a> — issues, discussion, drafts</li>
       <li><a href="https://github.com/zarr-developers/governance">Governance</a> — steering council, voting</li>
       <li><a href="/affiliated-projects">Affiliated projects</a> — projects under the Zarr umbrella</li>
@@ -39,7 +39,7 @@ title: Zarr Community
     <ul class="community-card__list">
       <li><a href="https://ossci.zulipchat.com/">Zulip</a> — real-time chat with maintainers and users</li>
       <li><a href="https://github.com/zarr-developers/zarr-python/discussions">GitHub Discussions</a> — Python usage questions</li>
-      <li><a href="https://zarr.dev/blog/">Blog</a> — updates and guest posts</li>
+      <li><a href="https://zarr.dev/blog/" target="_self">Blog</a> — updates and guest posts</li>
       <li><a href="https://bsky.app/profile/zarr.dev">Bluesky</a> · <a href="https://fosstodon.org/@zarr">Mastodon</a> · <a href="https://www.youtube.com/@zarr_dev/playlists">YouTube</a></li>
     </ul>
   </article>
