@@ -60,6 +60,7 @@ gtag('config', 'G-BCRR9QE7Z0');`],
         text: 'Community',
         items: [
           { text: 'Overview', link: '/community' },
+          { text: 'Affiliated Projects', link: '/affiliated-projects' },
           { text: 'Office Hours', link: '/office-hours' },
           { text: 'ZEPs', link: 'https://zarr.dev/zeps/' },
           { text: 'Slides', link: '/slides' },
