@@ -152,3 +152,10 @@
     transform: none !important;
   }
 }
+
+/* Provenance note at the bottom of pages imported from zarr-extensions */
+.vp-doc .extensions-source {
+  margin-top: 48px;
+  font-size: 13px;
+  color: var(--vp-c-text-2);
+}

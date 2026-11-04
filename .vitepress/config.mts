@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { redirectsPlugin, defaultPluginOptions } from './plugins/redirects'
+import { extensionsSidebar } from './extensions'
 
 // Read the path prefix from RTD's canonical URL env var when present
 // (e.g. https://<slug>.readthedocs.build/en/171/ → /en/171/), so all
@@ -71,11 +72,15 @@ gtag('config', 'G-BCRR9QE7Z0');`],
         items: [
           { text: 'Specification', link: 'https://zarr-specs.readthedocs.io/' },
           { text: 'Documentation', link: 'https://zarr.readthedocs.io/en/stable/' },
+          { text: 'Extensions', link: '/extensions/' },
           { text: 'Conventions', link: '/conventions' },
           { text: 'Blog', link: 'https://zarr.dev/blog/' },
         ],
       },
     ],
+    sidebar: {
+      '/extensions/': extensionsSidebar(),
+    },
     socialLinks: [
       {
         icon: {
@@ -95,7 +100,12 @@ gtag('config', 'G-BCRR9QE7Z0');`],
       },
     ],
     editLink: {
-      pattern: 'https://github.com/zarr-developers/zarr-developers.github.io/edit/main/:path',
+      // Pages under /extensions/ are imported from the registry repo
+      // (scripts/fetch-extensions.mjs), which sets `editUrl` to point there.
+      // This function is serialized to the client: keep it self-contained.
+      pattern: ({ filePath, frontmatter }) =>
+        frontmatter.editUrl ??
+        `https://github.com/zarr-developers/zarr-developers.github.io/edit/main/${filePath}`,
       text: 'Edit this page on GitHub',
     },
     footer: {

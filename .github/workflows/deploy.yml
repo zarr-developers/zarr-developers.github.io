@@ -4,6 +4,13 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # /extensions/ is imported from zarr-developers/zarr-extensions at build
+  # time. That repo can trigger a rebuild on merge by sending a
+  # repository_dispatch event of this type; the daily run is a fallback.
+  repository_dispatch:
+    types: [zarr-extensions-updated]
+  schedule:
+    - cron: '17 4 * * *'
 
 permissions:
   contents: read
