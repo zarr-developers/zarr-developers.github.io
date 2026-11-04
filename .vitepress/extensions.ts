@@ -21,7 +21,7 @@ const subdirsWithPage = (d: string) =>
 export function extensionsSidebar(): DefaultTheme.SidebarItem[] {
   if (!existsSync(path.join(dir, 'index.md'))) return []
   return [
-    { text: 'Overview', link: '/extensions/' },
+    { text: 'Extensions', link: '/extensions/' },
     ...subdirsWithPage(dir).map((point) => ({
       text: title(path.join(dir, point, 'index.md'), point),
       link: `/extensions/${point}/`,
