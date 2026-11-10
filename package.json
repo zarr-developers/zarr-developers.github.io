@@ -10,6 +10,7 @@
     "verify": "npm run docs:build && npm run docs:verify"
   },
   "devDependencies": {
+    "@zarr-developers/vitepress-theme": "github:zarr-developers/vitepress-theme#v0.1.0",
     "js-yaml": "4.1.1",
     "vitepress": "1.6.4"
   },
