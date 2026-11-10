@@ -17,6 +17,8 @@ export const implementations: Implementation[] = [
   { language: 'Rust',    name: 'zarrs',        href: 'https://github.com/LDeakin/zarrs',                 v2: true,  v3: true,
     activity: 'https://img.shields.io/github/release-date-pre/LDeakin/zarrs' },
   // C / C++
+  { language: 'C++', name: 'acquire-zarr', href: 'https://github.com/acquire-project/acquire-zarr', v2: false, v3: true,
+    activity: 'https://img.shields.io/github/release-date/acquire-project/acquire-zarr' },
   { language: 'C',       name: 'NetCDF-C',     href: 'https://github.com/Unidata/netcdf-c',              v2: true,  v3: false,
     activity: 'https://img.shields.io/github/release-date-pre/Unidata/netcdf-c' },
   { language: 'C++',     name: 'TensorStore',  href: 'https://github.com/google/tensorstore',            v2: true,  v3: true,

@@ -5,10 +5,12 @@ title: Zarr Implementations
 <PageHero
   eyebrow="Implementations"
   headline="Use Zarr in your language."
-  lead="Zarr is an open specification with libraries in Python, Rust, JavaScript, C, C++, Java, Julia, R, OCaml, and Elixir. Pick the implementation that fits your stack — they all read and write the same on-disk format."
+  lead="Zarr is an open specification with libraries in Python, Rust, JavaScript, C, C++, Java, Julia, R, OCaml, and Elixir. Pick the implementation that fits your stack and its supported read or write operations."
 />
 
 <ImplementationsGrid />
+
+[acquire-zarr](https://github.com/acquire-project/acquire-zarr) streams image data to Zarr v3 through C and Python APIs. It supports compression, multiscale output, and filesystem or S3-compatible storage. It does not support reading or random-access writing.
 
 ## Contributing
 
