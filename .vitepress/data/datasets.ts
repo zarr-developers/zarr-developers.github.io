@@ -1,7 +1,7 @@
 // .vitepress/data/datasets.ts
 //
 // Cross-domain balance required. Current per-domain counts:
-//   bio       : 1 (IDR)
+//   bio       : 2 (IDR, NEMAR)
 //   geo       : 6 (CMIP6, Earthmover Marketplace, MUR SST, NASA POWER, NWM, Planetary Computer)
 //   ml-hpc    : 0
 //   genomics  : 0
@@ -64,6 +64,14 @@ export const datasets: Dataset[] = [
     hosting: 'AWS',
     size: '5 TB',
     domain: 'geo',
+  },
+  {
+    name: 'NEMAR',
+    href: 'https://nemar.org/',
+    blurb: 'Public archive of human electromagnetic data (EEG, MEG, iEEG, EMG) from 777 datasets. Every dataset is actively converted to Zarr and served through a Zarr API.',
+    hosting: 'NEMAR',
+    size: '~66 TB',
+    domain: 'bio',
   },
   {
     name: 'webKnossos',
