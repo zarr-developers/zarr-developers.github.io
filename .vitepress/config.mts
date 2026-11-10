@@ -70,6 +70,7 @@ gtag('config', 'G-BCRR9QE7Z0');`],
         text: 'Resources',
         items: [
           { text: 'Specification', link: 'https://zarr-specs.readthedocs.io/' },
+          { text: 'Extensions', link: 'https://extensions.zarr.dev/' },
           { text: 'Documentation', link: 'https://zarr.readthedocs.io/en/stable/' },
           { text: 'Conventions', link: '/conventions' },
           { text: 'Blog', link: 'https://zarr.dev/blog/' },
