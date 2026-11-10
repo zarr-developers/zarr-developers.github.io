@@ -1,5 +1,6 @@
 import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
+import ZarrTheme from '@zarr-developers/vitepress-theme/theme'
 import type { Theme, EnhanceAppContext } from 'vitepress'
 import './custom.css'
 
@@ -11,7 +12,7 @@ import PageHero from './PageHero.vue'
 import ZarrHero from './ZarrHero.vue'
 
 export default {
-  extends: DefaultTheme,
+  extends: ZarrTheme,
   Layout: () =>
     h(DefaultTheme.Layout, null, {
       // Replaces the default hero image area on the home page with the
